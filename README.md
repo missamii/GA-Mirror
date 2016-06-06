@@ -99,7 +99,7 @@ Ethan is a WDI alumnus. After taking WDI, he took a few months of "paternity lea
 **LinkedIn:** [https://www.linkedin.com/in/ethanfriedman](https://www.linkedin.com/in/ethanfriedman)
 
 ### Emma Hou (TA)
-![headshot](https://avatars2.githubusercontent.com/u/16655549?v=3&s=400 | width=100)
+
 Emma graduated from Columbia University in 2015 with a MS degree of Electrical Engineering. She attended GA's WDI program from January 2016 to April 2016. She used to hate coding, but GA changed her thoughts of software development.  Emma will be available at GA Mon-Thurs 6-9 PM to help you out with homework, labs, or other questions!
 
 **Email:** emma.hou@generalassemb.ly
