@@ -113,4 +113,4 @@ Emma graduated from Columbia University in 2015 with a MS degree of Electrical E
 
 ## Questions? Concerns? Comments?
 
-Hit us up by any of the methods above!
+Hit us up by any of the methods above! 
