@@ -10,6 +10,8 @@ This repo is organized as follows:
   * **Homework**: Instructions for that week's homework assignments.
   * **Morning_Exercises**: Instructions for that week's morning exercises
   * **Classwork**: ***THIS*** is where you should do all your work.
+
+
 In addition to the Week directories, there are also directories (in the root folder of the repo) for:
   * **Projects**: Information for each of our four class projects will live here
   * **Cheatsheets_and_Resources**: Guides, cheatsheets, general resources will live here. For example, I've already created a guide to how to submit your homework that lives in this directory.
@@ -39,13 +41,11 @@ Our week is typically structured as follows (times are approximate):
 
 | | Monday | Tuesday | Wednesday | Thursday | Friday
 | --- | --- | --- | --- | --- | --- |
-| **9 - ~10 AM** | Morning Exercise | Morning Exercise | Review or Optional Lesson | Morning Exercise | Morning Exercise |
-| **~10 - ~11:30 AM** | Morning Lesson | Morning Lesson | Review or Optional Lesson |  Morning Lesson |  Morning Lesson |
-| **~11:30 AM - ~12:30 PM ** | Morning Lab (usually) | Morning Lab (usually) | Outcomes | Morning Lab (usually) | Morning Lab (usually) |
+| **9 - 10 AM** | Morning Exercise | Morning Exercise | Review | Morning Exercise | Morning Exercise |
+| **10 - 12:30 AM** | Lesson | Lesson | Review & Outcomes | Lesson | Lesson |
 | **12:30 - 1:30 PM** | *Lunch* | *Lunch* | *Lunch* | *Lunch* | *Lunch* |
-| **1:30 - ~3:30 PM ** | Afternoon Lesson | Afternoon Lesson | *No class -- work on HW, etc.* | Afternoon Lesson | Afternoon Lesson |
-| **~3:30 - ~4:30 PM** | Afternoon Lab | Afternoon Lab | *No class -- work on HW, etc.* | Afternoon Lab | Afternoon Lab |
-| **~4:30 - 5 PM** | Homework announcement | Homework announcement | *No class -- work on HW, etc.* | Homework announcement | Homework announcement |
+| **1:30 - 4:30 PM** | Lesson & Lab | Lesson & Lab | *No class* | Lesson & Lab | Lesson & Lab |
+| **4:30 PM** | Homework announcement | Homework announcement | *No class -- work on HW, etc.* | Homework announcement | Homework announcement |
 | **6 - 9 PM** | TA hours | TA hours | TA hours | TA hours | *(no TA)* |
 
 ## Class requirements
@@ -66,15 +66,15 @@ That said, the following requirements are mandatory for graduation and consequen
 ## Your instructional team
 
 ### Liza Ramo (Lead Instructor)
-Liza is a WDI alumna. After WDI she worked at TK TKTKTK
+Liza received a scholarship from Google to attend WDI in 2014. After graduating from WDI she worked at a finance company in Midtown for 2 years before coming to GA to be an instructor. Before General Assembly she worked at IBM.
 
-**Email:**
+**Email:** liza.ramo@ga.co
 
-**Slack:**
+**Slack:** @liza
 
-**Github:**
+**Github:** LizaLemons
 
-**LinkedIn:**
+**LinkedIn:** [https://www.linkedin.com/in/lizaramo](https://www.linkedin.com/in/lizaramo)
 
 ### Syed Salahuddin (Lead Instructor)
 Bio about Syed goes here TK
