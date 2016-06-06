@@ -1,4 +1,5 @@
-# Student repo for WDI-NYC-53. (WDI Robots)
+# Student repo for WDI Robots
+*•WDI-NYC-53•*
 
 ## Repo structure
 
@@ -20,7 +21,7 @@ In addition to the Week directories, there are also directories (in the root fol
 
 ### Units
 
-Our class is divided into four **units**, each of which will take anywhere from 2 - 4 weeks to complete. At the end of each unit is a project which you will complete and demonstrate to the class and your instructors.
+Our class is divided into four ***units***, each of which will take anywhere from 2 - 4 weeks to complete. At the end of each unit is a project which you will complete and demonstrate to the class and your instructors.
 
 Here's roughly what we'll cover in each unit (*subject to change depending on circumstances!)*
 
@@ -42,7 +43,7 @@ Our week is typically structured as follows (times are approximate):
 | | Monday | Tuesday | Wednesday | Thursday | Friday
 | --- | --- | --- | --- | --- | --- |
 | **9 - 10 AM** | Morning Exercise | Morning Exercise | Review | Morning Exercise | Morning Exercise |
-| **10 - 12:30 AM** | Lesson | Lesson | Review & Outcomes | Lesson | Lesson |
+| **10 - 12:30 AM** | Lesson | Lesson | Review (10 AM - 11:30 AM) & Outcomes (11:30 AM - 12:30 PM) | Lesson | Lesson |
 | **12:30 - 1:30 PM** | *Lunch* | *Lunch* | *Lunch* | *Lunch* | *Lunch* |
 | **1:30 - 4:30 PM** | Lesson & Lab | Lesson & Lab | *No class* | Lesson & Lab | Lesson & Lab |
 | **4:30 PM** | Homework announcement | Homework announcement | *No class -- work on HW, etc.* | Homework announcement | Homework announcement |
