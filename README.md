@@ -1,4 +1,4 @@
-# Student repo for WDI-NYC-53. (WDI Robots) LIZA
+# Student repo for WDI-NYC-53. (WDI Robots) OH HAI
 
 ## Repo structure
 
