@@ -1,9 +1,9 @@
-# Student repo for WDI-NYC-53. (WDI Robots) OH HAI
+# Student repo for WDI-NYC-53. (WDI Robots)
 
 ## Repo structure
 
 This repo is organized as follows:
-* Each week has its own directory (Week_1, Week_2, etc.)
+* Each week has its own directory (w1, w2, w3, etc.)
 * With each week's directory, there are sub-directories for:
   * **Each topic** we're covering that week (e.g., JavaScript-101, Git, CLI, etc.). Inside each of those directories you'll find lesson notes, sample files or entire apps (when appropriate), and so on.
   * **Labs**: Instructions for the in-class labs for that week.
