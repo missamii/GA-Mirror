@@ -26,7 +26,7 @@ The Simpsons are your average American family living in Springfield. Let's creat
 
 #### Remaking the Intro
 1. When the show's intro starts the camera pans through the clouds and over the entire town. The view then focuses through the window of the elementary school where we find Bart in detention writing out whatever horrible deed he accomplished that day. Create a directory called `school` and move `Bart.txt` inside of it.<br><br>
-2. Next the camera pans to the nuclear power plant where we find Homer mishandling what appears to be a radioactive core sample. Create a directory `power-plant` and move `Homer.txt` into it. Create a `core_sample.txt` file. And then delete it.<br><br>
+2. Next the camera pans to the nuclear power plant where we find Homer mishandling what appears to be a radioactive core sample. Create a directory `power-plant` and move `Homer.txt` into it. Create a `core_sample.txt` file in the power plant. And then delete it.<br><br>
 3. Homer forgot his employee ID, so he needs to get a temporary pass. Let's use the ECHO command to initialize some text in `Homer.txt` like such - ` echo 'Work Pass: Homer J. Simpson' >> Homer.txt `<br><br>
 4. Then we find Marge and Maggie together in the super market. Create a `market` directory and move Marge and Maggie inside it.<br><br>
 5. The camera then pans to the band room in the school where we find Lisa crushing a sax solo. Traverse to the `school` directory, create a `band-room` directory, and move `Lisa.txt` into the `band-room` directory.<br><br>
@@ -49,11 +49,18 @@ In your `classwork` directory create a new file for your cheatsheet. Name it wha
 * read the help file for a given command
 * change your current working directory
 * display the path of the current working directory
-* also include a reminder on the differences between an absolute and a relative path.
+* what symbol represents the current directory in file paths?
+* what symbol represents the parent directory of the current directory?
+* what symbol represents the user's root directory in file paths?
+* also include a reminder for yourself on the differences between an absolute and a relative path.
+* BONUSES:
+  * display the contents of a file
+  * add text to a file
+  * Look up online the keyboard shortcuts for repeating the prior command; moving to the beginning or end of a line; auto-completing file or directory names. Learn these! they're handy!
 
 #### Submitting your work
 When the exercise has been completed you may have felt that Part 1 was quite useless because now you have a bunch of empty directories and some arbitrary `.txt` files that don't even contain any text! This is all about getting reps and feeling comfortable in the environment. Keep practicing - this is now your life!
 
 Let's use ` tree ` to look at your file structure. While in the homework directory, use the ` tree ` command (now on your computer thanks to installfest!) and your terminal should show the file structure you created in steps 1-7. Take a snapshot! If you don't have any preferred software, you can use ` Command-Shift-4 ` to bring up a tool which will save a snapshot of any selection. Save this image to your homework folder. Make sure a copy of your command line cheatsheet from Part 2 is in the folder as well.
 
-You should have been using ` git add -A `, ` git commit -m "MESSAGE" `, and ` git push origin master ` after each step. Do it one more time with the tree image in the homework folder! Now go to `Cheatsheets_and_Resources/Homework_Submission_Unit1.md` and follow the instructions for submitting the homework. From Unit 2 on, there will be a slightly more involved process for submitting homework (which you can look up in the wiki), but this is sufficient for tonight.
+You should have been using ` git add -A `, ` git commit -m "MESSAGE" `, and ` git push origin master ` after each step. Do it one more time with the tree image in the homework folder! Now go to `Cheatsheets_and_Resources/Homework_Submission_Unit1.md` and follow the instructions for submitting the homework. From Unit 2 on, there will be a slightly more involved process for submitting homeworkw, but this is sufficient for tonight.

@@ -1,4 +1,4 @@
-### HOMEWORK SUBMISSION VIA GITHUB ISSUES
+### HOMEWORK SUBMISSION VIA GITHUB ISSUES (For Unit 1)
 
 In order to submit homework, you must have:
 1. Forked the class repo (found [here](https://github.com/ga-students/wdi-nyc-robots)) on Github to your personal Github.
