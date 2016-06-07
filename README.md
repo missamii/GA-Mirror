@@ -44,7 +44,7 @@ Our week is typically structured as follows (times are approximate):
 | --- | --- | --- | --- | --- | --- |
 | **9 - 10 AM** | Morning Exercise | Morning Exercise | Review | Morning Exercise | Morning Exercise |
 | **10 - 12:30 AM** | Lesson | Lesson | Review (10 AM - 11:30 AM) & Outcomes (11:30 AM - 12:30 PM) | Lesson | Lesson |
-| **12:30 - 1:30 PM** | *Lunch* | *Lunch* | *Lunch* | *Lunch* | *Lunch* |
+| **12:30 - 1:30 PM** | *Lunch* | *Lunch* | *Lunch* (Alternating between Mingle with other Immersive students and Lunch'n'Learn panels with various people from the industry) | *Lunch* | *Lunch* |
 | **1:30 - 4:30 PM** | Lesson & Lab | Lesson & Lab | *No class* | Lesson & Lab | Lesson & Lab |
 | **4:30 PM** | Homework announcement | Homework announcement | *No class -- work on HW, etc.* | Homework announcement | Homework announcement |
 | **6 - 9 PM** | TA hours | TA hours | TA hours | TA hours | *(no TA)* |
@@ -113,4 +113,4 @@ Emma graduated from Columbia University in 2015 with a MS degree of Electrical E
 
 ## Questions? Concerns? Comments?
 
-Hit us up by any of the methods above! 
+Hit us up by any of the methods above!
