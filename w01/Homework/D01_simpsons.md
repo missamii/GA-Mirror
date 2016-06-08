@@ -58,6 +58,11 @@ In your `classwork` directory create a new file for your cheatsheet. Name it wha
   * add text to a file
   * Look up online the keyboard shortcuts for repeating the prior command; moving to the beginning or end of a line; auto-completing file or directory names. Learn these! they're handy!
 
+## PART 3: Videos
+Do this part only if you have time! Go to [this YouTube playlist](https://www.youtube.com/playlist?list=PLw1xVKFbouelUj3g_56CRAUjGGEU13bPF) by Matthew Short, a former faculty chair here at GA (and current engineer at Google).  These three videos total approximately 15 minutes in length. It should be review of concepts from the prework, but it's good to make sure you have this stuff DOWN!
+
+Watch videos 77 ("JavaScript - Variables"), 78 ("JavaScript - Primitives"), and 79 ("JavaScript - Primitive Methods & Properties").
+
 #### Submitting your work
 When the exercise has been completed you may have felt that Part 1 was quite useless because now you have a bunch of empty directories and some arbitrary `.txt` files that don't even contain any text! This is all about getting reps and feeling comfortable in the environment. Keep practicing - this is now your life!
 
