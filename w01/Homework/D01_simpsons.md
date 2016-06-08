@@ -12,6 +12,9 @@ Work in the `w01/classwork/` directory. Create a new directory called `simpsons`
 ## Completion
 Finish all of the parts! In the future we may set reach goals and add bonuses onto the homework, however we decided to go with an easier assignment to help get you acclimated to the course. The main purpose of this assignment is to get you feeling comfortable typing and working inside the terminal. **Instructions on how to submit your homework can be found in Cheatsheets_and_Resources/Homework_Submission_Unit1.md**
 
+## Part 0 -- FINISH THE PREWORK
+Seriously, finish it if you haven't already. Tonight's homework is (relatively) light. So try to do your prework ASAP.
+
 ## Part 1 - Simpsons Activity
 The more practice you have working in the terminal manipulating files and directories the better!
 
@@ -63,4 +66,4 @@ When the exercise has been completed you may have felt that Part 1 was quite use
 
 Let's use ` tree ` to look at your file structure. While in the homework directory, use the ` tree ` command (now on your computer thanks to installfest!) and your terminal should show the file structure you created in steps 1-7. Take a snapshot! If you don't have any preferred software, you can use ` Command-Shift-4 ` to bring up a tool which will save a snapshot of any selection. Save this image to your homework folder. Make sure a copy of your command line cheatsheet from Part 2 is in the folder as well.
 
-You should have been using ` git add -A `, ` git commit -m "MESSAGE" `, and ` git push origin master ` after each step. Do it one more time with the tree image in the homework folder! Now go to `Cheatsheets_and_Resources/Homework_Submission_Unit1.md` and follow the instructions for submitting the homework. From Unit 2 on, there will be a slightly more involved process for submitting homeworkw, but this is sufficient for tonight.
+You should have been using ` git add -A `, ` git commit -m "MESSAGE" `, and ` git push origin master ` after each step. Do it one more time with the tree image in the homework folder! Now go to `Cheatsheets_and_Resources/Homework_Submission_Unit1.md` and follow the instructions for submitting the homework. From Unit 2 on, there will be a slightly more involved process for submitting homework, but this is sufficient for tonight.
