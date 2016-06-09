@@ -6,7 +6,7 @@ In order to submit homework, you must have:
 1. Committed and pushed your changes. In the Terminal, in the directory where you're working (generally that day's directory):
 ```
 git add -A
-git commit -m "some sort of commit message, i.e., 'working on homework. Ethan sucks'"
+git commit -m "some sort of commit message, i.e., 'working on homework. Ethan is awesome!'"
 ```
 
 This saves the changes to your local repo on your machine. You now need to push those changes out to your remote repo on Github: `git push origin master`
