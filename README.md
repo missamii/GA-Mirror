@@ -4,7 +4,7 @@
 ## Repo structure
 
 This repo is organized as follows:
-* Each week has its own directory (Week_1, Week_2, etc.)
+* Each week has its own directory (w1, w2, w3, etc.)
 * With each week's directory, there are sub-directories for:
   * **Each topic** we're covering that week (e.g., JavaScript-101, Git, CLI, etc.). Inside each of those directories you'll find lesson notes, sample files or entire apps (when appropriate), and so on.
   * **Labs**: Instructions for the in-class labs for that week.
@@ -21,7 +21,7 @@ In addition to the Week directories, there are also directories (in the root fol
 
 ### Units
 
-Our class is divided into four **units**, each of which will take anywhere from 2 - 4 weeks to complete. At the end of each unit is a project which you will complete and demonstrate to the class and your instructors.
+Our class is divided into four ***units***, each of which will take anywhere from 2 - 4 weeks to complete. At the end of each unit is a project which you will complete and demonstrate to the class and your instructors.
 
 Here's roughly what we'll cover in each unit (*subject to change depending on circumstances!)*
 
@@ -43,8 +43,8 @@ Our week is typically structured as follows (times are approximate):
 | | Monday | Tuesday | Wednesday | Thursday | Friday
 | --- | --- | --- | --- | --- | --- |
 | **9 - 10 AM** | Morning Exercise | Morning Exercise | Review | Morning Exercise | Morning Exercise |
-| **10 - 12:30 AM** | Lesson | Lesson | Review & Outcomes | Lesson | Lesson |
-| **12:30 - 1:30 PM** | *Lunch* | *Lunch* | *Lunch* | *Lunch* | *Lunch* |
+| **10 - 12:30 AM** | Lesson | Lesson | Review (10 AM - 11:30 AM) & Outcomes (11:30 AM - 12:30 PM) | Lesson | Lesson |
+| **12:30 - 1:30 PM** | *Lunch* | *Lunch* | *Lunch* (Alternating between Mingle with other Immersive students and Lunch'n'Learn panels with various people from the industry) | *Lunch* | *Lunch* |
 | **1:30 - 4:30 PM** | Lesson & Lab | Lesson & Lab | *No class* | Lesson & Lab | Lesson & Lab |
 | **4:30 PM** | Homework announcement | Homework announcement | *No class -- work on HW, etc.* | Homework announcement | Homework announcement |
 | **6 - 9 PM** | TA hours | TA hours | TA hours | TA hours | *(no TA)* |
@@ -55,7 +55,7 @@ The ***FOREMOST*** predictor of success during and following this course is how 
 
 That said, the following requirements are mandatory for graduation and consequent job search support.
 
-1. **Attendance**: You must attend class. Each students is granted up to four absences. More than four absences will result in withdrawal from the class. The class will not stand still while you're not here! Given our incredibly compressed timeframe, missing a class can result in increased time and effort spent catching up. A late arrival (whether at the beginning of the day, returning from lunch, or returning from a break) counts as 1/4 of an absence. Late arrivals are disruptive to your classmates and the instructional team. ***Inform the instructional team*** via email or Slack (our contact info is below) if you're going to miss a class or be late.
+1. **Attendance**: You must attend class. Each students is granted up to four absences. More than four absences will result in withdrawal from the class. The class will not stand still while you're not here! Given our incredibly compressed timeframe, missing a class can result in increased time and effort spent catching up. A late arrival (whether at the beginning of the day, returning from lunch, or returning from a break) counts as 1/3 of an absence. Late arrivals are disruptive to your classmates and the instructional team. ***Inform the instructional team*** via email or Slack (our contact info is below) if you're going to miss a class or be late.
 1. **Homework**: You must complete 80% of the homework to graduate. We will alert you if you're falling below that threshold, but you can reach out to any one of us at any point if you're not sure. When your homework is graded, you'll be informed if you need to do additional work on it to have it count as a complete homework. We do *not* expect everyone to complete every homework! This class is ***hard***. Depending on the homework, getting most of the way through it may count as a completion. If a homework turns out to be too hard, don't freak out! Come find us. We'll work with you!
 1. **Projects**: There are four projects, one at the end of each unit. Detailed project requirements will come later, and may change, but here's what we anticipate they'll look like:
   1. *Project 1 (solo project):* Build a web game.
@@ -80,13 +80,13 @@ Liza received a scholarship from Google to attend WDI in 2014. After graduating 
 ### Syed Salahuddin (Lead Instructor)
 Bio about Syed goes here TK
 
-**Email:**
+**Email:** syed.salahuddin@ga.co
 
-**Slack:**
+**Slack:** @sssyed
 
-**Github:**
+**Github:** sssyed
 
-**LinkedIn:**
+**LinkedIn:** [https://www.linkedin.com/in/syed-salahuddin-826751b2](https://www.linkedin.com/in/syed-salahuddin-826751b2)
 
 ### Ethan Friedman (Instructional Associate)
 Ethan is a WDI alumnus. After taking WDI, he took a few months of "paternity leave" (his first child was born 2 weeks after the course ended!). You can expect lots of cute baby pictures from Ethan. He then TA'ed a WDI course, and then joined up with Liza and Syed to teach a cohort of WDI that just ended in May.
@@ -110,6 +110,8 @@ Emma graduated from Columbia University in 2015 with a MS degree of Electrical E
 **Github:** [https://github.com/AuvEmma](https://github.com/AuvEmma)
 
 **LinkedIn:** [https://www.linkedin.com/in/auvemma](https://www.linkedin.com/in/auvemma)
+
+**EMMA'S HOURS:** Emma will be on campus (and available on Slack) from 6-9 PM Monday - Thursday
 
 ## Questions? Concerns? Comments?
 
