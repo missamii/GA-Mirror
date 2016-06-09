@@ -84,9 +84,26 @@ e.g.:
 
 ![dog developer](http://i1.kym-cdn.com/photos/images/original/000/234/765/b7e.jpg)
 
-Escape:
+### Escape:
 The backslash character (\\) is the 'escape' character. If you want to the markdown to show any of the special symbols referenced above (e.g., \#), just preface it with a backslash to display it.
 
-Resources
+### Collapsable section
+
+<details>
+<summary>Example solution</summary>
+Here is some text that was previously hidden!
+</details>
+
+##### Here's how to do it:
+
+```
+<details>
+<summary>Example solution</summary>
+Here is some text that was previously hidden!
+</details>
+```
+
+
+### Resources
 
 Read the [original markdown docs](http://daringfireball.net/projects/markdown/syntax), and then take a look at the [github flavored markdown docs](https://help.github.com/articles/working-with-advanced-formatting/).
