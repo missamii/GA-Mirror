@@ -27,4 +27,4 @@ Here's the list of who's in which squad:
 | Aya Kawabata | Denis Koltsov | Joseph Sul |
 | Cristina Ruiz | Harry Hur | Tiffany Lo |
 | Shreiya Chowdhary | Austin Hudson | Mimi Wu |
-| Carlo Ruiz |  |  |
+| Carlo Ruiz | Babajide Kale | Carrow Thibault |
