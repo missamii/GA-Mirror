@@ -66,7 +66,7 @@ That said, the following requirements are mandatory for graduation and consequen
 
 ## Your instructional team
 
-### Liza Ramo (Lead Instructor)
+### Liza Ramo
 Liza received a scholarship from Google to attend WDI in 2014. After graduating from WDI she worked at a finance company in Midtown for 2 years before coming to GA to be an instructor. Before General Assembly she worked at IBM.
 
 **Email:** liza.ramo@ga.co
@@ -77,7 +77,7 @@ Liza received a scholarship from Google to attend WDI in 2014. After graduating 
 
 **LinkedIn:** [https://www.linkedin.com/in/lizaramo](https://www.linkedin.com/in/lizaramo)
 
-### Syed Salahuddin (Lead Instructor)
+### Syed Salahuddin
 Bio about Syed goes here TK
 
 **Email:** syed.salahuddin@ga.co
