@@ -81,6 +81,7 @@ Liza received a scholarship from Google to attend WDI in 2014. After graduating 
 
 
 ### Syed Salahuddin
+Founder of @Babycastles, Adjunct Professor @NYU, Lead Instructor @GA, one of DJ▲CHIPOTLE
 
 **Email:** syed.salahuddin@ga.co
 
