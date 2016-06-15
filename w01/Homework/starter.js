@@ -23,8 +23,8 @@ console.log("EXAMPLE","60",tripledVariable);
 var a = 1;
 var b = 2;
 
-var c;
-
+var c = Math.sqrt(a*a+b*b);
+console.log("step a answer",c);
 // Write an expression here which computes
 // the correct value of c based on the values of a and b
 
@@ -36,12 +36,13 @@ var c;
 
 var pounds = 155;
 
-var kilograms;
-
+var kilograms = pounds/2.2
+console.log(kilograms)
 // Write an expression here which computes
 // the correct value of the variable kilograms
 
 // Log your answer to the console
+
 
 
 
