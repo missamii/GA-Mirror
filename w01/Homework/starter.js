@@ -49,9 +49,11 @@ console.log(kilograms)
 // STEP C: Old Modems
 
 var sizeInGB = 25;
+var sizeInKB = sizeInGB * 8000000
+var ks = 56 
+var timeToDownload = sizeInKB / ks
 
-var timeToDownload;
-
+console.log(timeToDownload)
 // Write an expression here which computes
 // the correct value of the variable timeToDownload
 
