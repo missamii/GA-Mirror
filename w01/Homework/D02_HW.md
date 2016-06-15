@@ -22,7 +22,8 @@ We've covered a few topics you'll need to know as a programmer - using Git and G
 
 * For Part 2 - JavaScript, **all five steps need to be completed**. Code for the first four steps will go in their respective places in the `starter.js` file. For example:
 
-* ```js
+* 
+```js
 // EXAMPLE A
 var givenVariable = 20;
 var doubledVariable = givenVariable * 2;
