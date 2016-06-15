@@ -63,6 +63,16 @@ console.log(timeToDownload)
 
 // STEP D: Killer Caffeine
 
+var gramsPerHunLBS = 6
+var gramsPerLBS = gramsPerHunLBS/100
+var myBodyWeight = 150
+var gramsToKill = gramsPerLBS * myBodyWeight
+
+var caffeineMG = 95
+var caffeineG = caffeineMG * 0.001
+var cupsToKill = gramsToKill / caffeineG
+
+console.log(Math.ceil(cupsToKill))
 // For this part create you own appropriately named variables for
 // any values you want to use
 
