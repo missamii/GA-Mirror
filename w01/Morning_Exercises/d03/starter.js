@@ -9,14 +9,14 @@
 
 // Question 2
 
-//   var e = 3;
-//   var f = 9;
-//   var g = e + f;
-//   f = g;
-//   e = 5;
-//   console.log('Question 2: e = ',e);
-//   console.log('Question 2: f = ',f);
-//   console.log('Question 2: g = ',g);
+  // var e = 3;
+  // var f = 9;
+  // var g = e + f;
+  // f = g;
+  // e = 5;
+  // console.log('Question 2: e = ',e);
+  // console.log('Question 2: f = ',f);
+  // console.log('Question 2: g = ',g);
 
 
 // Question 3
