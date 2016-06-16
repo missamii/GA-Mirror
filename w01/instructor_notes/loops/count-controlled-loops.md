@@ -10,7 +10,7 @@ specific `number of times`.
 
 -  In contrast, a condition controlled loop iterates a variable number of times – we control the # of iterations through our Boolean condition. Here's an example:
 
-		counter = 0;
+		 counter = 0;
     	while(counter < 5){
     		console.log("This will log 5 times");
     		counter += 1;
@@ -59,7 +59,7 @@ Write a program that asks the user to enter in an integer.
 Then find all numbers between 1 and 10,000 that are evenly divisible by that number.
 
 
-# Problem 
+# Problem
 
 Write a program that generates random lottery numbers for the user
 Ask the user for the number of digits they need as well as the high and low value of each digit (i.e. 6 digit number with digits ranging from 1 to 60)
@@ -70,16 +70,24 @@ Generate the desired lottery number
 
 Just like if statements, you can nest for loops inside of other for loops. Let's take a look!
 
-	var cols = "";
+var cols = "";
+var acc_outie = 0;
+var acc_innie = 0;
 
-	for(var i = 0; i < 3; i++){ // rows
-    	for(var j = 0; j < 3; j++){ // columns
-        	cols += " * ";
+for(var i = 0; i < 3; i++){ // rows
+    for(var j = 0; j < 3; j++){ // columns
+        cols += " * ";
+        acc_innie = acc_innie + 1;
     }
-    	console.log(cols);
-    	cols = "";
-    	console.log("");
-	}
+    console.log(cols);
+    cols = "";
+    console.log("");
+    acc_outie = acc_outie + 1;
+}
+
+console.log("outer loop ran this many times "+ acc_outie);
+console.log("the inner loop ran this many times "+ acc_innie);
+
 
 Some notes on nested loops:
 
