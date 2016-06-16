@@ -82,3 +82,16 @@ console.log(Math.ceil(cupsToKill))
 // Compute the number of cups
 
 // Log the answer to the console
+
+
+
+// E. ZOOOMBIE ARRAAAAAAAAAYYYS
+undead shopkeeper
+
+Object {scientistsResearchingCure: Array[2], humansFightingBack: Array[3], apocalypseHasHappened: true, zombieVirusCure: null};
+
+zombies[5].scientistsResearchingCure
+
+zombies.push("Ali");
+zombies.upshift("Boody");
+//I tried messing with the last two items. I'm pretty sure this isn't exactly correct. But I know that up
