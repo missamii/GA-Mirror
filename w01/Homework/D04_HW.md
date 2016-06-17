@@ -25,7 +25,20 @@ If you find yourself struggling with this part, go to the playlist [here](https:
 
 
 1. What's the keyword for creating a new variable in Javascript?
+
+```
+var 
+So it would essentially, it would look like this: var myName = ("Tiffany");
+```
+
 1. What do `if`, `else if`, and `else` do?
+
+    - `if` it states that if the condition is true, do this, otherwise do something else (or nothing).
+    - `else if` this will only run if the condition is true, and the previous statement's condition was false.
+    - `else`if the previous if statement is not true. This will get excuted, creating a loop.
+
+
+
 1. Give an example of an `array`, and why you might choose to use one to store data (i.e., what characteristics of the data make it suitable for using this datatype?)?
 1. Give an example of an `object` (what your fundamentals prework may have called 'associative arrays'). Under what circumstances would you choose to use one to store data instead of an array (what about the *nature* of the data makes an object a better choice)?
 1. Why would you choose to use a `while` loop instead of a `for` loop, or vice versa? (Think about what characteristics of the nature of your iteration make one more suitable than the other.) Read [I Don't Know JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch1.md), Chapter 1 if you want a loop-y refresher.
