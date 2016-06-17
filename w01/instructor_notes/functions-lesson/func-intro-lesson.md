@@ -8,6 +8,7 @@
 - PARAMETERS vs ARGUMENTS
 - NAMED vs ANONYMOUS functions
 - RETURN
+- Functions vs METHODS
 
 
 ---
@@ -245,6 +246,17 @@ animals.length
 ```
 
 
+---
+
+
+
+**Exercise:** 2-parameters.js
+
+
+
+---
+
+
 
 ### Anon functions
 - The functions we've been writing are simply known as `functions` or `named functions`
@@ -296,7 +308,7 @@ addOne()
 
 
 
-**Exercise:** 2-parameters.js
+**Exercise:** 3-functions-lab.js
 
 
 
