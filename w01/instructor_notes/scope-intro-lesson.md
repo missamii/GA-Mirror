@@ -250,6 +250,29 @@ wdi.whatsTheName();
 
 
 
+### Functions vs. Methods
+
+A function is called a `method` when it is a property on an object.
+
+```js
+var liza = {
+  name: 'liza',
+  sayName: function() {
+    console.log( this.name )
+  }
+}
+
+
+liza
+{ name: 'liza', sayName: [Function] }
+
+
+liza.sayName()
+=> liza
+=> undefined
+
+```
+
 
 
 
