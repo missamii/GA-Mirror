@@ -1,4 +1,4 @@
-# W01D04 Homework
+;# W01D04 Homework
 
 ![](http://i.giphy.com/4mYEvZksvTrKU.gif)
 
@@ -10,6 +10,20 @@ If you find yourself struggling with this part, go to the playlist [here](https:
 
 #### Datatypes, Conditionals, and Loops
 1. What are the different datatypes in JavaScript?
+
+*Primitive*
+    - String
+    - Number
+    - Boolean
+    - Undefined
+    - Null
+    
+*Non- Primitive*
+    - Array
+    - Object
+    - RegExp
+
+
 1. What's the keyword for creating a new variable in Javascript?
 1. What do `if`, `else if`, and `else` do?
 1. Give an example of an `array`, and why you might choose to use one to store data (i.e., what characteristics of the data make it suitable for using this datatype?)?
