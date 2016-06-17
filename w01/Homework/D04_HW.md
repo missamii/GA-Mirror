@@ -9,7 +9,7 @@
 If you find yourself struggling with this part, go to the playlist [here](https://www.youtube.com/playlist?list=PLw1xVKFbouelUj3g_56CRAUjGGEU13bPF). The relevant videos on datatypes, conditionals, loops, etc. are numbers 77 - 84. Each video is only about 4-7 minutes long!
 
 #### Datatypes, Conditionals, and Loops
-1. What are the different datatypes in JavaScript?
+2. What are the different datatypes in JavaScript?
 
 *Primitive*
     - String
@@ -24,14 +24,14 @@ If you find yourself struggling with this part, go to the playlist [here](https:
     - RegExp
 
 
-1. What's the keyword for creating a new variable in Javascript?
+3. What's the keyword for creating a new variable in Javascript?
 
 ```
 var 
 So it would essentially, it would look like this: var myName = ("Tiffany");
 ```
 
-1. What do `if`, `else if`, and `else` do?
+4. What do `if`, `else if`, and `else` do?
 
     - `if` it states that if the condition is true, do this, otherwise do something else (or nothing).
     - `else if` this will only run if the condition is true, and the previous statement's condition was false.
@@ -39,10 +39,18 @@ So it would essentially, it would look like this: var myName = ("Tiffany");
 
 
 
-1. Give an example of an `array`, and why you might choose to use one to store data (i.e., what characteristics of the data make it suitable for using this datatype?)?
-1. Give an example of an `object` (what your fundamentals prework may have called 'associative arrays'). Under what circumstances would you choose to use one to store data instead of an array (what about the *nature* of the data makes an object a better choice)?
-1. Why would you choose to use a `while` loop instead of a `for` loop, or vice versa? (Think about what characteristics of the nature of your iteration make one more suitable than the other.) Read [I Don't Know JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch1.md), Chapter 1 if you want a loop-y refresher.
-1. What's wrong with the `for` loop in the code below? Fix it so the code runs properly:
+5. Give an example of an `array`, and why you might choose to use one to store data (i.e., what characteristics of the data make it suitable for using this datatype?)?
+
+    - An array is like a list. It can be made of text or numbers. I would use it to list names, places, items and so for.
+
+
+6. Give an example of an `object` (what your fundamentals prework may have called 'associative arrays'). Under what circumstances would you choose to use one to store data instead of an array (what about the *nature* of the data makes an object a better choice)?
+
+
+
+7. Why would you choose to use a `while` loop instead of a `for` loop, or vice versa? (Think about what characteristics of the nature of your iteration make one more suitable than the other.) Read [I Don't Know JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch1.md), Chapter 1 if you want a loop-y refresher.
+
+8. What's wrong with the `for` loop in the code below? Fix it so the code runs properly:
 
   ```js
   var awesomePeople = ["Ethan", "Liza", "Emma", "Syed"]
