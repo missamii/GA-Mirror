@@ -92,8 +92,8 @@ write the code to perform the tasks required.
     /if you're stuck, Google 'random number JavaScript')
     */
 
-    var index
-    var guessedLetters = Math.floor(Math.random());
+    var index[0];
+    var guessedLetters = Math.floor((Math.random() * 10) + 1);
 
     /*
     now set this.currentWord equal to the word in this.wordsArray at that index!
@@ -102,7 +102,8 @@ write the code to perform the tasks required.
     set equal to this.wordsArray[2], which is "pears"
     */
 
-    //your code here
+    this.currentWord = "Galaxy";
+    this.wordsArray[0];
 
     /*
     ok, now we need to loop over each letter in this.currentWord and push an
