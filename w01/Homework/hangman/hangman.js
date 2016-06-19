@@ -69,7 +69,7 @@ write the code to perform the tasks required.
     */
 
      console.log(this);
-     this.guess = 10
+     this.guess = 10;
 
     /*
     now we also need to make sure the guessedLetters array is blank (in case
@@ -77,7 +77,9 @@ write the code to perform the tasks required.
     thing you just did, but this time setting this.guessedLetters = []
     */
 
-    // your code here
+    this.guessedLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+          'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+          't', 'u', 'v', 'w', 'x', 'y', 'z'];;
 
     /*
     ok now we get a little more complex. We want to select a random word from our
