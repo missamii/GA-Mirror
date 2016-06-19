@@ -92,8 +92,8 @@ write the code to perform the tasks required.
     /if you're stuck, Google 'random number JavaScript')
     */
 
-    var index[0];
-    var guessedLetters = Math.floor((Math.random() * 10) + 1);
+    var index = Math.floor((Math.random() * wordsArray.length);
+    this currentWord = wordsArray[index];
 
     /*
     now set this.currentWord equal to the word in this.wordsArray at that index!
@@ -114,7 +114,10 @@ write the code to perform the tasks required.
     ["_","_","_","_","_"] (5 underscores)
     */
 
-    //your code here
+    var underscores ="";
+      for(var i=0;i<wordLength;i++){
+        underscores+= "<div class='underscore'></div>";
+}
 
     /*
     alright!
