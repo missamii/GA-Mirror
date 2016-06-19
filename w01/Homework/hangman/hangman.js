@@ -25,11 +25,13 @@ not methods, like Math.PI (3.14159...)
 Go ahead and replace 'null' in the different properties below with the correct values.
 */
 
-  guesses: null,
-  guessedLetters: null,
-  currentWord: null,
-  hangmanWord: null,
-  wordsArray: null,
+  Game.guesses = 10;
+  Game.guessedLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  Game.currentWord = "Honda";
+  Game.hangmanWord = "Mercedes";
+  Game.wordsArray = ["Honda", "Toyota", "Audi", "Mercedes"];
 
 /*
 Now we get into the meat of the game: the methods that give it life! For each
