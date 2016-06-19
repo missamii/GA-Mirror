@@ -2,29 +2,6 @@
 console.log('hangman.js loaded');
 
 var Game = {
-/*
-let's start by initializing the properties of the Game object.
-we will set the following properties (I've given you the properties, just set the values)
-guesses -- set it to 10 initially
-guessedLetters -- initially an empty array
-currentWord -- initally an empty string
-hangmanWord -- initally an empty array
-wordsArray -- an array of strings, where each string is one of the words in the game.
-E.g., my wordsArray when I wrote this was:
-[ "javascript", "python", "developer", "programmer", "general", "assembly"]
-
-then we need the various methods to actually run the game. Remember: the properties
-of an object (which is all Game is) can be any value: primitives like strings,
-numbers, Booleans, undefined, etc., or data structures like arrays and other objects.
-Since functions are themselves a kind of object in JavaScript, they too can be the
-properties of an object (in which case we call them the object's "methods"). For
-example, the built-in Math object has lots of methods you've used already, like
-Math.random() and Math.floor(). Other properies of the Math object are numbers,
-not methods, like Math.PI (3.14159...)
-
-Go ahead and replace 'null' in the different properties below with the correct values.
-*/
-
   Game.guesses: 10;
   Game.guessedLetters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -34,40 +11,8 @@ Go ahead and replace 'null' in the different properties below with the correct v
   Game.wordsArray: ["Galaxy", "Nebula", "Star"];
 }
 
-/*
-Now we get into the meat of the game: the methods that give it life! For each
-function (aka "method" since it's a property of the Game object), you'll need to
-write the code to perform the tasks required.
-*/
-
   startGame: function(wordsArray) {
 
-    /*
-    this one starts off easy:
-   first thing you need to do is set the guesses property you just created
-   above to 10 (I know you did that already -- but what if it's the second time
-   you played the game? Just to be safe, we want to initialize each start of this
-   game with guesses = 10.)
-
-   there's only one thing tricky about this: SCOPE
-   you need to refer to the guesses property above. But it's a property on the
-   Game object. fortunately we know a special keyword: 'this' which inside an
-   object, refers to the object itself. So inside the startGame function, which
-   is a property of the Game object, 'this' will refer to the Game object. So
-   you'll need to set not simply
-   guesses = 10;
-   but
-   this.guesses = 10;
-
-   you're going to be using 'this' throughout this game to refer to other functions
-   and properties in the game object! Get used to it! IF YOU'RE EVER UNSURE OF
-   THE SCOPE, I.E., WHAT THE CURRENT VALUE OF 'THIS'IS, THEN CONSOLE.LOG IT!!
-
-   so first of all, do that. insert a console.log(this); statement below.
-
-   then set this.guess = 10.
-
-    */
 
      console.log(this);
      this.guess = 10;
@@ -82,37 +27,12 @@ write the code to perform the tasks required.
           'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
           't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-    /*
-    ok now we get a little more complex. We want to select a random word from our
-    array of words. This means we need a random number between 0 and the *length*
-    of the array, rounded down to the nearest integer. I.e., if we have 7 words in
-    our word array, we want a random integer between 0 and 6. (0,1,2,3,4,5, or 6).
-
-    create a variable called 'index' and set it equal to that.
-    /if you're stuck, Google 'random number JavaScript')
-    */
 
     var index = Math.floor((Math.random() * wordsArray.length);
-    this currentWord = wordsArray[index];
+    this.currentWord = wordsArray[index];
+    this.currentWord = "Nebula";
+    this.wordsArray[1];
 
-    /*
-    now set this.currentWord equal to the word in this.wordsArray at that index!
-    // so that if this.wordsArray = ["apples", "bananas", "pears"]
-    // and the value of your index variable was 2, then this.currentWord would be
-    set equal to this.wordsArray[2], which is "pears"
-    */
-
-    this.currentWord = "Galaxy";
-    this.wordsArray[0];
-
-    /*
-    ok, now we need to loop over each letter in this.currentWord and push an
-    underscore ("_") into our hangmanWord array for each letter.vso if our current
-    word was "pie" then when you're done hangmanWord would look like this:
-    ["_", "_", "_"] (3 underscores)
-    while if the current word was "apple", it would look like this:
-    ["_","_","_","_","_"] (5 underscores)
-    */
 
     var underscores ="";
       for(var i=0;i<wordLength;i++){
@@ -131,7 +51,7 @@ write the code to perform the tasks required.
     in the appropriate values as arguments (we'll write the render function itself next):
     */
 
-    //your code here
+    // console.log all you need here 3x
 
     /*
     one last step in startGame() and the game has started in earnest. We need to
@@ -144,7 +64,7 @@ write the code to perform the tasks required.
     in userGuess. So pass that in as an argument.
     */
 
-    //your code here
+    //you
 
     /*
     BONUS IF YOU'VE FINISHED THE GAME! you can do the above two steps in one line of
