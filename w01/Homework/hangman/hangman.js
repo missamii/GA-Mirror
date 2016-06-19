@@ -29,9 +29,9 @@ Go ahead and replace 'null' in the different properties below with the correct v
   Game.guessedLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
         't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  Game.currentWord = "Honda";
-  Game.hangmanWord = "Mercedes";
-  Game.wordsArray = ["Galaxy", "Nebula", "Star", "Mercedes"];
+  Game.currentWord = "Galaxy";
+  Game.hangmanWord = "Nebula";
+  Game.wordsArray = ["Galaxy", "Nebula", "Star"];
 
 /*
 Now we get into the meat of the game: the methods that give it life! For each
@@ -79,7 +79,7 @@ write the code to perform the tasks required.
 
     this.guessedLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
           'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-          't', 'u', 'v', 'w', 'x', 'y', 'z'];;
+          't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
     /*
     ok now we get a little more complex. We want to select a random word from our
@@ -91,7 +91,8 @@ write the code to perform the tasks required.
     /if you're stuck, Google 'random number JavaScript')
     */
 
-    //your code here
+    var index
+    var guessedLetters = Math.floor(Math.random());
 
     /*
     now set this.currentWord equal to the word in this.wordsArray at that index!
