@@ -31,7 +31,7 @@ Go ahead and replace 'null' in the different properties below with the correct v
         't', 'u', 'v', 'w', 'x', 'y', 'z'];
   Game.currentWord = "Honda";
   Game.hangmanWord = "Mercedes";
-  Game.wordsArray = ["Honda", "Toyota", "Audi", "Mercedes"];
+  Game.wordsArray = ["Galaxy", "Nebula", "Star", "Mercedes"];
 
 /*
 Now we get into the meat of the game: the methods that give it life! For each
@@ -68,7 +68,8 @@ write the code to perform the tasks required.
 
     */
 
-    // your code here
+     console.log(this);
+     this.guess = 10
 
     /*
     now we also need to make sure the guessedLetters array is blank (in case
