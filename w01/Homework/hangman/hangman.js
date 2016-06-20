@@ -12,6 +12,7 @@ var Game = {
      console.log(this); //take this out later
      this.guesses = 10;
      this.guessedLetters = [];
+     this.currentWord = wordsArray[Math.floor(Math.random() * wordsArray.length)]
      letter = prompt("Guess a letter!")
      guess(letter);
 }
