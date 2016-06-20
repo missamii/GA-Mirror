@@ -13,38 +13,37 @@ var Game = {
      this.guesses = 10;
      this.guessedLetters = [];
      this.currentWord = wordsArray[Math.floor(Math.random() * wordsArray.length)]
-     letter = prompt("Guess a letter!")
-     guess(letter);
+
+var userGuess =
+     this.promptUser("Guess a letter!")
+      function functionName() { // we're going to write that function in a minute
+
 }
-    var index = Math.floor((Math.random() * wordsArray.length);
+     this.guess()
+      function functionName() { //again, we'll write this function below
+
+     }
+
+var index = Math.floor((Math.random() * wordsArray.length);{
     this.currentWord = wordsArray[index];
     this.wordsArray[1];
-
+}
     var Game ="";
       for(var i=0;i<currentWord.length;i++){
         hangmanWord.push("_");
 }
     this.render();
-      console.log("The hangman word was %s", "this.currentWord");
-      console.log("Your total number of guesses are %s","this.guesses");
-      console.log("Your guessed letters are %s", "this.guessedLetters");
+      console.log("The hangman word was", "this.currentWord");
+      console.log("Your total number of guesses are","this.guesses");
+      console.log("Your guessed letters are", "this.guessedLetters");
 
 function Game() {
 
+promptUser
 }
 
-    /*
-    one last step in startGame() and the game has started in earnest. We need to
-    us prompt() to tell the user to enter a letter, and then we need to evaluate it.
-    let's do it in two steps here.
-    (1)create a variable called userGuess. Set it equal to the result of calling
-    this.promptUser() (we're going to write that function in a minute).
-    (2) call this.guess() (again, we'll write this function below). This function will
-    take one argument, the letter the player guessed.Which is what we just stored
-    in userGuess. So pass that in as an argument.
-    */
 
-    //you
+    //you code here
 
     /*
     BONUS IF YOU'VE FINISHED THE GAME! you can do the above two steps in one line of
