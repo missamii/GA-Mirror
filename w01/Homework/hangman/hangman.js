@@ -1,57 +1,36 @@
-//ETHAN NOTES:
 console.log('hangman.js loaded');
 
 var Game = {
-  Game.guesses: 10;
-  Game.guessedLetters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-        't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  Game.currentWord: "Galaxy";
-  Game.hangmanWord: "Nebula";
-  Game.wordsArray: ["Galaxy", "Nebula", "Star"];
-}
+  guesses: 10;
+  guessedLetters: [];
+  currentWord: "";
+  hangmanWord: "";
+  wordsArray: [];
+} // remove curly later
 
   startGame: function(wordsArray) {
-
-
-     console.log(this);
-     this.guess = 10;
-
-    /*
-    now we also need to make sure the guessedLetters array is blank (in case
-    there are letters in it from the last time we played the game). Do the same
-    thing you just did, but this time setting this.guessedLetters = []
-    */
-
-    this.guessedLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-          'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-          't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
-
+     console.log(this); //take this out later
+     this.guesses = 10;
+     this.guessedLetters = [];
+     letter = prompt("Guess a letter!")
+     guess(letter);
+}
     var index = Math.floor((Math.random() * wordsArray.length);
     this.currentWord = wordsArray[index];
-    this.currentWord = "Nebula";
     this.wordsArray[1];
 
-
-    var underscores ="";
-      for(var i=0;i<wordLength;i++){
-        underscores+= "<div class='underscore'></div>";
+    var Game ="";
+      for(var i=0;i<currentWord.length;i++){
+        hangmanWord.push("_");
 }
+    this.render();
+      console.log("The hangman word was %s", "this.currentWord");
+      console.log("Your total number of guesses are %s","this.guesses");
+      console.log("Your guessed letters are %s", "this.guessedLetters");
 
-    /*
-    alright!
-    now let's start the game going! We need to start by displaying the current
-    state of the hangmanWord (at first it's completely unknown), the number of
-    guesses remaining, and the letters that have been guessed so far. We call
-    displaying something to the page (or in this case, the console), 'rendering'
-    it. So we're going to call another function here, which we'll write below,
-    called this.render(). render takes THREE parameters: the hangmanWord, the number of
-    guesses remaining, and the letters guessed so far. Call render here, passing
-    in the appropriate values as arguments (we'll write the render function itself next):
-    */
+function Game() {
 
-    // console.log all you need here 3x
+}
 
     /*
     one last step in startGame() and the game has started in earnest. We need to
