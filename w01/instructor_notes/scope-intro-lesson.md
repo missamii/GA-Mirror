@@ -9,106 +9,7 @@
 - Define HOISTING
 - Variable vs. function hoisting
 - `this` and how it relates to scope
-
-
-
----
-
-
-
-### JS interpretation process
-- We write js code & things magically happen in the browser.
-- Chrome and Node both use the V8 JS engine
-- V8 (written in C++) compiles JS source code directly into machine code
-
-
-### Hoisting
-- JS interpreters move all variable *declarations* to the top of the current scope.
-- Only the *declarations* are hoisted. *Assignments* are left where they are.
-
-
-Variable hoisting:
-
-```js
-function foo() {
-  var foo = 1;
-  var bar = 2;
-  var baz = 3;
-
-  console.log(foo + " " + bar + " " + baz);
-}
-
-=> 1 2 3
-
-
-// what happens if we move the log?
-function foo() {
-  var foo = 1;
-  console.log(foo + " " + bar + " " + baz);
-  var bar = 2;
-  var baz = 3;
-}
-
-=> 1 undefined undefined
-
-
-// This is how the interpreter actually reads the above code:
-function foo() {
-  var foo;
-  var bar;
-  var baz;
-
-  foo = 1;
-  console.log(foo + " " + bar + " " + baz);
-  bar = 2;
-  baz = 3;
-}
-
-```
-
-What's happening here?
-
-The interpreter `hoists` the *declarations* of the variables, but not the *assignments*. It knows that these variables exists, but it doesn't know *what their values are*.
-
-By the time the `console.log` runs, it only knows the value of `foo`. The other two are undefined.
-
-
-
-### Function hoisting
-- Function definitions *and* declarations are hoisted (so, the entire thing).
-- That means functions have global scope.
-- For this reason, typically when we talk about scope, we are referring to variables.
-
-```js
-
-isItHoisted();
-// Outputs: "Yes!"
-
-function isItHoisted() {
-  console.log("Yes!");
-}
-
-```
-
-
-### What about anonymous function hoisting?
-Remember what an anon. fxn is?
-
-```js
-
-// regular
-function helloLiza() {
-  console.log('liza');
-}
-
-// anon.
-var helloLiza = function() {
-  console.log('liza');
-}
-
-```
-
-- Anon. fxns are considered variables. The declaration is hoisted but not the assignment.
+- functions vs. METHODS
 
 
 ---
@@ -179,9 +80,9 @@ function helloLiza() {
   console.log( liza );
 }
 
-helloLiza();
-
 var liza = 'liza';
+
+helloLiza();
 
 ```
 
@@ -224,6 +125,116 @@ console.log(liza); // this does not
 
 
 
+### Hoisting
+- We write js code & things magically happen in the browser.
+- Chrome and Node both use the V8 JS engine, or interpreter
+- During the interpretation process, JS interpreters move all variable *declarations* to the top of the current scope.
+- Only the *declarations* are hoisted. *Assignments* are left where they are.
+
+
+Variable hoisting:
+
+```js
+function foo() {
+  var foo = 1;
+  var bar = 2;
+  var baz = 3;
+
+  console.log(foo + " " + bar + " " + baz);
+}
+
+=> 1 2 3
+
+
+
+
+
+
+
+
+// what happens if we move the log?
+function foo() {
+  var foo = 1;
+  console.log(foo + " " + bar + " " + baz);
+  var bar = 2;
+  var baz = 3;
+}
+
+=> 1 undefined undefined
+
+
+
+
+
+
+
+
+
+
+// This is how the interpreter actually reads the above code:
+function foo() {
+  var foo;
+  var bar;
+  var baz;
+
+  foo = 1;
+  console.log(foo + " " + bar + " " + baz);
+  bar = 2;
+  baz = 3;
+}
+
+```
+
+What's happening here?
+
+The interpreter `hoists` the *declarations* of the variables, but not the *assignments*. It knows that these variables exists, but it doesn't know *what their values are*.
+
+By the time the `console.log` runs, it only knows the value of `foo`. The other two are undefined.
+
+
+
+### Function hoisting
+- Function definitions *and* declarations are hoisted (so, the entire thing).
+- That means functions have global scope.
+- For this reason, typically when we talk about scope, we are referring to variables.
+
+```js
+
+isItHoisted();
+// Outputs: "Yes!"
+
+function isItHoisted() {
+  console.log("Yes!");
+}
+
+```
+
+
+### What about anonymous function hoisting?
+Remember what an anon. fxn is?
+
+```js
+
+// regular
+function helloLiza() {
+  console.log('liza');
+}
+
+// anon.
+var helloLiza = function() {
+  console.log('liza');
+}
+
+```
+
+- Anon. fxns are considered variables. The declaration is hoisted but not the assignment.
+
+
+
+---
+
+
+
 ### A little teeny tiny bit about `THIS`
 - `this` in JS is a tricky concept to describe.
 - The `this` keyword is an object provided by the language whose scope and context is evaluated at runtime (rather than during interpretation/compiling)
@@ -248,8 +259,6 @@ wdi.whatsTheName();
 - More on `this` later...
 
 
-
-
 ### Functions vs. Methods
 
 A function is called a `method` when it is a property on an object.
@@ -264,12 +273,12 @@ var liza = {
 
 
 liza
-{ name: 'liza', sayName: [Function] }
+=> { name: 'liza', sayName: [Function] }
 
 
 liza.sayName()
 => liza
-=> undefined
+=> undefined // because the method has no explicit return, of course 
 
 ```
 
