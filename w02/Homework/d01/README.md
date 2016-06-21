@@ -18,23 +18,23 @@ var h = '2'
 var i = '0'
 var j = 0
 ```
-
-1. ```a === c - b```
-- ```c === d % e```
-- ```b === e / 4```
-- ```"Hello world" && true```
-- ```a === e % d - b * c - b + d + 1```
-- ```f === false```
-- ```f != "Hello world" && false```
-- ```f === g```
-- ```f == g```
-- ```h !== b```
-- ```h != b```
-- ```!a```
-- ```!f```
-- ```i == j```
-- ```i && false```
-- ```j || false```
+                                ###### My Guess       ###### The Correct Answer
+1. ```a === c - b```                      false
+- ```c === d % e```                       false
+- ```b === e / 4```                       true
+- ```"Hello world" && true```             true
+- ```a === e % d - b * c - b + d + 1```   true
+- ```f === false```                       false
+- ```f != "Hello world" && false```       false
+- ```f === g```                           true
+- ```f == g```                            true
+- ```h !== b```                           false               true
+- ```h != b```                            false               false
+- ```!a```                                false               false
+- ```!f```                                false               true
+- ```i == j```                            true                true
+- ```i && false```                        false               false
+- ```j || false```                        false               false
 
 ================
 

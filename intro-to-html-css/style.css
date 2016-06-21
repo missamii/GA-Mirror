@@ -1,0 +1,64 @@
+bg {
+background-color: #777FDC
+background-url: <!---check what the img scr link looks like again i forgot -->
+}
+
+h1 {
+  font-family: fantasy;
+  font-style: italic;
+  font-weight: bold;
+  color: #888FDC
+}
+
+blockquote {
+  font-weight: lighter;
+  font-size: 17pt
+  font-style: italic;
+  padding-bottom: 10px
+}
+
+a {
+  color: #00688B;
+  font-style: underline dotted;
+  cursor: crosshair;
+}
+
+strong {
+  font-weight: 14pt;
+  color: #236B8E;
+}
+i {
+color: # ;
+font-weight: ;
+}
+u {
+
+}
+.meow {
+  color: ;
+}
+#woof{
+  font-weight: bolder;
+}
+div.menu-bar li:hover > ul{
+  display: block;
+
+}
+.carrot {
+  color: orange;
+}
+.spinach {
+
+}
+#first {
+  font-style: italic;
+}
+
+a.homepage:hover, a.homepage:focus, a.homepage:active {
+  background-color: #777
+}
+
+a.homepage:link, a.homepage:visited {
+  padding: 120px 40px 100px 40px;
+
+}
