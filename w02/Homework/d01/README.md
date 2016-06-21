@@ -41,26 +41,23 @@ var j = 0
 ### PART 2: HTML/CSS
 
  1. Research HTML tags (there's this website called Google.com....). Make a list of tags, along with each tag's intended use in the HTML. Start with these common tags:
-  * div --  tag defines a division or a section in an HTML document. And is used to group block-elements to format them with CSS.
-  * p -- defines paragraphs
-  * a
-  * span
-  * ul
-  * li
-  * nav
-  * head
-  * body
-  * html
-  * button
-  * script
+  * div -- <div></div> tag defines a division or a section in an HTML document. And is used to group block-elements to format them with CSS.
+  * p -- <p></p> defines paragraphs
+  * a -- <a href=""></a> defines a hyperlink
+  * span -- <span style="color:red"></span> A element used to color a part of a text
+  * ul -- <ul></ul> <ul> tag defines an unordered (bulleted) list.
+  * li -- <li></li> tag defines a list item.
+  * nav -- <nav></nav>  tag defines a set of navigation links.
+  * head -- <head> element is a container for all the head elements.
+  * body -- <body></body> tag defines the document's body.
+  * html -- <html></html>  tag tells the browser that this is an HTML document.
+  * button -- <button type="button"></button> tag defines a clickable button.
+  * script -- <script></script> tag is used to define a client-side script (JavaScript).
 
-  *
-  *
-  *
-  *
-  *
-  *
-  *
+  * acronym -- <acronym> tag defines an acronym. An acronym must spell out another word. For example: NASA, ASAP, GUI. It is not supported by HTML5.
+  * address -- <address></address> tag defines the contact information for the author/owner of a document or an article.
+  * ol -- <ol> tag defines an ordered list.
+  * fieldset -- <fieldset> tag is used to group related elements in a form.
 1. List at least 5 others we haven't covered in class yet, along with their use.
 1. Go to the class repo (*not* to your fork, go to the main repo [here](https://github.com/ga-students/wdi-nyc-robots)). Click on the 'wiki' tab. You'll see a wiki page for HTML tags. Add any tags you researched to the wiki page, along with a one-sentence description of what they're for. Everyone needs to add at least one tag to the wiki page (ideally all 5 you found that we haven't reviewed yet, but we do recognize that the last students to do this may have found some of the tags they researched have already been added by others.)
 1. CSS!
