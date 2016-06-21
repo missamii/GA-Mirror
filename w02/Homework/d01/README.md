@@ -41,8 +41,8 @@ var j = 0
 ### PART 2: HTML/CSS
 
  1. Research HTML tags (there's this website called Google.com....). Make a list of tags, along with each tag's intended use in the HTML. Start with these common tags:
-  * div
-  * p
+  * div --  tag defines a division or a section in an HTML document. And is used to group block-elements to format them with CSS.
+  * p -- defines paragraphs
   * a
   * span
   * ul
@@ -53,6 +53,14 @@ var j = 0
   * html
   * button
   * script
+
+  *
+  *
+  *
+  *
+  *
+  *
+  *
 1. List at least 5 others we haven't covered in class yet, along with their use.
 1. Go to the class repo (*not* to your fork, go to the main repo [here](https://github.com/ga-students/wdi-nyc-robots)). Click on the 'wiki' tab. You'll see a wiki page for HTML tags. Add any tags you researched to the wiki page, along with a one-sentence description of what they're for. Everyone needs to add at least one tag to the wiki page (ideally all 5 you found that we haven't reviewed yet, but we do recognize that the last students to do this may have found some of the tags they researched have already been added by others.)
 1. CSS!
