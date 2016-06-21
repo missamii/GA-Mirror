@@ -19,15 +19,15 @@ var i = '0'
 var j = 0
 ```
                                 ###### My Guess       ###### The Correct Answer
-1. ```a === c - b```                      false
-- ```c === d % e```                       false
-- ```b === e / 4```                       true
-- ```"Hello world" && true```             true
-- ```a === e % d - b * c - b + d + 1```   true
-- ```f === false```                       false
-- ```f != "Hello world" && false```       false
-- ```f === g```                           true
-- ```f == g```                            true
+1. ```a === c - b```                      false               true
+- ```c === d % e```                       false               false
+- ```b === e / 4```                       true                true
+- ```"Hello world" && true```             true                true
+- ```a === e % d - b * c - b + d + 1```   true                true
+- ```f === false```                       false               true
+- ```f != "Hello world" && false```       false               false
+- ```f === g```                           true                false
+- ```f == g```                            true                false
 - ```h !== b```                           false               true
 - ```h != b```                            false               false
 - ```!a```                                false               false
