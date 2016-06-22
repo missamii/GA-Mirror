@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  width: 100%;
+}
+.site-wrapper {
+  /*border: 1px solid red;*/
+  width: 90%;
+  margin: 0 5%;
+  /*height: 500px;*/
+  padding: 20px;
+}
+[class*='col-'] {
+  border: 1px solid blue;
+  padding: 20px;
+  float: left;
+}
+
+.header,
+.ad {
+  text-align: center;
+}
+
+.col-left {
+  width: 66.66%;
+}
+.col-right {
+  width: 33.33%;
+  /*height: 200px;*/
+}

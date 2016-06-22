@@ -1,0 +1,52 @@
+
+/*==========  Mobile first boilerplate ==========*/
+
+/* Styles here apply to any device */
+body {
+  padding: 20px;
+}
+h1 {
+  color: yellow;
+}
+
+/* Ask yourself ...is the width a min. of x pixels? */
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  body {
+    background-color: blue;
+    color: pink;
+  }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  body {
+    background-color: green;
+    color: lightblue;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  body {
+    background-color: lightpink;
+    color: orange;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  body {
+    background-color: turquoise;
+    color: white;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  body {
+    background-color: purple;
+    color: turquoise;
+  }
+}
