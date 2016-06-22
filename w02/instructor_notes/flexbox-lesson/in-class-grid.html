@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>grid demo</title>
+    <style>
+    * {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .site-wrapper {
+      border: 2px solid blue;
+      width: 90%;
+      margin: 0 5%;
+      padding: 20px;
+      min-height: 500px;
+    }
+
+    .row {
+      border: 1px dotted red;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .col {
+      border: 1px dotted green;
+      float: left;
+    }
+
+    #silly-id {
+      border: 5px dotted pink;
+    }
+    .nav-col {
+      min-height: 100px;
+      border: 10px solid khaki;
+    }
+
+    .jumbotron-col {
+      min-height: 200px;
+    }
+
+    .content-col {
+      min-height: 500px;
+      width: 25%;
+    }
+    .card-col {
+      border: 2px dotted red;
+      min-height: 70px;
+      padding: 5px;
+      margin: 25px 0;
+    }
+
+    .inside-card-col {
+      border: 1px dashed blue;
+      min-height: 50px;
+    }
+
+    .inside-card-col-1 {
+      width: 30%;
+    }
+
+    .inside-card-col-2 {
+      width: 70%;
+    }
+
+    .middle-col {
+      width: 25%;
+      border: 2px dotted green;
+    }
+
+    .right-col {
+      width: 50%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="site-wrapper">
+
+      <!-- begin the grid -->
+      <div class="grid">
+
+        <!-- navigation row -->
+        <div class="row nav-row">
+          <div id="silly-id" class="col nav-col">Hi I'm Nav</div>
+        </div>
+
+        <!-- jumbotron row -->
+        <div class="row jumbotron-row">
+          <div class="col jumbotron-col">Dude I'm a jumbotron</div>
+        </div>
+
+        <!-- content row -->
+        <div class="row content-row">
+
+          <!-- left col -->
+          <div class="col content-col">
+            <div class="row">
+              <!-- card -->
+              <div class="col card-col"></div>
+                <div class="row">
+                  <div class="col inside-card-col inside-card-col-1"></div>
+                  <div class="col inside-card-col inside-card-col-2"></div>
+                </div>
+            </div>
+
+            <div class="row">
+              <!-- card -->
+              <div class="col card-col"></div>
+                <div class="row">
+                  <div class="col inside-card-col inside-card-col-1"></div>
+                  <div class="col inside-card-col inside-card-col-2"></div>
+                </div>
+            </div>
+
+          </div>
+
+          <div class="col content-col middle-col"></div>
+          <div class="col content-col right-col"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
