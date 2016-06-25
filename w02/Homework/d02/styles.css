@@ -1,66 +1,162 @@
 /*YOUR STYLING GOES HERE*/
-body {
-    background: red; /* For browsers that do not support gradients -thanks W3Schools*/
-    background: linear-gradient(#008B8B, #70DBDB); /* Standard syntax -thanks W3Schools*/
-}
-.sun {
-    color: #FFE600;
-    height: 100px;
-    weight: 100px;
-    border-radius: 50px;
-    -moz-border-radius: 50px;
-	  -webkit-border-radius: 50px;
-}
-.sky {
 
-
+#sun {
+      background: #FFE600;
+      width: 160px;
+    	height: 160px;
+      left: 100px;
+      top: 90px;
+      position: absolute;
+    	-moz-border-radius: 90px;
+    	-webkit-border-radius: 90px;
+    	border-radius: 90px;
+}
+#sky {
+      background: linear-gradient(#008B8B, #70DBDB); /* Standard syntax -thanks W3Schools*/
+      position: fixed;
+      width: 4000px;
+      height: 600px;
+      padding: 0px;
+      margin: -0px;
+      padding:3px 0;
 }
 
 .cloud-container {
-  color: #E8E8E8;
-  width: 350px;
-  height: 120px;
-  z-index: 1;
-  -webkit-filter: blur(3px);
-}
-.clouds {
-    color: #E8E8E8;
+    color: #CDC9C9;
     width: 350px;
     height: 120px;
-    z-index: 1;
-    -webkit-filter: blur(3px);
+    position: absolute;
+    left: 100px;
+    top: -20px;
+    -webkit-filter: blur(25px);
 }
-.fluff {
-  color: #E8E8E8;
+.clouds:nth-child(1) {
+    background: red;
+    width: 500px;
+    height: 120px;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    border-radius: 200px;
+}
+.clouds:nth-child(2) {
+  background: red;
+  width: 500px;
+  height: 120px;
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  border-radius: 200px;
+}
+.clouds:nth-child(3) {
+  background: red;
+  width: 500px;
+  height: 120px;
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  border-radius: 200px;
+}
+.fluff:nth-child(1) {
+  background: #E8E8E8;
+  width: 200px;
+  height: 135px;
+  position: absolute;
+  top: 85px;
+  left: 900px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+}
+
+.fluff:nth-child(2) {
+  background: #E8E8E8;
+  width: 200px;
+  height: 135px;
+  position: absolute;
+  top: 80px;
+  left: 600px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+}
+
+}
+.fluff:nth-child(3) {
+   background: #E8E8E8;
+   width: 200px;
+   height: 135px;
+   position: absolute;
+   top: 80px;
+   left: 400px;
+   -webkit-border-radius: 200px;
+   -moz-border-radius: 200px;
+   border-radius: 200px;
 }
 
 .earth {
-  top: 0;
+  top: 480px;
 	left: 0;
-	width: 100%;
-	height: 300px;
+	height: 400px;
+  width: 200%;
+  margin: auto;
 	background: #397D02;
+  position: fixed;
 }
 
 .castle {
-  color: #B4CDCD;
+  background: #B4CDCD;
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  left: 500px;
+  top: -230px;
 }
 .inner-castle {
-  color: ;
-
+  background: #B4CDCD;
+  position: absolute;
+  width: 90px;
+  height: 70px;
+  top: 100px;
+  left: 200px;
+  position: absolute;
 }
 .battlements {
-  color: ;
+  background: #B4CDCD;
+  left: 200px;
+  top: 200px;
+  width: 300px;
+  height: 50px
+  position: absolute;
 
 }
 .lever {
-  color: ;
+  background: #000000;
+  position: absolute;
+  left: 75px;
+  top: 200px;
+  width: 7px;
+  height: 60px;
 }
 .gate {
-  color: ;
+  background: #AA5303;
+  width: 120px;
+  height: 230px;
+  position: fixed;
+  left: 600px;
+  top: 404px;
+  border-radius: 10px 10px 0px 0px;
 
 }
-. moat{
-  color: #3299CC;
-  border-radius: 100px / 50px; 
+.moat {
+  position: fixed;
+  top: 600px;
+  left: 380px;
+  width: 600px;
+	height: 90px;
+	background: #3299CC;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+  z-index: -1;
 }
