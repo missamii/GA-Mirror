@@ -20,7 +20,6 @@ function makeMiddleEarth() {
       article.appendChild(h1);
       middleEarth.appendChild(article);
     }
-    
     body.appendChild(middleEarth);
     // add each land as an article tag (add them one by one in a loop)
     // inside each article tag include an h1 with the name of the land
