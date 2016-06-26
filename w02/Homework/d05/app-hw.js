@@ -50,8 +50,9 @@ passing in the initial scene and choices (which were initially set up above for 
   (4) it should call initializeRecognition, to start the speech listener,
   (5) it should set inProgress to true;
   and finally (6) it should call playGame to begin the game */
-function start() {
-  console.log('starting game');
+function startGame() {
+  
+}
   //your code here
 
 }
@@ -61,8 +62,10 @@ function start() {
 // (2) fill the .display div with what's passed in as 'text', and
 // (3) iterate over the storyChoices that were passed in and for each one
 // create a new <p> with class "game-options" and add them all to the .choices div
-function renderStory(text, storyChoices) {
-  console.log("rendering the next scene in the story");
+function renderStory() {
+
+}
+  game-options.document.createElement("p")
   //your code here
 
 }
