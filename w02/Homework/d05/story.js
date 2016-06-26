@@ -138,7 +138,7 @@ var story = {
     down here? Fantasies of crates of gold bullion dance in your head.) and slowly head down. You didn&#8217;t \
     remember to bring a flashlight, something for which you are kicking yourself now, and only a thin stream \
     of light from the kitchen above illuminates the basement as you reach the bottom. Odd that there are no windows \
-    &mdash; no, that&#8217;s wrong: there <span class=italics>were</span windows, but they&#8217;ve been \
+    &mdash; no, that&#8217;s wrong: there <span class=italics>were</span> windows, but they&#8217;ve been \
     thoroughly boarded up, so thoroughly that not a chink of light creeps through them. Weirder and wei &mdash; \
     </p><p>Something &mdash; someone &mdash; cannons into you from behind so hard you are driven forward toward \
     a large box you had noticed sitting in the corner. It is not until fall forward onto it, breaking the lid \
@@ -162,7 +162,7 @@ var story = {
     house to earn your reward. Just one night. And now,&#8221;, she cackles softly, &#8220;it will be night \
     everlasting.&#8221;</p>",
     fullChoices: ["GAME over"],
-    results: ["endgame"]
+    results: ["gameover"]
   },
   backYard: {
     narrative: "<p>You refused to ignore my warnings about the object, huh? Well, let&#8217;s see \
