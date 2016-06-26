@@ -1,5 +1,14 @@
 /*YOUR STYLING GOES HERE*/
-
+html {
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  background: linear-gradient(#008B8B, #70DBDB); /* Standard syntax -thanks W3Schools*/
+  position: fixed;
+  height: 70%;
+  max-width: 100%;
+}
 #sun {
       background: #FFE600;
       width: 160px;
@@ -14,86 +23,62 @@
 #sky {
       background: linear-gradient(#008B8B, #70DBDB); /* Standard syntax -thanks W3Schools*/
       position: fixed;
-      width: 4000px;
-      height: 600px;
-      padding: 0px;
-      margin: -0px;
-      padding:3px 0;
+      height: 70%;
+      max-width: 100%;
 }
-
 .cloud-container {
-    color: #CDC9C9;
-    width: 350px;
-    height: 120px;
+    background: #E8E8E8;
+    width: 300px;
+    height: 150px;
     position: absolute;
     left: 100px;
-    top: -20px;
+    top: 140px;
     -webkit-filter: blur(25px);
+    border-radius: 120px;
 }
-.clouds:nth-child(1) {
-    background: red;
+.clouds {
+    background: #E8E8E8;
     width: 500px;
     height: 120px;
     position: absolute;
     left: 300px;
     top: 300px;
     border-radius: 200px;
-}
-.clouds:nth-child(2) {
-  background: red;
-  width: 500px;
-  height: 120px;
-  position: absolute;
-  left: 300px;
-  top: 300px;
-  border-radius: 200px;
-}
-.clouds:nth-child(3) {
-  background: red;
-  width: 500px;
-  height: 120px;
-  position: absolute;
-  left: 300px;
-  top: 300px;
-  border-radius: 200px;
+    list-style: none;
 }
 .fluff:nth-child(1) {
   background: #E8E8E8;
-  width: 200px;
+  width: 205px;
   height: 135px;
   position: absolute;
-  top: 85px;
-  left: 900px;
+  top: -15px;
+  left: 980px;
   -webkit-border-radius: 200px;
   -moz-border-radius: 200px;
   border-radius: 200px;
 }
-
 .fluff:nth-child(2) {
   background: #E8E8E8;
-  width: 200px;
+  width: 210px;
   height: 135px;
   position: absolute;
-  top: 80px;
-  left: 600px;
+  top: -60px;
+  left: 650px;
   -webkit-border-radius: 200px;
   -moz-border-radius: 200px;
   border-radius: 200px;
-}
-
 }
 .fluff:nth-child(3) {
    background: #E8E8E8;
-   width: 200px;
+   width: 215px;
    height: 135px;
    position: absolute;
-   top: 80px;
+   top: -80px;
    left: 400px;
    -webkit-border-radius: 200px;
    -moz-border-radius: 200px;
    border-radius: 200px;
 }
-
 .earth {
   top: 480px;
 	left: 0;
@@ -103,7 +88,6 @@
 	background: #397D02;
   position: fixed;
 }
-
 .castle {
   background: #B4CDCD;
   width: 350px;
@@ -122,13 +106,36 @@
   position: absolute;
 }
 .battlements {
-  background: #B4CDCD;
   left: 200px;
   top: 200px;
   width: 300px;
   height: 50px
   position: absolute;
-
+  list-style: none;
+}
+.battlements > li:nth-child(1) {
+  position: absolute;
+  top: -45px;
+  left: 20px;
+  width: 75px;
+  height: 50px;
+  background: #B4CDCD;
+}
+.battlements > li:nth-child(2) {
+  position: absolute;
+  top: -45px;
+  left: 140px;
+  width: 75px;
+  height: 50px;
+  background: #B4CDCD;
+}
+.battlements > li:nth-child(3) {
+  position: absolute;
+  top: -45px;
+  left: 260px;
+  width: 75px;
+  height: 50px;
+  background: #B4CDCD;
 }
 .lever {
   background: #000000;
@@ -146,7 +153,56 @@
   left: 600px;
   top: 404px;
   border-radius: 10px 10px 0px 0px;
-
+  list-style: none;
+}
+.gate > li:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  width: 3px;
+  height: 229px;
+  background: #0D0D0D;
+}
+.gate > li:nth-child(2) {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  width: 2px;
+  height: 229px;
+  background: #0D0D0D;
+}
+.gate > li:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  left: 72px;
+  width: 2px;
+  height: 229px;
+  background: #0D0D0D;
+}
+.gate > li:nth-child(4) {
+  position: absolute;
+  top: 0px;
+  left: 130px;
+  width: 2px;
+  height: 229px;
+  background: #0D0D0D;
+}
+.gate > li:nth-child(5) {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  width: 2px;
+  height: 229px;
+  background: #0D0D0D;
+}
+.gate > li:nth-child(7) {
+  position: absolute;
+  top: 80px;
+  left: -26px;
+  width: 10px;
+  height: 20px;
+  border-radius: 5px;
+  background: red;
 }
 .moat {
   position: fixed;
