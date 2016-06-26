@@ -50,22 +50,59 @@ passing in the initial scene and choices (which were initially set up above for 
   (4) it should call initializeRecognition, to start the speech listener,
   (5) it should set inProgress to true;
   and finally (6) it should call playGame to begin the game */
-function startGame() {
-  
-}
+  function start() {
+    console.log('starting game');
+    inProgress = true;
+    button.classList.add("hidden");
+    makeShortChoices();
+    renderStory(scene.narrative, scene.fullChoices);
+    initializeRecognition();
+    playGame();
+  }
+  function speechResult() {
+    recognition.onresult = function(event) {
+     console.log("recognition result event!");
+     var transcript = event.results[event.resultIndex][0].transcript;
+     var words = transcript.split(" ");
+     var result = words[words.length - 1];
+     if (development) {
+       var dev = document.querySelector('#speech');
+       dev.innerHTML = "";
+       dev.innerHTML = "Last speech recognition result: <span class='italics'>" + result + "</span>";
+     }
+     console.log("Result: ", result);
+     var match = checkForMatch(result);
+     if (match == "gameover") {
+       recognition.stop();
+       inProgress = false;
+     } else if (match) {
+       console.log("I've found a match to a command in the commands array!");
+       moveStory(match);
+     }
+    };
+  }
   //your code here
 
-}
 
 // the renderStory function will display the story in the view
 // it needs to (1) empty out the .display and .choices divs in the DOM
 // (2) fill the .display div with what's passed in as 'text', and
 // (3) iterate over the storyChoices that were passed in and for each one
 // create a new <p> with class "game-options" and add them all to the .choices div
-function renderStory() {
+  function renderStory(text, storyChoices) {
+    storyDisplay.innerHTML = "";
+    storyDisplay.innerHTML = text;
+
+    gameOptions.innerHTML = "";
+    storyChoices.forEach(function(choice) {
+      var p = document.createElement('p');
+      p.className = "game-options";
+      p.innerHTML = choice;
+      gameOptions.appendChild(p);
+    });
+  }
 
 }
-  game-options.document.createElement("p")
   //your code here
 
 }
@@ -78,6 +115,14 @@ function renderStory() {
 // A second HINT: make sure you use `hasOwnProperty` when you use a for ... in loop on an object
 function makeShortChoices() {
   console.log("generating the one-word short choices arrays in the story object");
+    for (var scene in story) {
+      if (story.hasOwnProperty(scene)) {
+        story[scene].shortChoices = [];
+        for (var i = 0; i < story[scene].fullChoices.length; i++) {
+          story[scene].shortChoices.push(story[scene].fullChoices[i].toLowerCase().split(" ")[0]);
+        }
+      }
+    }
   //your code here
 }
 
@@ -146,11 +191,19 @@ function speechResult() {
 // "open" it will return story.opening.results[0] (because "open" is the first item in the commands array)
 // if it detects "walk" it will return "story.opening.results[1]" because "walk" is the second item in the
 // commands array and so on.
-function checkForMatch(text) {
-  console.log("checking for match");
+  function checkForMatch(text) {
+    console.log("checking for match");
+    var result = false;
+    for (var i = 0; i < commands.length; i++) {
+      if (commands[i] == text) {
+        console.log("Match found with command: ", commands[i]);
+        result = scene.results[i];
+      }
+    }
+    return result;
+  }
   //your code here
 
-}
 
 // needs to set the narrative and choices and commands objects appropriately
 // pass in the choice the user made and update the various narrative variables accordingly.
@@ -161,6 +214,9 @@ function checkForMatch(text) {
 // finally it should run renderStory, passing in the new scene's narrative and fullChoices to be
 // displayed on the webpage
 function moveStory(userChoice) {
+  scene = story[choice];
+  commands = scene.shortChoices;
+  renderStory(scene.narrative, scene.fullChoices);
   //your code here
 }
 
@@ -171,4 +227,30 @@ function endGame() {
 
   console.log('ending game');
   //  your code here
+   function spookySounds(sound) {
+      spooooooky sound effects!
+     var sounds = [
+                     "/assets/audio/Creaking_Door_Spooky-SoundBible.com-1909842345.mp3",
+                     "assets/audio/horned_owl-Mike_Koenig-1945374932.mp3"
+                  ];
+     return sounds[index];
+   }
+
+   function owlSound() {
+     if (scene == "opening" || scene == "forest") {
+       setSoundTimeout()
+     } else {
+
+     }
+   }
+
+  function setSoundTimeout(sound) {
+   var audio = document.createElement('audio');
+     audio.src = spookySounds(0);
+      var owlInterval = setInterval(function(){
+
+    }, (Math.floor(Math.random() * (15000 - 7500)) + 7500));
+
+   }
+
 }
