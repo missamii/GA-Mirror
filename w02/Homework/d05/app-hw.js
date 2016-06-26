@@ -218,6 +218,9 @@ function moveStory(userChoice) {
   commands = scene.shortChoices;
   renderStory(scene.narrative, scene.fullChoices);
   //your code here
+var narrative = story[userChoice].narrative;
+var fullChoices = story[userChoice].fullChoices;
+ renderStory(narrative, fullChoices);
 }
 
 //set inProgress to false
@@ -227,30 +230,7 @@ function endGame() {
 
   console.log('ending game');
   //  your code here
-   function spookySounds(sound) {
-      spooooooky sound effects!
-     var sounds = [
-                     "/assets/audio/Creaking_Door_Spooky-SoundBible.com-1909842345.mp3",
-                     "assets/audio/horned_owl-Mike_Koenig-1945374932.mp3"
-                  ];
-     return sounds[index];
-   }
-
-   function owlSound() {
-     if (scene == "opening" || scene == "forest") {
-       setSoundTimeout()
-     } else {
-
-     }
-   }
-
-  function setSoundTimeout(sound) {
-   var audio = document.createElement('audio');
-     audio.src = spookySounds(0);
-      var owlInterval = setInterval(function(){
-
-    }, (Math.floor(Math.random() * (15000 - 7500)) + 7500));
-
-   }
-
+  button.classList.remove("hidden");
+  button.innerText = "Play again";
+  scene = story.opening;
 }
