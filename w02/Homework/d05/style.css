@@ -1,0 +1,94 @@
+body {
+  width: 70vw;
+  margin: 0 auto;
+  color: white;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  background-image: url("assets/images/hauntedmansion.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+  -webkit-filter: darken(21%);
+  -moz-filter: darken(21%);
+  -o-filter: darken(21%);
+  -ms-filter: darken(21%);
+  filter: darken(21%);
+}
+
+.content {
+  position: fixed;
+  width: 70vw;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 10px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 3em;
+  color: darkred;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  opacity:1;
+}
+
+button {
+  margin-left: 32vw;
+}
+
+#display {
+  text-align: justify;;
+  opacity: 1;
+  font-size: 1.2em;
+}
+
+/* thanks to CSS-Tricks: https://css-tricks.com/snippets/css/drop-caps/ for
+the heart of the drop-cap CSS */
+#display p::first-letter {
+  float: left;
+  color: darkred;
+  font-size: 4em;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: Georgia;
+}
+
+.game-options {
+  margin-left: 20px;
+  color: yellow;
+}
+
+.instructions {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.italics {
+  font-style:italic;
+  font-weight: bold;
+}
