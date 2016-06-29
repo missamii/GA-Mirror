@@ -19,7 +19,7 @@
 1. **So why didn't we teach it to you already?**
   - vanilla JS is sometimes faster
   - it's important to know how to do everything with plain old JS before you add in jQuery
-  - jQuery is a big library. You import a ton of code and only use a small portion on any given project. (There are simplified versions of jQuery that just do some of the stuff, like underscore.)
+  - jQuery is a library. You import a bunch of code and only use a small portion on any given project. (There are simplified versions of jQuery that just do some of the stuff, like underscore.)
   - it can conflict with other libraries (100% guarantee: by the time you guys are working on your final projects, some of you will be getting weird bugs because you've pulled in multiple libraries, and we won't be able to help you diagnose them!)
   - Front-end frameworks such as AngularJS or React do NOT play nicely with jQuery and the use of jQuery is strongly discouraged in a React app. The whole idea of a front-end framework is that the framework is what should be manipulating the DOM, not you!
   - any time you use code someone else has written, you risk stuff breaking in hard-to-detect ways
