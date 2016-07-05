@@ -2,12 +2,12 @@
 
 ### Groups
 
-1. Tiffany, Maggie, Shreiya
+1. Tiffany, Maggie, *Shreiya*
 2. Austin, Hiro, Rikki
 3. Denis, Ivan, Daniel
 4. Caspar, Mimi, Kevin
 5. Harry, Alberto
-6. Elena, Cristina
+6. *Elena*, Cristina
 7. Babajide, Joseph
 8. Isaac, Aya
 

@@ -1,0 +1,61 @@
+body {
+  background-image: url('../assets/images/rainbow-bg.jpg');
+  font-family: sans-serif;
+}
+
+main {
+  margin: 1vh auto;
+  background: white;
+  height: 98vh;
+  width: 60vw;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 25%;
+  background: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  border-bottom: 3px solid #4848d6;
+}
+
+header h1 {
+  color: white;
+  font-family: "Cabin Sketch";
+  font-size: 3em;
+}
+
+nav {
+  padding: 2px 9%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-around;
+  width: 82%;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1vw;
+}
+
+#splash {
+  width: 40%;
+  height: 100%;
+}
+
+#splash img {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 40vh;
+  width: 40vh;
+}
