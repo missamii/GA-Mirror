@@ -22,7 +22,7 @@ Get as far as you can! You should definitely have a plan
 
 You need to recreate the mockup shown here
 
-![Dog-Mockup](./doggies/dog-mockup.png)
+![Dog-Mockup](./dog-mockup.png)
 
 - What are the different aspects of this mockup? What are the largest elements/collections of elements you see?
 - What elements appear to be nested within each other?
