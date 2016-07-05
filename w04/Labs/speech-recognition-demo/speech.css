@@ -1,0 +1,104 @@
+/*
+https://media.giphy.com/media/SAqrAYXBitPR6/giphy.gif
+https://media.giphy.com/media/12VDAApNt4aTNS/giphy.gif
+https://media.giphy.com/media/Fay5iI480e4yA/giphy.gif
+*/
+
+
+body {
+  padding: 30px;
+  position: relative;
+  min-height: 600px;
+}
+.glyphicon-record {
+  font-size: 200px;
+  cursor: pointer;
+  margin: 30px 0;
+}
+.glyphicon-record:hover {
+  color: darkgray;
+}
+
+.on {  /* create the pulse effect: */
+  /* http://jsfiddle.net/5r8BY/ */
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 1s infinite;
+}
+
+@-webkit-keyframes color-change {
+  0% { color: darkgray; }
+  50% { color: red; }
+  100% { color: darkgray; }
+}
+@-moz-keyframes color-change {
+    0% { color: darkgray; }
+    50% { color: red; }
+    100% { color: darkgray; }
+}
+@-ms-keyframes color-change {
+    0% { color: darkgray; }
+    50% { color: red; }
+    100% { color: darkgray; }
+}
+@-o-keyframes color-change {
+    0% { color: darkgray; }
+    50% { color: red; }
+    100% { color: darkgray; }
+}
+@keyframes color-change {
+  0% { color: darkgray; }
+  50% { color: red; }
+  100% { color: darkgray; }
+}
+body p {
+  margin: 10px;
+}
+.title {
+  text-decoration: underline;
+}
+#interim-transcript {
+  font-size: 20px;
+}
+#final-transcript {
+  font-size: 50px;
+}
+
+/* buttons */
+body .buttons {
+  background-color: white;
+  border: 2px dotted black;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 0px;
+  height: 60px;
+  min-width: 100px;
+}
+body .buttons:hover {
+  color: red;
+  border-color: red;
+}
+.page {
+  margin-bottom: 60px;
+}
+#next {
+  right: 60px;
+}
+#back {
+  left: 60px;
+}
+
+.animal-pic {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin-bottom: 80px;
+}
+#dog {
+  background-image: url('https://media.giphy.com/media/SAqrAYXBitPR6/giphy.gif');
+}
+#cat {
+  background-image: url('https://media.giphy.com/media/12VDAApNt4aTNS/giphy.gif');
+}
