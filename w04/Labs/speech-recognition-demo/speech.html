@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Target Speech Recognition Demo</title>
+  <link rel="stylesheet" href="speech.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <h1>Speech Recognition</h1>
+  <br><br>
+
+  <!-- record button -->
+  <p>
+    <span>PRESS ME</span><br>
+    <span id="record-button" class="glyphicon glyphicon-record off" aria-hidden="true" aria-label="record-button"></span>
+  </p>
+
+  <!-- first 'page' -->
+  <div id="page-one" class="page">
+    <p class="title">Interim transcript: </p>
+    <p id="interim-transcript"></p>
+
+    <p class="title">Final transcript: </p>
+    <p id="final-transcript"></p>
+  </div>
+
+  <!-- second 'page' -->
+  <div id="page-two" class="hidden page">
+    <p>Say "DOG" or "CAT"</p>
+    <div id="dog" class="animal-pic hidden"></div>
+    <div id="cat" class="animal-pic hidden"></div>
+  </div>
+
+  <button type="button" id="next" class="buttons btn btn-secondary">Next</button>
+  <button type="button" id="back" class="buttons btn btn-secondary">Back</button>
+
+<!-- jQuery required for Bootstrap -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="speech.js"></script>
+</body>
+</html>
