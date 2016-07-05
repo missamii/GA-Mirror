@@ -6,40 +6,40 @@
 // https://whatwebcando.today/
 // ===============================
 
-window.onload = function() {
-  console.log('Window loaded.');
+window.onload = function() { // I think this is where window onload function loads the following variables inside this function. So it's like your telling the browser to do the following things when it's loaded.
+  console.log('Window loaded.'); // This is show on your browser that the window had loaded.  Console log is for checking/testing your code.
 
-  var interim_span        =   document.getElementById('interim-transcript');
-  var interim_transcript  =   '';
-  var final_span          =   document.getElementById('final-transcript');
+  var interim_span        =   document.getElementById('interim-transcript'); // This means to get the element Id by whatever the element Id is called. So it will grab the HTML Id.
+  var interim_transcript  =   ''; // This looks like an empty string.
+  var final_span          =   document.getElementById('final-transcript'); // This is grabbing the HTML Id.
   var final_transcript    =   '';
-  var pageOne             =   document.getElementById('page-one');
-  var pageTwo             =   document.getElementById('page-two');
-  var nextBtn             =   document.getElementById('next');
-  var backBtn             =   document.getElementById('back');
-  var dogPic              =   document.getElementById('dog');
-  var catPic              =   document.getElementById('cat');
+  var pageOne             =   document.getElementById('page-one'); // This is grabbing the HTML Id.
+  var pageTwo             =   document.getElementById('page-two'); // This is grabbing the HTML Id.
+  var nextBtn             =   document.getElementById('next'); // This is grabbing the HTML Id.
+  var backBtn             =   document.getElementById('back'); // This is grabbing the HTML Id.
+  var dogPic              =   document.getElementById('dog'); // This is grabbing the HTML Id.
+  var catPic              =   document.getElementById('cat'); // This is grabbing the HTML Id.
 
-  var status = "off";
+  var status = "off"; // I think this holds the value needd for the off command.
 
-  var recognition = new window.webkitSpeechRecognition();
-  recognition.continuous = false;
-  recognition.interimResults = true;
+  var recognition = new window.webkitSpeechRecognition(); // I think webkit is something for the browser's set preference.
+  recognition.continuous = false; // I think this means that it will not loop or continue over and over. So for example once engaged it will stop and probably needed to be started again.
+  recognition.interimResults = true; // This is set to true so that it will show results in the browser, and the console log.
 
-  var micButton = document.getElementById('record-button');
+  var micButton = document.getElementById('record-button'); // This is grabbing the HTML Id for the record button.
 
-  micButton.addEventListener("click", function() {
-    if (status == "off") {
-      status = "on";
-      console.log("Status:", status);
+  micButton.addEventListener("click", function() { // This looks like an Event listener for the mic button. So when it's clicked on, it will start the interaction or the event.
+    if (status == "off") { // This is a comparing the off button to be excuted if it's true. This is a boolean.
+      status = "on"; // This is assiging the status on.
+      console.log("Status:", status); // This is to check the code. It'll show status, and what the status is.
 
-      micButton.classList.remove("off");
-      micButton.classList.add("on");
+      micButton.classList.remove("off"); // This will remove the HTML class for the off button.
+      micButton.classList.add("on"); // This will add the HTML class for the on button.
 
-      recognition.start();
+      recognition.start(); // I feel that this is a fuction to make the code below operate. Although it's not in a curly bracket. But then I think that maybe it starts the speech recognition service, so that it will listen to incoming audio/voice.
 
-      recognition.addEventListener('result', function(event) {
-        console.log( "event:", event );
+      recognition.addEventListener('result', function(event) { // This is targeting the recognition obeject so that it'll
+        console.log( "event:", event ); // This will display the event value and the event.
 
         for (var i = event.resultIndex; i < event.results.length; ++i) {
           console.log( "Is final? ", event.results[i]["isFinal"] );
