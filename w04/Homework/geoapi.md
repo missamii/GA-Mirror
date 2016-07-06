@@ -10,6 +10,8 @@ This is a Health APP. It's geared towards mental health. For ages 12 and up, mal
 This APP is called TalkxHale. It's a simple user friendly app, friendly in color with fresh looking font and UI. It will have a google styled location map. A search bar where you can search where you are looking for a mental health provider at. I will use an API, HTML, CSS, JavaScript/jQuery(possibly) and the DOM to construct this.
 
 
+
+#### My Resources
 ```
 Ideas of APP's that could use Geolocation
  // TalkxHale APP: This is an app that shows all the locations of therapist that are in the area to speak with you. When you need to speak with someone ASAP! Because mental health is important.
@@ -17,7 +19,9 @@ Resource for API: https://developers.google.com/places/supported_types
 http://javapapers.com/android/find-places-nearby-in-google-maps-using-google-places-apiandroid-app/
 ```
 
-
+#### Back up ideas
+```
 Back up ideas incase the first idea doesn't work well for me. :)
  // CoolPools: This is an app that shows all the locations of the pools in NYC.
  // EwFood: This app shows a location of all the restaurants that have unclean eating conditions.
+```
