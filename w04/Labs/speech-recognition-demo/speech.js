@@ -13,12 +13,12 @@ window.onload = function() { // I think this is where window onload function loa
   var interim_transcript  =   ''; // This looks like an empty string.
   var final_span          =   document.getElementById('final-transcript'); // This is grabbing the HTML Id.
   var final_transcript    =   '';
-  var pageOne             =   document.getElementById('page-one'); // This is grabbing the HTML Id.
-  var pageTwo             =   document.getElementById('page-two'); // This is grabbing the HTML Id.
-  var nextBtn             =   document.getElementById('next'); // This is grabbing the HTML Id.
-  var backBtn             =   document.getElementById('back'); // This is grabbing the HTML Id.
-  var dogPic              =   document.getElementById('dog'); // This is grabbing the HTML Id.
-  var catPic              =   document.getElementById('cat'); // This is grabbing the HTML Id.
+  var pageOne             =   document.getElementById('page-one'); // This is grabbing the HTML Id it will get back the first page.
+  var pageTwo             =   document.getElementById('page-two'); // This is grabbing the HTML Id, it will get back the second page.
+  var nextBtn             =   document.getElementById('next'); // This is grabbing the HTML Id, it will store it in nextBtn variable and get the next id.
+  var backBtn             =   document.getElementById('back'); // This is grabbing the HTML Id it will store it inside the backBtn variable. And get the back id.
+  var dogPic              =   document.getElementById('dog'); // This is grabbing the HTML Id it will get the dog picture.
+  var catPic              =   document.getElementById('cat'); // This is grabbing the HTML Id it will get the cat picture.
 
   var status = "off"; // I think this holds the value needd for the off command.
 
@@ -41,57 +41,58 @@ window.onload = function() { // I think this is where window onload function loa
       recognition.addEventListener('result', function(event) { // This is targeting the recognition obeject so that it'll
         console.log( "event:", event ); // This will display the event value and the event.
 
-        for (var i = event.resultIndex; i < event.results.length; ++i) {
-          console.log( "Is final? ", event.results[i]["isFinal"] );
-          console.log( "Transcript: ", event.results[i][0]["transcript"] );
-          var transcr = event.results[i][0].transcript;
+        for (var i = event.resultIndex; i < event.results.length; ++i) { // This is loop for the event result index.
+          console.log( "Is final? ", event.results[i]["isFinal"] ); // This is return or display the final results.
+          console.log( "Transcript: ", event.results[i][0]["transcript"] ); // This is display the results for the transcript result.
+          var transcr = event.results[i][0].transcript; This is a variable containing DOM
 
-          if (event.results[i].isFinal) { // final transcript
-            final_transcript = transcr;
+          if (event.results[i].isFinal) { // final transcript if conditionals which take in the condition of results of this event
+            final_transcript = transcr; // gives the value of transcr to final_transcript
+
 
             // * page two stuff (dog & cat page):
-            if (transcr.indexOf("dog") > -1) {
-              dogPic.classList.remove("hidden");
-              catPic.classList.add("hidden");
-            } else if (transcr.indexOf("cat") > -1) {
-              catPic.classList.remove("hidden");
-              dogPic.classList.add("hidden");
+            if (transcr.indexOf("dog") > -1) { // this should check or evalute the transcript index
+              dogPic.classList.remove("hidden"); // remove hidden from dogPic classList
+              catPic.classList.add("hidden"); // will add hidden to the cat picture classList
+            } else if (transcr.indexOf("cat") > -1) { // this will index of the transcript
+              catPic.classList.remove("hidden"); // will remove the cat picture from the classList
+              dogPic.classList.add("hidden"); // add the hidden dog picture
             }
 
 
           } else { // if not final transcript (interim):
-            interim_transcript += transcr;
+            interim_transcript += transcr; // this updates interim transcript
           }
         }
 
-        interim_span.innerHTML = linebreak(interim_transcript);
-        final_span.innerHTML = linebreak(final_transcript);
+        interim_span.innerHTML = linebreak(interim_transcript); // use a linebreak in the interim_spa
+        final_span.innerHTML = linebreak(final_transcript); // use a linebreak in the final_span
 
-        console.log('================');
+        console.log('================'); // will show ================ in the console log
 
       }); // end event listener
-    } else {    // if status = 'on'
-      status = "off";
-      console.log("status: ", status);
+    } else {    // the statement is, if status = 'on'
+      status = "off"; // and if it is on, it tell it to turn it off here
+      console.log("status: ", status);  // shows the status in the console log
 
-      micButton.classList.remove("on");
-      micButton.classList.add("off");
+      micButton.classList.remove("on"); //remove on class from mic
+      micButton.classList.add("off"); //add off class from mic
 
-      recognition.stop();
+      recognition.stop();  //just as it all started, I think this stops the recognition of the API
 
-      console.log('* ================== *');
+      console.log('* ================== *'); // will show this in the * ================== *
     }
 
   }); // end mic click fxn
 
   // what to do upon end listening:
   recognition.addEventListener('end', function() {
-    console.log('Listening ended.');
-    status = "off";
-    console.log("Status: ", status);
-    micButton.classList.remove("on");
-    micButton.classList.add("off");
-    console.log('==================');
+    console.log('Listening ended.'); // will log the listening end
+    status = "off"; // mic status is set to off
+    console.log("Status: ", status); // will log the status in the console log
+    micButton.classList.remove("on"); // this will remove the class of "on" for the mic
+    micButton.classList.add("off"); // this adds a class so to turn "off" the mic
+    console.log('=================='); // will show this ================== in the console log
   });
 
   // * Next & Back button click fxns:
