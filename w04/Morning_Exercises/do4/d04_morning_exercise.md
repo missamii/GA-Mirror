@@ -60,44 +60,17 @@ If you got the above, try to implement Method 2
 
 ```js
 function palindromeTwo(str) {
-  //make a variable to hold our reversed version of str
-  var revStr = "";
-  //now loop over str in REVERSE order
-  for (var i = str.length - 1; i >= 0; i--) {
-    //add each character to revStr;
-    revStr += str[i];
-  }
-  // return the result of comparing the two strings.
-  return str === revStr;
+  //your code here
 }
 ```
 
-I would now test it out. If it works, I would make it more robust just like I did to our method 1 solution, controlling for capitalization and spacing, by adding in the same second line of code:
-```js
-str = str.toLowerCase().replace(' ','');
-```
+I would now test it out. If it works, I would make it more robust just like I did to our method 1 solution, controlling for capitalization and spacing.
+
 
 Finally, I would try implementing the array method the assignment mentioned would be the quickest. This is the most abstract method, so I'd tackle it last. It takes advantage of the fact that arrays (but not strings) have a 'reverse' method in JavaScript.
 ```js
 function palindromeThree(str) {
-  //same line of code to deal with capital letters & spaces
-  str = str.toLowerCase().replace(' ','');
-
-  // you could do this in multiple steps. I'm going to do it in one line
-  // (a) split into array of individual characters; (b) reverse the array; (c) join back into a string
-  var revStr = str.split('').reverse().join('');
-
-  // same line of code as in method 2
-  return str === revStr;
-}
-```
-
-#### Crazy example of why shorter code isn't always better code.
-You could implement the above method in a single-line of code. But yuck!
-
-```js
-function shorterPalindromeMethod(str) {
-  return str.toLowerCase().replace(' ','') === str.toLowerCase().replace(' ','').split('').reverse().join('');
+  //your code here
 }
 ```
 
