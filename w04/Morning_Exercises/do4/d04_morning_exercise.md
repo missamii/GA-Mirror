@@ -14,7 +14,7 @@ OK, so start off by making sure you get what a palindrome is: a string that read
 
 My first step would then be to think in my head "how might I solve this problem if I just had pen and paper to do so, no computer". I can think of two ways:
 
-1. compare the first and last letters. If they're the same cross them off. If they're not the same: stop, it's not a palindrome.
+1. METHOD 1: compare the first and last letters. If they're the same cross them off. If they're not the same: stop, it's not a palindrome.
 So if I were analyzing the string "abcba" I would compare the first and last letters: they're both *a*. I'd then cross them off:
   ~~a~~bcb~~a~~
 
@@ -24,7 +24,7 @@ So if I were analyzing the string "abcba" I would compare the first and last let
 
   and so on. If I get to where there's either 1 letter left in the center or no letters left uncrossed, then my string is a palindrome!
 
-2. Another method: I would write out my string and then underneath it I would start copying the letters in reverse order. When I'm done if the two strings are the same, it's a palindrome. Example with the string "ethan" I would write it out:
+2. METHOD 2: I would write out my string and then underneath it I would start copying the letters in reverse order. When I'm done if the two strings are the same, it's a palindrome. Example with the string "ethan" I would write it out:
 
   "ethan" and then write it out in reverse underneath:
 
@@ -34,25 +34,16 @@ So if I were analyzing the string "abcba" I would compare the first and last let
 
 By thinking through what you would do yourself, without a computer, to solve a problem, you've done 90% of the work. The rest is then just translating the hard work of thinking into code.
 
-For example: for method 1 above:
+Let's do that now! Try to implement your own implementation of Method 1 above:
 
 ```js
 function isThisAPalindrome(str) {
-  // start by looping over the string just as I did above
-  for (var i = 0; i < str.length; i++) {
-    // compare the character at position i with the character that is i positions back from the end.
-    // so that we're comparing the 1st character to the last, the 2nd character to the 2nd-to-last, etc.
-    if (str[i] !== str[str.length - 1 - i]) {
-      //the two characters aren't the same! NOT A PALINDROME
-      return false;
-    }
-  }
-  // if we've finished the loop without returning `false` then it's a palindrome!
-  return true;
+  // your code goes here
+
 }
 ```
 
-That's one interpretation of method 1! My next step would be to test it out and see if it works. I can already see some problems:
+My next step would be to test it out and see if it works. If it does, I would start thinking about how I could break it (make it fail). I can already see some problems:
   * what if the string has upper- and lower-case letters?
   * what if the string has spaces?
 
@@ -60,19 +51,12 @@ So I'd then rework my solution to make it more robust.
 
 ```js
 function isThisAPalindrome(str) {
-  // eliminate spaces and capital letters (could also do this in 2 steps)
-  str = str.toLowerCase().replace(' ','');
-
-  for (var i = 0; i < str.length; i++) {
-    if (str[i] !== str[str.length - 1 - i]) {
-      return false;
-    }
-  }
-  return true;
+  // code here -- this function should ignore
+  // capitalization and spaces.
 }
 ```
 
-Let's try method 2:
+If you got the above, try to implement Method 2
 
 ```js
 function palindromeTwo(str) {
