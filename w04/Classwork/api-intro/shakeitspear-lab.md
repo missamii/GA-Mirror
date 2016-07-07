@@ -12,13 +12,10 @@
 - Make calls in the browser using each endpoint
 
 ### Part II: Make API calls from your website
-- What you will be building: an html website with two buttons: `poem` and `sentence`. Depending on the button clicked, the website 
+- What you will be building: an html website with two buttons: `poem` and `sentence`. Depending on the button clicked, the website will make a call to a different endpoint.
 - Make a directory & create new HTML and JS files
 - Start by creating an HTML button with an event listener that simply logs 'Hello' (just to make sure things are functioning).
 - You don't need an input box.
 - Next, build your AJAX method & a hard-coded query and log the response data.
 - Now, build two buttons, `poem` and `sentence`.
-- Depending on what the user clicks,
-
-
-logging the response data, parse it into variables and append them to the page using JS
+- Depending on what the user clicks, make an API call to the appropriate endpoint, log the response data, parse it into variables and append them to the page using JS
