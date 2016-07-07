@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OMDB API</title>
+    <link rel="shortcut icon" type="image/png" href="http://www.faviconshut.com/pics/3/3530-movie-camera-icon-png-camera-entertainment-film-favicon.png"/>
+  </head>
+  <body>
+
+  <h1>APIs are awesome!</h1>
+
+  <form>
+    <label>
+      <input type="text" id="api-input" name="movie" placeholder="movie title">
+    </label>
+    <button id="submit-btn">Search</button>
+  </form>
+
+  <!-- data goes here:  -->
+  <div id="info-container">
+    <p>
+      <b><span>Title:</span></b>
+      <span id="title">
+      Title will go here.
+      </span>
+    </p>
+    <p>
+      <b><span>Year:</span></b>
+      <span id="year">Year will go here.</span>
+    </p>
+    <p>
+      <b><span>Poster:</span></b><br>
+      <span id="poster">Poster will go here</span>
+    </p>
+  </div>
+
+
+  <!-- include jQuery here: -->
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js" charset="utf-8"></script>
+  <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
