@@ -25,11 +25,15 @@ window.onload = function() {
       var title = response.Title;
       var year = response.Year;
       var posterURL = response.Poster;
+      var textBox = response.Box
+      var aTextBox = response.Atextbox
 
       // get the elements:
       var titleEl = document.getElementById('title');
       var yearEl = document.getElementById('year');
       var posterEl = document.getElementById('poster');
+      var textBoxEl = document.getElementsById('textbox')
+      var aTextBoxEl = document.getElementById('atextbox')
 
       // append the data
       titleEl.innerHTML = title;
