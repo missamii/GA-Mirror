@@ -11,17 +11,22 @@ body {
   font-style: italic;
   font-family: helvetica;
   font-size: 10pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.colorbutton {
-background-color: #fce4ec; color: #000000;
-font-size: 12pt;
-font-family: monospace;
-text-align: center;
-text-decoration: none;
-border: none;
-padding: 15px 51px;
-display: inline-block;
+.button {
+  background-color: #fce4ec;
+  color: #000000;
+  font-size: 12pt;
+  font-family: monospace;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  padding: 15px 51px;
+  display: inline-block;
 }
 h1 {
-
+  font-family: helvetica;
+  font-size: 30pt;
 }
