@@ -1,0 +1,31 @@
+body {
+background-color: #F0E0BB;
+}
+.main {
+  background: #549990;
+  width: 50vw;
+  height: 50vw;
+  margin: 0 auto;
+}
+.pokeform {
+
+}
+h1 {
+  color: #F73E44;
+}
+h4 {
+
+}
+.button {
+
+}
+.fieldset {
+  border:0 none;
+}
+.search {
+
+}
+.pokename {
+  color: red;
+  font-family: sans-serif;
+}

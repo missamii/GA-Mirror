@@ -1,0 +1,28 @@
+body {
+  background-color: #fff;
+}
+#main {
+  height: ;
+  width: ;
+  background: #228;
+}
+#modal {
+  top: 30px;
+  left: 100px;
+  height: 100vh;
+  width: 60vw;
+  background: #777;
+}
+#background {
+  background-color: #fff;
+  visibility: hidden;
+ opacity: 0.5;
+}
+#button1 {
+  padding: 20px 10px;
+  background-color: #84F3B9
+}
+#button2 {
+  padding: 20px 10px;
+  background-color: #84F3B1
+}
