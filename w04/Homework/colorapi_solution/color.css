@@ -1,0 +1,38 @@
+.button-holder, .container, .saved-colors {
+  margin: 30px auto;
+  width: 90vw;
+  display: inline-flex;
+}
+
+.container {
+  justify-content: space-between;
+  padding: 0 auto;
+}
+
+.button-holder {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  line-height: 12;
+  margin: 2px;
+}
+
+.title {
+  height: 1em;
+  width: 100%;
+  text-align:center;
+}
+
+h1, h2, footer {
+  width: 90vw;
+  text-align: center;
+}
+
+#palette-name {
+  font-style: italic;
+}
