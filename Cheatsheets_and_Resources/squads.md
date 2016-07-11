@@ -23,8 +23,8 @@ Here's the list of who's in which squad:
 | Nathan Smith | Isaac Kang | Daniel Yochum |
 | Hiro Narita | Alberto Gomez | Ivan Trujillo |
 | Caspar Nagel | Samuel Duffy | Rikki Rabinowitz |
-| Kevin Bender | Yilin Peng | Margaret Merrell |
+| ---| Yilin Peng | Margaret Merrell |
 | Aya Kawabata | Denis Koltsov | Joseph Sul |
 | Cristina Ruiz | Harry Hur | Tiffany Lo |
 | Shreiya Chowdhary | Austin Hudson | Mimi Wu |
-| Carlo Ruiz | Babajide Kale | Carrow Thibault |
+|  --- | Babajide Kale | Carrow Thibault |
