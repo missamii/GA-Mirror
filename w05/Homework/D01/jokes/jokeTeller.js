@@ -1,9 +1,6 @@
-window.onload = function() {
-  // console.log('not very funny at all');
-  // var cowsay = require('cowsay');
-  var jokeTeller = require('./jokeTeller.js');
-
+// window.onload = function() {
+  var jokeTeller = require('./badJokes.js');
+  console.log(jokeTeller);
   var jokes = jokeTeller[Math.floor(Math.random() * jokeTeller.length)];
-  
-
-};
+  console.log(jokes);
+// };

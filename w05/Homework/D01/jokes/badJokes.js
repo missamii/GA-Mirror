@@ -5,4 +5,4 @@ var badJokes = [
   "What's that on your shoe? (slaps you upside the face)"
 ];
 
-module.export = badJokes;
+module.exports = badJokes;
