@@ -1,5 +1,17 @@
-node math.js circle 6
-// process.argv[0] => "path/to/node"
-// process.argv[1] => "path/to/math.js"
-// process.argv[2] => "circle"
-// process.argv[3] => 6
+// first function; circle
+function circle(radius) {
+  return 3.14 * (radius * radius);
+}
+console.log(circle(7));
+
+// second function; rectangle
+function rectangle(h, w) {
+  return h * w
+}
+
+console.log(rectangle(4,6));
+
+// third function; square
+function square(sl) {
+
+}
