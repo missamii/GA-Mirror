@@ -26,7 +26,7 @@ The default is '-b'.
 
 var classList = [];
 var fs = require('fs');
-
+console.log(process.argv);
 //TODO need more error handling here
 //ADD: validate sourcefile path
 if (process.argv.length < 4 || parseInt(process.argv[3] == NaN)) {
