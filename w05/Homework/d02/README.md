@@ -77,7 +77,7 @@ Here's a screenshot of what mine looked like with absolutely *minimal* styling (
 1. Let's start with the "see all babbls" button since the backend code is going to be a little simpler for this. On the frontend, when we click the button we need to submit a GET request to the server to the root path ('/'). jQuery actually has a shorthand `$.getJSON` method, so let's use that! Syntax is `$.getJSON(url, callback)`. Nice and crisp. Now, we're going to be using http-server to serve up our front-end page, but our back-end API server will be running off of Express. If you remember when we wrote the starter backend code above, we set the server's port to be 3000. So the url for our $.getJSON function will be `'http://localhost:3000/'`. The callback function should take a parameter; call it `result` or `data` or whatever you want. For now, just console.log the value of `result` inside the callback.
 When we created the server route up above, in app.js, we put a console.log in the GET('/') route. Let's make sure we're seeing that in the terminal. Inside your public directory, run `http-server`. It should tell you it's up and running on Port 8080. Inside your main babblr directory, in a different Terminal window, make sure `nodemon` is running so that your back-end API server is up on Port 3000. Open up your browser and go to http://localhost:8080. It should load up your webpage. And clicking on the 'get all babbls' button won't do anything on the frontend yet (because we haven't written the backend code to catch the request, handle it, and send data back) BUT if you view the terminal window where your node server is running, you should see the console.log of 'incoming GET request' that we started up earlier. If you get that, awesome! Then STOP. Add and commit your code in git.
 1. OK, pop back over to app.js and let's get the backend for this route up and running. When the server receives a GET request to the root path ('/') we want it to
-  1. read the babbls.json file in the data/ directory
+  1. read the babbls.json file in the data/ directory (I have included a sample babbls.json here in this directory that you can use to give yourself some starter babbls -- or feel free to write your own instead!)
   1. send that data back to the client
 We're going to use the built-in filesystem module (fs) to read the babbls.json file in our data/ directory. So you should know how to do that now. Inside the app.get('/') callback function, call `fs.readFile('./data/babbls.json', 'utf8', function(error, data) { // code here })`.  Inside THAT callback (callbacks inside callbacks inside callbacks--very *Inception!*), you should always put in error handling first. Add in an `if` statement that looks to see if there was an `error` passed in, and if so logs it to the console. If there's no error, then we want to send the `data` that we read from our file back to the client. Just like in the in-class demo, we can use `response.json(data)` to that. So put that inside your callback. Almost there! Make sure both servers are up and running, refresh the page in your browser, and click the 'see all babbls' button. If you look in your browser's console, you should see the console.log of the data that was received from the server -- it should be the contents of babbls.json. If you see it, congrats!
 1. This next part I'm not going to do for you -- you should be old hands at this. You just hit up an API successfully (only this time it was your own API that you built!) and got some JSON back. To render it to the DOM, you may use your choice of:
@@ -118,9 +118,18 @@ WHEW! If you got all this working sucessfully then you should be able to
   * Send the babbl to the API server (localhost:3000)
   * Catch the request on the other end, grab the babbls from our "database" (babbls.json), parse them into JavaScript, add the new babbl, reconvert the babbls to JSON, write them to the "database", and send a response back to the client.
 1. On the frontend, add in a .success or a .done function that console.logs what comes back from the API if you didn't already. Submit a new babbl and you should see `{"success":"true"}` in your browser's console!
-**CONGRATULATIONS! HAVE A DRINK! HAVE THREE!**
-1. TO SUBMIT THIS HOMEWORK:
-  * In your homework issue, 
+*CONGRATULATIONS! HAVE A DRINK! HAVE THREE!*
+1. **TO SUBMIT THIS HOMEWORK:**
+  * In your homework issue, rate how many steps out of the 29 above you have completed successfully. **A completed homework must have at least through step 22 working.** If you completed any of the bonuses below, indicate which ones.
+  * In addition, in your issue, answer the following questions:
+    - Do you have a working backend server that is capable of listening for incoming requests, checking to see if they match any routes you've specified, and taking action accordingly?
+    - Is your server capable of both reading your "database" (i.e., your babbls.json file) and writing to it?
+    - Do you have a working frontend that displays content on the page?
+    - Is your frontend capable of making an AJAX GET request to your backend when the 'view all babbls' is clicked, and does the backend in return send over the contents of the babbls.json file, which the frontend can successfully display?
+    - Is your frontend capable of grabbing the contents of the input fields when you click on the 'submit new babbl' button, making a POST request to your backend, which in turn successfully writes the new babbl to the file?
+    -HW GUIDELINES FOR EVERYONE:
+      - **Due at midnight** (unless you prefer to do it early in the morning, then it must be done before class starts)
+      - If you want more time, talk to us first, then you have **2 days** to turn it in at midnight. After that, it's either done or not done & that's the end of it. This should happen very rarely. *Late homeworks do not receive feedback.* 
 
 ### **BONUSES**
 1. Make sure your babbls are displaying so that the newest babbl appears at the top, and then downward in descending chronological order.
