@@ -1,4 +1,4 @@
-# Assignment
+# Homework Assignment - W05D01
 
 ## Part 1 - Node
 
@@ -13,7 +13,7 @@ var badJokes = [
 
 * Write a node file called *jokeTeller.js* that picks a bad joke at random from the above array and logs it to the console. You can copy and paste the badJokes array into this file.
 
-* Let's practice compartmentalizing your code: move your badJokes array (from the problem above) to a NEW file *badJokes.js*. Rework *jokeTeller.js* such that it is able to access the badJokes array from *badJokes.js* and log a random joke to the console.
+* Let's practice compartmentalizing your code: move your badJokes array (from the problem above) to a NEW file *badJokes.js*. Rework *jokeTeller.js* such that it is able to access the badJokes array from *badJokes.js* and log a random joke to the console. You'll need `module.exports` and `require`, both of which should be familiar to you from Liza's lesson today; review the instructor notes if you don't remember!
 
 ## Part 2 - Arguments
 
@@ -22,7 +22,7 @@ Make a file called *geometry.js*. Inside it, write three functions:
 2- one for calculating the area of a rectangle (height and width as arguments)
 3- one for calculating the area of a square (side length as an argument)
 
-Put all your functions as methods inside an object called geometry. Make another file called *math.js*, and make the geometry object accessible in *math.js*.
+Put all your functions as methods inside an object called `geometry`. Make another file called *math.js*, and make the `geometry` object accessible in *math.js*. 
 
 Write JavaScript logic such that on running *math.js* with node, while giving it arguments, the following would happen:
 
