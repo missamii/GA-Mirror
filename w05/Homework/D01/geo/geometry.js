@@ -6,12 +6,13 @@ console.log(circle(7));
 
 // second function; rectangle
 function rectangle(h, w) {
-  return h * w
+  return h * w;
 }
 
 console.log(rectangle(4,6));
 
 // third function; square
-function square(sl) {
-
+function square(l) {
+  return l * l;
 }
+console.log(square(5));
