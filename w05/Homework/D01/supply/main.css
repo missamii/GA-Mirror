@@ -1,31 +1,56 @@
-body {
-  background-color: #889;
-  font-family: ;
-}
 #main {
-  /*display: flex;*/
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex-flow: 
-  background: #549990;
-  width: 50vw;
-  height: 50vw;
-  margin: 0 auto;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
-.first {
-  width: 50vw;
-  height: 50vw;
-  background-color: #777;
+.main-boots {
+  height: 40vh;
+  width: 44vw;
 }
-.second {
-
+#top {
+  display: flex;
+  justify-content: center;
+  padding-bottom: -90px;
+  margin-left: -179px;
 }
-.third {
-
+.logo {
+  height: 10vh;
+  width: 3vw;
 }
-.fourth {
-
+#nav {
+/*Too late to finish this part*/
 }
-.fifth {
-
+h3 {
+  font-kerning: auto;
+  font-family: veranda
+  font-color: #666;
+}
+.mens {
+  height: 30vh;
+  width: 14vw;
+  padding-left: 40px;
+}
+.women {
+  height: 30vh;
+  width: 14vw;
+  padding-left: 15px;
+}
+.lifestyle {
+  height: 30vh;
+  width: 14vw;
+  padding-left: 15px;
+}
+#bottom {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 200px;
+}
+.home-about {
+  width: 21vw;
+  height: 25vh;
+}
+.home-blog {
+  width: 21vw;
+  height: 25vh;
+  padding-left: 31px;
 }
