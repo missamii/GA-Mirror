@@ -1,0 +1,31 @@
+body {
+  background-color: #889;
+  font-family: ;
+}
+#main {
+  /*display: flex;*/
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-flow: 
+  background: #549990;
+  width: 50vw;
+  height: 50vw;
+  margin: 0 auto;
+}
+.first {
+  width: 50vw;
+  height: 50vw;
+  background-color: #777;
+}
+.second {
+
+}
+.third {
+
+}
+.fourth {
+
+}
+.fifth {
+
+}
