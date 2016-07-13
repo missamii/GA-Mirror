@@ -1,0 +1,22 @@
+/* my css goes here */
+
+.ethan-color-demo {
+  display: inline-block;
+  margin: 10px;
+  height: 150px;
+  width: 150px;
+}
+
+#grid-demo div  {
+  height: 150px;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.vert-demo div, .hide-demo div, .light-green {
+  height: 150px;
+}
+
+.card {
+  width: 500px;
+}
