@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MaterializeCSS CSS Framework demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+  <!--
+    I've put comments just highlighting what each section does
+
+    the important thing to remember about CSS Frameworks such as
+    MaterializeCSS (which is what I've used here) and Bootstrap
+    is that they work by having you apply classes to items in your
+    HTML. The framework then applies all sorts of styles based on
+    those classes. It can be ugly and hacky since your HTML will be
+    full of TONS AND TONS of nested divs with different classes on
+    them. However, it can also be a lightning-fast way to apply lots
+    of styling quickly versus building it up yourself. SO: very useful
+    perhaps when you're creating your personal portfolios.
+
+    For more info on this particular framework, see materializecss.com
+    -->
+    <!-- BUILT-IN COLORS WITH CSS CLASSES -->
+    <!-- just add the name of the color as a class to the element -->
+    <!-- to change the text color, append '-text' to the color name -->
+    <!-- for different shades, add 'lighten-[#]' or darken-[#] -->
+    <div class="container"><h2>COLORS</h2>
+      <div id="color-demo">
+        <div class="ethan-color-demo card-panel teal">text</div>
+        <div class="ethan-color-demo card-panel blue">text</div>
+        <div class="ethan-color-demo card-panel orange">text</div>
+        <div class="ethan-color-demo card-panel orange lighten-2">text</div>
+        <div class="ethan-color-demo card-panel orange green-text darken-2">text</div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+
+    <!-- THE 12-COLUMN GRID SYSTEM -->
+    <!-- must have a 'row' div to hold each set of 'col' divs -->
+    <!-- 's' + a number from 1 - 12: how many cols that element -->
+    <!-- should take up on a 'small' (mobile) screen -->
+    <!-- same for 'm' (medium = tablet) and 'l' (large = desktop) -->
+    <!-- sizing works from small to large: if you want something to -->
+    <!-- take up 6 cols in all sizes, you just need 's6' -->
+    <div class="container" id="grid-demo">
+      <h2>GRID</h2>
+      <h3>Basics</h3>
+      <div class="row">
+        <div class="col s12 teal">I'm full-width on all screens</div>
+      </div>
+      <div class="row">
+        <div class="col s6 red">Half-width on all screens</div>
+        <div class="col s6 yellow">Half-width on all screens</div>
+      </div>
+      <h3>Offset</h3>
+      <div class="row">
+        <div class="col s12 teal">I'm full-width on all screens</div>
+        <!-- add 'offset' classes to offset an element -->
+        <div class="col s6 yellow offset-s6">Half-width -- offset by 6</div>
+      </div>
+      <h3>Auto-Responsive Design!</h3>
+      <div class="row">
+        <div class="col s12 teal">I'm full-width on all screens</div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 yellow">12 cols on mobile; 6 on other</div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l3 green lighten-2">s12 m6 l3</div>
+        <div class="col s12 m6 l3 green darken-2">s12 m6 l3</div>
+        <div class="col s12 m6 l3 green lighten-4">s12 m6 l3</div>
+        <div class="col s12 m6 l3 green darken-4">s12 m6 l3</div>
+      </div>
+    </div>
+
+    <!-- VERTICAL ALIGN (THIS WAS WAY COOLER PRE-FLEXBOX) -->
+    <!-- if you want something vertically aligned then it must -->
+    <!-- have a class of 'valign' AND be enclosed inside a -->
+    <!-- div with class 'valign-wrapper' -->
+    <div class="container vert-demo">
+      <h2>Vertical align</h2>
+      <div class="valign-wrapper pink lighten-3">
+        <h5 class="valign">I'm vertically aligned!</h5>
+      </div>
+    </div>
+    <br/>
+
+    <!-- LET'S HIDE SOME STUFF -->
+    <!-- add different hide instructions to hide on certain -->
+    <!-- screen sizes. just add 'hide' class to hide on all -->
+    <div class="container hide-demo">
+      <h3>Hiding elements automatically</h3>
+      <div class="row">
+        <div class="col s12 lime lighten-1 hide-on-med-and-down">hide on med and down</div>
+      </div>
+      <div class="row">
+        <div class="col s12 lime lighten-2 hide-on-small-only">hide on small only</div>
+      </div>
+      <div class="row">
+        <div class="col s12 lime lighten-3 hide-on-large-only">hide on large only</div>
+      </div>
+    </div>
+
+    <!-- RESPONSIVE IMAGES -->
+    <!-- add 'responsive-img' class to make img auto-responsive -->
+    <!-- add 'circle' class for a cameo-style image -->
+    <div class="container img-demo">
+      <h3>Responsive images</h3>
+      <img src="IMG_0457.jpg" class="responsive-img">
+      <img src="IMG_0430.jpg" class="circle responsive-img">
+    </div>
+
+    <!-- ADDING DEPTH -->
+    <!-- add 'z-depth-[1-5]' class to change amount of shadow -->
+    <div class="container shadow-demo">
+      <h3>Applying depth</h3>
+      <div class="row">
+        <div class="col s12 m2">
+          <p class="z-depth-1  light-green lighten-3">z-depth-1</p>
+        </div>
+        <div class="col s12 m2">
+          <p class="z-depth-2  light-green lighten-3">z-depth-2</p>
+        </div>
+        <div class="col s12 m2">
+          <p class="z-depth-3  light-green lighten-3">z-depth-3</p>
+        </div>
+        <div class="col s12 m2">
+          <p class="z-depth-4  light-green lighten-3">z-depth-4</p>
+        </div>
+        <div class="col s12 m2">
+          <p class="z-depth-5  light-green lighten-3">z-depth-5</p>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- "CARDS" -->
+    <!-- for holding "media": contains a "front" and "back" -->
+    <div class="container card-demo">
+      <h3>"Card" Objects for media display</h3>
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="IMG_0459.jpg">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Cutest Baby Ever<i class="material-icons right">more_vert</i></span>
+          <p><a href="#">I'm a link to more baby pix (not really)</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Cutest Baby Ever<i class="material-icons right">close</i></span>
+          <p>This particular piece of info is only shown once you click on the card. Neat, huh? Oh, something about babies etc. etc. etc. </p>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- NAVBAR -->
+    <!-- easy to make different navbars for different screens -->
+    <!-- add 'right', 'left' to change link position -->
+    <h3>Built-in navbar design</h3>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">EthanCorp Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo right">EthanCorp Logo</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">EthanCorp Logo</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+
+    <!-- FORMS -->
+    <!-- add 'input-field' class for built in form styling -->
+    <!-- add 'validate' class to inputs for built-in validation styling -->
+    <h3>Built-in form design</h3>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+            <label for="disabled">Disabled</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password"  minlength="6" class="validate">
+            <label for="password">Password (6 or more characters)</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <br>
+
+    <!-- Icons using Material Icons (link in HTML head) -->
+    <!-- must include appropriate 'link' tag: see HTML head above -->
+    <!-- use by creating an 'i' element w/ class 'material-icons' -->
+    <!-- the text of the '<i>' corresponds to the name of the icon -->
+    <div class="container">
+      <h3>Built-in icon font</h3>
+      <i class="material-icons large">perm_identity</i>
+      <i class="material-icons large">call</i>
+      <i class="material-icons large">fast_forward</i>
+      <i class="material-icons large">description</i>
+      <i class="material-icons large">settings</i>
+      <i class="material-icons large">search</i>
+    </div>
+    <br>
+
+    <!-- COLLAPSIBLE ELEMENTS -->
+    <!-- container class = "collapsible" data-collapsible prop either -->
+    <!-- "accordion" (one item open) or "expandable" (multiple) -->
+    <!-- collapsible elements get "collapsible-header" or "-body" -->
+    <div class="container">
+      <h3>Collapsible elements</h3>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">pregnant_woman</i>Pregnant women click here?</div>
+          <div class="collapsible-body"><p>Lots of stuffs about pregnancy.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">motorcycle</i>Motorcycle riders click here</div>
+          <div class="collapsible-body"><p>Don't do this while pregnant!</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">pets</i>Dog lovers click here</div>
+          <div class="collapsible-body"><p>bark bark woof woof.</p></div>
+        </li>
+      </ul>
+    </div>
+    <br>
+
+    <!-- link to my personal website, which uses the parallax effect -->
+    <div class="container">
+      <h3> OOOH -- Parallax!</h3>
+      <p>See <a href="http://www.ethanjfriedman.com">Ethanjfriedman.com</a> for a demo</p>
+    </div>
+    <br>
+
+    <!-- Modals (pop-ups, basically) -->
+    <!-- SEE SCRIPT TAG AT BOTTOM TOO! -->
+    <!-- need JS to initialize: see below -->
+    <!-- need a (link) for the modal whose -->
+    <!-- href is the ID of the modal -->
+    <!-- modal itself needs a matching id, class "modal" -->
+    <div class="container modal-demo">
+      <h3>AAAH -- Modals!</h3>
+
+      <!-- Modal Trigger -->
+      <!-- the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered -->
+      <a class="waves-effect waves-light green btn modal-trigger" href="#cool-modal">Click me, mofo</a>
+
+      <!-- Modal Structure -->
+      <div id="cool-modal" class="modal">
+        <div class="modal-content">
+          <h4>Legalese</h4>
+          <p>By merely reading this text you have consented to sign over all your worldly goods to me. If you refuse to do so, you agree I can sue you in the court of my choosing.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-yellow btn-flat">Disagree (but really agree)</a>
+          <a href="#!" class="modal-action modal-close waves-effect waves-yellow btn-flat">Agree</a>
+        </div>
+      </div>
+
+      <!-- Modal with customness added -->
+      <a class="waves-effect waves-light yellow btn custom-modal-trigger" href="#custom-modal">I've got a custom close modal function</a>
+
+      <!-- Modal Structure -->
+      <div id="custom-modal" class="modal">
+        <div class="modal-content">
+          <h4>Stuffs</h4>
+          <p>blah blah blah. Close me and see what happens</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fine, I'll close you</a>
+        </div>
+      </div>
+
+      <div class="hide modality-ness">
+        <h3>Whoa! I'm hidden until the modal is closed</h3>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    //this readies the modal trigger
+    //note this is jQuery
+    //the class of the trigger doesn't have to be 'modal-trigger'
+      $(document).ready(function(){
+        $('.modal-trigger').leanModal();
+        $('.custom-modal-trigger').leanModal({
+          ready: function() {
+            $('.modality-ness').addClass('hide');
+          },
+          complete: function() {
+            $('.modality-ness').removeClass('hide');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
