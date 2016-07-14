@@ -1,0 +1,17 @@
+
+body {
+  background-color: #fff;
+  background-image: url("/img/babylon_00388780.png");
+  background-position: bottom -80px right 1px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  padding: 100px;
+  left: 255px;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#babblr-name {
+
+}
