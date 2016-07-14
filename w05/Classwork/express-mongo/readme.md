@@ -12,7 +12,10 @@ the routes
 ### api routes:
 
 - GET|POST /contacts
+`http://localhost:3000/contacts`
+
 - GET|PUT|DELETE /contacts/:id
+`http://localhost:3000/contacts/SOME_ID_NUMBER`
 
 use this `schema`:
 
