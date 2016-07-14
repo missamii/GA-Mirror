@@ -2,25 +2,22 @@ window.onload = function() {
   console.log("js is loaded");
 
 var babbls = {};
+var showBabbl = document.querySelector('showAll');
+showBabbl.addEventListener('click', function(ev){
+  console.log('babbls babbls here');
+  $.getJSON('http://localhost:3000/', function(res){
+    console.log(res);
+    res = JSON.parse(res);
+    var babbls = res;
+    console.log(babbls[0]);
 
-var babblrButton = document.getElementById('see-babbls').addEventListener('click', function);
-  function displayBabbls() {
-  document.getElementById('show-babbls').innerHTML =   ;
-}
 
-var sendBabbls = document.getElementById('submit-babbl').addEventListener('click', giveBabbls);
-  function giveBabbls() {
+var submitBabbl = document.querySelector('submitBabbl');
 
-  }
-    //   $(document).ready(function() {
-    //   Materialize.updateTextFields();
-    // })
-    // $('#textarea1').val('New Text');
-    // $('#textarea1').trigger('autoresize');
+submitBabbl.addEventListener('click', function(ev){
+  ev.preventDefault();
+  console.log('new babbl');
 
-// $.ajax({
-//   url
-// })
-//
 
-};
+
+});
