@@ -47,4 +47,4 @@ add elements (like forms) and remove elements (like lists).
 - create a view that ***lists all the contacts**, **shows a single contact**,
 **lets you enter a new contact**, **edit or delete and existing contact**
 
-`curl -H "Content-Type: application/json" -d '{"firstName":"Syed", "lastName": "Salahuddin", "email": "syed@salahuddin.com"}' http://localhost/contacts`
+`curl -H "Content-Type: application/json" -d '{"firstName":"Syed", "lastName": "Salahuddin", "email": "syed@salahuddin.com"}' http://localhost:3000/contacts`
