@@ -3,7 +3,7 @@
 ### to run:
 
 - `npm install`
-- `mongodb` (in it's own tab)
+- `mongod` (in it's own tab)
 - `nodemon` (in it's own tab)
 
 use `curl` or create a front-end that ajax's into your back-end to test
