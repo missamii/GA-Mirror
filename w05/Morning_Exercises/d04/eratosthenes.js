@@ -2,11 +2,15 @@ function eratosthenes(n) {
   var primes = [];  // initialize blank array
 
   for (var i = 0; i < n; i ++) {
-    primes.push("P"); //fill the array
+    if (i < 2) {
+      primes.push("N")
+    } else {
+      primes.push("P"); //fill the array
+    }
   }
-
-  primes[0] = "N"; // 0 and 1 are not prime numbers
-  primes[1] = "N";
+  //
+  // primes[0] = "N"; // 0 and 1 are not prime numbers
+  // primes[1] = "N";
 
   //here's the heart of the algorithm
   //loop over all the numbers in the nums array. Can start at 2 since we know 0 and 1 aren't prime
@@ -35,4 +39,4 @@ function eratosthenes(n) {
   }
 }
 
-eratosthenes(1000);
+eratosthenes(10000000);

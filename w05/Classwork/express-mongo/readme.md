@@ -3,7 +3,7 @@
 ### to run:
 
 - `npm install`
-- `mongodb` (in it's own tab)
+- `mongod` (in it's own tab)
 - `nodemon` (in it's own tab)
 
 use `curl` or create a front-end that ajax's into your back-end to test
@@ -12,7 +12,10 @@ the routes
 ### api routes:
 
 - GET|POST /contacts
+`http://localhost:3000/contacts`
+
 - GET|PUT|DELETE /contacts/:id
+`http://localhost:3000/contacts/SOME_ID_NUMBER`
 
 use this `schema`:
 
@@ -44,4 +47,4 @@ add elements (like forms) and remove elements (like lists).
 - create a view that ***lists all the contacts**, **shows a single contact**,
 **lets you enter a new contact**, **edit or delete and existing contact**
 
-`curl -H "Content-Type: application/json" -d '{"firstName":"Syed", "lastName": "Salahuddin", "email": "syed@salahuddin.com"}' http://localhost/contacts`
+`curl -H "Content-Type: application/json" -d '{"firstName":"Syed", "lastName": "Salahuddin", "email": "syed@salahuddin.com"}' http://localhost:3000/contacts`
