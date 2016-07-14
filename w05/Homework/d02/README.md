@@ -5,7 +5,7 @@
 
 ## App structure
 
-*Babblr/* this is where the API server will live (app.js)
+*babblr/* this is where the API server will live (app.js)
 
 *babblr/public* (this is where our frontend will live)
 
@@ -90,17 +90,17 @@ It doesn't have to look pretty -- we're not worrying about styling tonight! But 
 1. Now let's build our second route so we can actually create a new babbl. Start on the frontend. In main.js you'll need a click event listener on the submit new babbl button. You should have set this up already, but do so now, and confirm it triggers a console.log on a click. Inside the callback for the event listener we will need to do the following
   * grab the values of the author input and the babbl input.
   * create a new object with "author" and "babbl" properties, set equal to the values you grabbed from the DOM
-  * Make a $.POST request (annoyingly, jQuery does *not* have a shorthand $.postJSON function) to ('/'), passing in the object you just created as the data of the request.
+  * Make a $.post request (annoyingly, jQuery does *not* have a shorthand $.postJSON function) to ('/'), passing in the object you just created as the data of the request.
 
-   Here's what the $.POST should look like:
+   Here's what the $.post should look like:
    ```js
-   $.POST({
+   $.post({
       url: 'http://localhost:3000/',
       data: //[the name of your data object goes here],
       dataType: 'json'
    })
    ```
-   Add in a `.done` function to your POST that will console.log the data that it gets back.
+   Add in a `.done` function to your $.post that will console.log the data that it gets back.
 
 24. Try writing a new babbl and clicking submit. If you go over to your server's terminal window, you should see the console.log you created on the backend in app.js in the app.post('/') route way up near the start of the homework. (If you didn't create that console.log, do it now.) If you're seeing it, congrats! Your server successfully received the POST request. Add and commit your code.
 1. So now we need to actually grab the data from the request. To do this, we're going to use another npm package called 'body-parser' which will, shockingly, parse the body of the request for what the frontend code shoved in there. So up at the top of your app.js file, add in `var bodyParser = require('body-parser')` and of course, in the terminal run `npm install --save body-parser` to get it added into our node_modules.
@@ -129,7 +129,7 @@ WHEW! If you got all this working sucessfully then you should be able to
     - Is your frontend capable of grabbing the contents of the input fields when you click on the 'submit new babbl' button, making a POST request to your backend, which in turn successfully writes the new babbl to the file?
     -HW GUIDELINES FOR EVERYONE:
       - **Due at midnight** (unless you prefer to do it early in the morning, then it must be done before class starts)
-      - If you want more time, talk to us first, then you have **2 days** to turn it in at midnight. After that, it's either done or not done & that's the end of it. This should happen very rarely. *Late homeworks do not receive feedback.* 
+      - If you want more time, talk to us first, then you have **2 days** to turn it in at midnight. After that, it's either done or not done & that's the end of it. This should happen very rarely. *Late homeworks do not receive feedback.*
 
 ### **BONUSES**
 1. Make sure your babbls are displaying so that the newest babbl appears at the top, and then downward in descending chronological order.

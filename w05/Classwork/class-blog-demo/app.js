@@ -36,12 +36,12 @@ app.post('/', function(req, res) {
       console.log(data);
       data = JSON.parse(data);
       data.push(newPost);
-      newData = JSON.stringify(data);
+      var newData = JSON.stringify(data);
       fs.writeFile('posts.json', newData, function(err, data) {
         res.send(newData);
       });
     }
-  })
+  });
 });
 
 // start server
