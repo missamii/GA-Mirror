@@ -10,7 +10,7 @@ We'll spend 10-15 minutes researching, and then each group will present their to
 
 TEAM assignments
 
-1. Tiffany Lo, Harry Hur,Margaret Merrell, Babajide Kale
+1. Tiffany Lo, Harry Hur, Margaret Merrell, Babajide Kale
 
 2. Isaac Kang, Joseph Sul,Austin Hudson, Mimi Wu
 
