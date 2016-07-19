@@ -4,6 +4,7 @@
   - Must use at least one API.
   - API must be reasonably complex. OMDB API for example is not complex enough.
   - You may use an API we have used in class, but we will work with you to make the project more complex.
+  - Must use your own API as well using **mongo, node and express.**
 
 2. Must use HTML form elements.
 
