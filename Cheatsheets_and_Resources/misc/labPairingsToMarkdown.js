@@ -20,6 +20,8 @@ fs.readFile(process.argv[2], (err, data) => {
     fs.writeFile(outputFile, fullMarkdown, (e) => {
       if (e) {
         console.error.bind(console, 'error writing file');
+      } else {
+        console.log('markdown successfully created and written to', outputFile);
       }
     });
   }
