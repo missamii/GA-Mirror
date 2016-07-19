@@ -1,7 +1,9 @@
-console.log('i am alive');
+window.onload = function() {
+  console.log('i am alive');
 
+// group project/hw Maggie, Shreiya and Tiffany W06 DAY01
 
-var endPoint = "https:www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyA30BtAT-lBL3irQvEz_0w-yxeQNwz156o";
+var endPoint = "https:www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDq5r-MVpLn0CiSpGVgDHbwYFvUCQJVGp0";
 
 var map;
 var lat;
@@ -12,6 +14,9 @@ var options = {
   timeout: 5000,
   maximumAge: 0
 };
+
+var apiPublicKeyQuery = "?key=" + GEO_API_KEY;
+
 
 function success(pos) {
   var crd = pos.coords;
@@ -72,3 +77,4 @@ findBtn.addEventListener('click', function() {
         });
 
 });
+}
