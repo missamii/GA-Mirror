@@ -14,7 +14,7 @@
 
 6. Because you have a while to do this project, we expect full functionality and nice CSS. As always, save CSS til the end.
 
-7. Just like for project 1, instructors are not available for help on demand. You must submit a GH issue.
+7. Just like for project 1, instructors are not available for help on demand. You must submit a GH issue. See the instructions in this folder.
 
 
 ---
