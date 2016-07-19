@@ -1,0 +1,30 @@
+body {
+  font-family: 'Lato', sans-serif;
+  padding: 50px;
+}
+
+.picture {
+  height: 100px;
+}
+
+#go-button,
+.my-btn {
+  /*width: 45px;
+  height: 40px;*/
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.appended-response {
+  color: red;
+}
+
+.hulk {
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.glyphicon-heart {
+  font-size: 25px;
+}
