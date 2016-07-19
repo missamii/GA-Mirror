@@ -1,8 +1,8 @@
-window.onload = function() {
+// window.onload = function() {
   console.log('i am alive');
 
 // group project/hw Maggie, Shreiya and Tiffany W06 DAY01
-
+// https://developers.google.com/maps/documentation/javascript/places
 var endPoint = "https:www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDq5r-MVpLn0CiSpGVgDHbwYFvUCQJVGp0";
 
 var map;
@@ -15,7 +15,7 @@ var options = {
   maximumAge: 0
 };
 
-var apiPublicKeyQuery = "?key=" + GEO_API_KEY;
+// var apiPublicKeyQuery = "?key=" + GEO_API_KEY;
 
 
 function success(pos) {
@@ -77,4 +77,4 @@ findBtn.addEventListener('click', function() {
         });
 
 });
-}
+// }
