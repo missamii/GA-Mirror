@@ -6,6 +6,11 @@
 - FE: gh-pages
 - This means you'll need to init a git repo in each the FE & BE
 - (hint: to delete a git repo run `rm -rf .git` from the root of the repo.)
+- So in the end... Your FE will have one remote (`origin`, which is GH) and at least two branches (`master` and `gh-pages`)
+- Your BE will have two remotes -- `origin` (GH) and `heroku` -- and just one branch, `master`
+
+
+**Also:**
 - Heroku recognizes that an app is a node app by the existence of a `package.json` file in the root directory. Heroku reads the file to determine the version of Node.js that will be used to run your application on Heroku, as well as the dependencies that should be installed with your application.
 - Make sure your `node_modules` dir is in a `.gitignore`. You do not want to push this to Heroku.
 
@@ -37,6 +42,7 @@
 - Go into your **FE** JS file and change the URL to your backend from `localhost:3000` to your new heroku URL. You can find it after you run the `heroku create` command above, it should look something like this:
 `https://rocky-bastion-46302.herokuapp.com`
 - We are doing this because your FE needs to know where to send AJAX requests. Your BE's URL is no longer `localhost:3000` because we've pushed it to Heroku.
+- *Note:* I like to just comment out the local URL so that when I'm developing I can easily uncomment between production and local.
 
 
 ### Config/Environment vars
@@ -74,6 +80,7 @@ app.listen(PORT, function(){
 
 
 ### Deploy to Heroku
+- Make sure that all your URLs are changed back to the production URLs
 - Add & commit
 - Push to Heroku: `git push heroku master`
 - You should also push to GH `git push origin master`
@@ -93,10 +100,12 @@ app.listen(PORT, function(){
 
 
 ### Troubleshooting
-- If anything goes wrong, run `heroku logs` from the root of your node app. 
+- If anything goes wrong, run `heroku logs` from the root of your node app.
 
 
 ---
 
 
 **Note:** Because Heroku is a free service, an app sleeps after 30 mins of inactivity, and an app can be active no more than 18 hours in a day before going to sleep. This means that when you visit your Heroku URL, it may take a few extra moments for it to "wake" & load. Remember, you need to wake your BE in order for your FE to work.
+
+Psstt.... http://kaffeine.herokuapp.com/
