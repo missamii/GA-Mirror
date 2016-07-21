@@ -3,10 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Forms are awesome!</title>
+    <!-- for jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
+          <h1>Movies</h1>
     <!-- your form goes here -->
+
+    <!-- start drop down -->
+    <select name="movies" id="movies">
+      <option value="blue">Blue Jasmine</option>
+      <option value="alice">Alice in Wonderland</option>
+      <option value="dragon">The Girl with the Dragon Tattoo</option>
+    </select>
+    <!-- end drop down -->
+          <br> <br>
+    <!-- radio buttons start -->
+    <input type="radio" name="favorite" value="favorite" id="love">
+    <label for="favorite">Favorite?</label>                                 <br>
+    <input type="radio" name="disliked" value="disliked" id="hated">
+    <label for="disliked">Hated this movie?</label>                          <br>
+    <!-- end radio buttons -->
+    <br> <br>
+    <button type="button" name="button" id="submit">Submit</button>
+    <!-- js src below -->
     <script src="forms.js" charset="utf-8"></script>
   </body>
 </html>

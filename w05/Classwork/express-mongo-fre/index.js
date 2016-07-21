@@ -63,9 +63,9 @@ app.post("/contacts", function(req, res) {
   var newContact = req.body;
   newContact.createData = new Date();
 
-  if (!(req.body.firstName || req.body.lastName)) {
-    handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
-  }
+  // if (!(req.body.firstName || req.body.lastName)) {
+  //   handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
+  // }
 
   // insert one new contact
   db.collection(CONTACTS_COLLECTION).insertOne(newContact, function(err, doc) {
@@ -73,6 +73,7 @@ app.post("/contacts", function(req, res) {
       handleError(res, err.message, "Failed to create new contact.");
     } else {
       res.status(201).json(doc.ops[0]);
+      console.log(res.status);
     }
   });
 });
