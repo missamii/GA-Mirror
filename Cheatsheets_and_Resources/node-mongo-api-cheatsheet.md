@@ -25,6 +25,9 @@
 - Write your BE routes; make sure the verb + path match the FE
 - Hide your API keys in your bash profile (located at `~/.bash_profile`) using this format:
   - `export MARVEL_PUBLIC_API_KEY="21p983298479328749283728"`
+- Anytime you edit your `.bash_profile` you must reload the terminal!
+  - `source ~/.bash_profile`
+  - Or close & reopen the current Terminal tab
 - Retrieve them in your JS file like so:
   - `process.env.MARVEL_PUBLIC_API_KEY`
 - This hides your keys locally
