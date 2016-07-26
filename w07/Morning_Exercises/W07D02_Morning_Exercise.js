@@ -26,6 +26,24 @@ arrayTransformer(array, function(x) {
 });
 
 
+
+function arrayTransformer(arr, callback) {
+  // your code here
+  var newArray = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    newArray.push(callback(arr[i]));
+  }
+  console.log(newArray);
+  return newArray;
+}
+
+arrayTransformer(["ethan","liza","syed"], function(x) {
+  var div = document.createElement('div');
+  div.classList.add('teacher');
+  div.innerHTML = x;
+  return div;
+});
 // To show your function's successfully working,
 // (1) using [1,2,3] as your source array, create an array of its squares
 // (2) transform the array of teachers here -- they've all decided to have
