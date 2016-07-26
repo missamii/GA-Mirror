@@ -11,9 +11,20 @@ on every item in the array, passing in each item in turn to the callback functio
 as an argument.
 */
 
+
+var array = [1,2,3];
 function arrayTransformer(arr, callback) {
   // your code here
+  var newArr =[];
+  for (i = 0; i <arr.length; i++) {
+    newArr.push(callback(arr[i]));
+  }
+  console.log(newArr);
 }
+arrayTransformer(array, function(x) {
+  return x * x;
+});
+
 
 // To show your function's successfully working,
 // (1) using [1,2,3] as your source array, create an array of its squares
@@ -22,6 +33,7 @@ function arrayTransformer(arr, callback) {
 // be "F" and vice versa. Log the teachers array when you're done to confirm
 // the original array is unchanged.
 
+var array = [1,2,3];
 var teachers = [
   {
     name: "Syed",
@@ -36,6 +48,25 @@ var teachers = [
     gender: "F"
   }
 ];
+function arrayTransformer(arr, callback) {
+  // your code here
+  var newArr =[];
+  for (i = 0; i < arr.length; i++) {
+    newArr.push(callback(arr[i]));
+  }
+  console.log(newArr);
+}
+arrayTransformer(array, function(x) {
+  return x * x;
+});
+arrayTransformer(teachers, function(x) {
+  if (x.gender === 'M') {
+    x.gender = 'F';
+  } else {
+    x.gender = 'M';
+  }
+  return x;
+});
 
 /*
 2. WRITE A FUNCTION THAT TAKES TWO PARAMETERS:

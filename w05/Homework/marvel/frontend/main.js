@@ -41,8 +41,8 @@ var newdiv = document.querySelector('#newdiv');
           // appending API info to the DOM
           var html = '';
           if (chosenEndPoint === 'characters') {
-            for (var i = 0; i < response.data.results.length; i++) {
-              var character = response.data.results[i];
+            for (var c = 0; c < response.data.results.length; c++) {
+              var character = response.data.results[c];
               html += '<h3>' + character.name + '</h3>';
               html += '<p>id: ' + character.id + '</p>';
               html += '<img src="'+character.thumbnail.path + '.' + character.thumbnail.extension + '">';
@@ -62,6 +62,6 @@ var newdiv = document.querySelector('#newdiv');
             html += response.attributionHTML;
           }
           document.querySelector('#newdiv').innerHTML = html;
-        })
-      })
-}
+        });
+      });
+};

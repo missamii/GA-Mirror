@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // connect to the database server
 var MongoClient = mongodb.MongoClient;
-var url = 'mongodb://localhost:27017/marvel'
+var url = 'mongodb://localhost:27017/marvel';
 mongodb.MongoClient.connect(process.env.MONGODB_URI || url, function (err, database) {
   if (err) {
     console.log(err);
