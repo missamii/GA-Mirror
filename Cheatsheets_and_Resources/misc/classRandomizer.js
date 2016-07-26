@@ -7,7 +7,7 @@
 ///////////////////////////////////////////////////////
 
 /*SYNTAX FOR USING THIS SCRIPT IS
-node classRandomizer.js path/to/classfile groupsize [,path/to/outputfile direction]
+node classRandomizer.js path/to/classfile groupsize [,path/to/outputfile, direction]
 classfile must be a json array of students.
 groupsize is the number of students you'd like in each group
 outputfile will be overwritten if it exists, and created if it does not
