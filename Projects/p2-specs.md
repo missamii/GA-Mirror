@@ -4,6 +4,7 @@
   - Must use at least one API.
   - API must be reasonably complex. OMDB API for example is not complex enough.
   - You may use an API we have used in class, but we will work with you to make the project more complex.
+  - Must use your own API as well using **mongo, node and express.**
 
 2. Must use HTML form elements.
 
@@ -14,7 +15,7 @@
 
 6. Because you have a while to do this project, we expect full functionality and nice CSS. As always, save CSS til the end.
 
-7. Just like for project 1, instructors are not available for help on demand. You must submit a GH issue.
+7. Just like for project 1, instructors are not available for help on demand. You must submit a GH issue. See the instructions in this folder.
 
 
 ---
