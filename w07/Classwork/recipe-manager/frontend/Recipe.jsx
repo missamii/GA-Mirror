@@ -6,7 +6,6 @@ var Recipe = React.createClass({
       <div className="recipe">
         <h3>{this.props.r.title}</h3>
         <h4>by {this.props.r.author}</h4>
-        <h4>Category: {this.props.r.category}</h4>
         <ul>
           {this.props.ingreds}
         </ul>
