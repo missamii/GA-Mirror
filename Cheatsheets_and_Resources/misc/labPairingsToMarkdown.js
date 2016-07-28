@@ -7,7 +7,7 @@ fs.readFile(process.argv[2], (err, data) => {
     console.error.bind(console, 'error reading sourcefile');
   } else {
     const labPairings = JSON.parse(data);
-    const header = "# Lab Pairings\n\n| Group | Partner 1 | Partner 2 |\n| --- | --- | --- |\n";
+    const header = "# Pairings\n\n| Group | Partner 1 | Partner 2 |\n| --- | --- | --- |\n";
     const body = labPairings.map((g, i) => {
       let p1 = Math.round(Math.random());
       let p2 = p1 === 1 ? 0 : 1;
