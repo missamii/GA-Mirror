@@ -30,7 +30,7 @@ class Search extends Component {
     const index = 0;
     return (
       <div>
-        <h1>{this.props.hello}</h1>
+        <h1>{this.props.unicorns}</h1>
         <input placeholder="search"
           onChange={this.handleChange.bind(this)} />
         <button onClick={this.handleClick.bind(this)}>go</button>
