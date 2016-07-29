@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getThis from './utils/key.js';
+import getUnicorns from './utils/key.js';
 
 class Search extends Component {
   constructor(props){
@@ -13,7 +13,7 @@ class Search extends Component {
   handleClick(event) {
     console.log(this);
     //this.setState({ searchText: event.target.value });
-    getThis()
+    getUnicorns()
     .then((res) => {
       this.setState({
         response: res.data
@@ -26,7 +26,7 @@ class Search extends Component {
     this.setState({ searchText: event.target.value });
   }
   render(){
-    const restaurants = this.state.response;
+    const unicorns = this.state.response;
     const index = 0;
     return (
       <div>
@@ -36,8 +36,8 @@ class Search extends Component {
         <button onClick={this.handleClick.bind(this)}>go</button>
         <h3>{this.state.searchText}</h3>
         <ol>
-          {restaurants.map(function (restaurant) {
-            return <li key={restaurant.phone}>{restaurant.dba}</li>
+          {unicorns.map(function (unicorns) {
+            return <li key={unicorns.tails}>{unicorns.dba}</li>
           })}
         </ol>
       </div>
