@@ -6,19 +6,20 @@
 - App (main)
 
 - header
-  + Link Container
-  +
-  +
-  + heading with Title and summary of page
-- content
-  +
-  +
+  + link nav
+  + bold heading with Title and short page summary of site
+
+- content (body)
+  + the title
+  + has the comic image
+  + has links to comics
+  + has buttons to go forward or back (nav)
 
 - footer  
-  +
-  +
-  +
-  +
+  + favorite comics
+  + links to recommend comics
+  + image link to comics
+  + warning message
 
 
 
@@ -43,7 +44,6 @@ What does Webpack do?
 What are props?
   + Immutable (let's react do fast reference checks).
   + They are used to pass data down from your view-controller(your top level component)
-  +
 
 
 What is state?
