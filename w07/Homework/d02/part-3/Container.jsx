@@ -9,4 +9,4 @@ var Category = React.createClass({
   }
 });
 
-export default Products
+export default Container
