@@ -12,19 +12,13 @@
 
 
 
-
 // ---------------------------------------
 
 
-// * Copy the react-boiler directory & create the above hello world example
+// * Exercise * Copy the react-boiler directory & create the above hello world example
 
 
 // ---------------------------------------
-
-
-
-
-
 
 
 
@@ -52,6 +46,7 @@
 
 
 
+
 // ---------------------------------------
 
 
@@ -60,12 +55,6 @@
 
 
 // ---------------------------------------
-
-
-
-
-
-
 
 
 
@@ -169,7 +158,7 @@
 
 
 
-/**** Part 4.2 - Expressions and Props ---> dynamic --> give components props --> render 2 of the same component ***/
+/**** Part 4.2 - Expressions and Props ---> dynamic --> render 2 of the same component ***/
 // var React = require('react');
 // var ReactDOM = require('react-dom');
 //
@@ -337,55 +326,55 @@
 
 
 /*** Part 5 • Props with Styles + loops ***/
-var React = require('react');
-var ReactDOM = require('react-dom');
-
-var MyListComponent = React.createClass({
-  renderTheList: function() {
-    var result = [];
-    for (var i = 0; i < this.props.valList.length; i++) {
-      var innerHtml = this.props.valList[i];
-      result.push(<li key={i}>{innerHtml}</li>);
-    }
-    console.log(result);
-    return result;
-  },
-  render: function(){
-    // return <option>{this.props.value}</option>;
-    return (
-      <ul>
-        {
-          this.renderTheList()
-        }
-      </ul>
-    )
-  }
-});
-
-var MyBigListContainer = React.createClass({
-  render: function(){
-    var myStyles = {
-      border: '1px solid #999',
-      display: 'inline-block',
-      paddingRight: '50px',
-      paddingLeft: '30px',
-      color: 'red'
-    };
-    var valList1 = ['volvo', 'saab', 'mercedes', 'audi'];
-    var valList2 = ['lollipops', 'tacos', 'pizza', 'coffee'];
-    return ( // react div element, via JSX, containing <MyOption> component
-      <div style={myStyles}>
-        <MyListComponent valList={valList1}></MyListComponent>
-        <MyListComponent valList={valList2}></MyListComponent>
-      </div>
-    );
-  }
-});
-
-ReactDOM.render(
-  <MyBigListContainer/>,
-  document.getElementById('react-app')
-);
+// var React = require('react');
+// var ReactDOM = require('react-dom');
+//
+// var MyListComponent = React.createClass({
+//   renderTheList: function() {
+//     var result = [];
+//     for (var i = 0; i < this.props.valList.length; i++) {
+//       var innerHtml = this.props.valList[i];
+//       result.push(<li key={i}>{innerHtml}</li>);
+//     }
+//     console.log(result);
+//     return result;
+//   },
+//   render: function(){
+//     // return <option>{this.props.value}</option>;
+//     return (
+//       <ul>
+//         {
+//           this.renderTheList()
+//         }
+//       </ul>
+//     )
+//   }
+// });
+//
+// var MyBigListContainer = React.createClass({
+//   render: function(){
+//     var myStyles = {
+//       border: '1px solid #999',
+//       display: 'inline-block',
+//       paddingRight: '50px',
+//       paddingLeft: '30px',
+//       color: 'red'
+//     };
+//     var valList1 = ['volvo', 'saab', 'mercedes', 'audi'];
+//     var valList2 = ['lollipops', 'tacos', 'pizza', 'coffee'];
+//     return ( // react div element, via JSX, containing <MyOption> component
+//       <div style={myStyles}>
+//         <MyListComponent valList={valList1}></MyListComponent>
+//         <MyListComponent valList={valList2}></MyListComponent>
+//       </div>
+//     );
+//   }
+// });
+//
+// ReactDOM.render(
+//   <MyBigListContainer/>,
+//   document.getElementById('react-app')
+// );
 
 
 
@@ -570,6 +559,82 @@ ReactDOM.render(
 //   <App myprop={9} />,
 //   document.getElementById('react-app')
 // );
+
+
+
+
+
+/**** Part 6.1 - State & Events --> big counter changes parent bg color ****/
+// child --> state: counter
+// parent --> state: bg color
+// parent passes child cbfxn as prop
+// when button clicked, increase/decrease counter & trigger this.props.cbfxn
+
+// var React = require('react');
+// var ReactDOM = require('react-dom');
+//
+// var Counter = React.createClass({
+// 	getInitialState: function() {
+// 		return {
+// 			counter: 0,
+//       name: 'liza'
+// 		};
+// 	},
+// 	increment: function(event) {
+//     console.log(event.nativeEvent);
+// 		this.setState({
+// 			counter: this.state.counter += 1
+// 		});
+//     this.props.changeParentFxn();
+// 	},
+// 	decrement: function(event) {
+// 		this.setState({
+// 			counter: this.state.counter -= 1
+// 		});
+//     this.props.changeParentFxn();
+// 	},
+// 	render: function() {
+// 		// console.log("STATE:", this.state);
+// 		return (
+// 			<div className="counter">
+//         <button onClick={this.increment}>+</button>
+//   				<h1>{this.state.counter}</h1>
+//         <button onClick={this.decrement}>-</button>
+// 			</div>
+// 		);
+// 	}
+// });
+//
+// var App = React.createClass({
+//   getInitialState: function() {
+//     return {
+//       bgColor: 'gray'
+//     }
+//   },
+//   changeParentColor: function() {
+//     console.log('hello world');
+//     const colors = ['red', 'blue', 'green', 'yellow', 'pink', 'purple'];
+//     var randColorIndex = Math.floor(Math.random() * colors.length);
+//     console.log("randColorIndex", randColorIndex);
+//     this.setState({
+//       bgColor: colors[randColorIndex]
+//     });
+//     console.log('APP STATE: ', this.state);
+//   },
+//   render: function() {
+//     return(
+//       <div className="app" style={{backgroundColor: this.state.bgColor, color: 'white'}}>
+//         <Counter changeParentFxn={this.changeParentColor}/>
+//       </div>
+//     );
+//   }
+// });
+//
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('react-app')
+// );
+
 
 
 
