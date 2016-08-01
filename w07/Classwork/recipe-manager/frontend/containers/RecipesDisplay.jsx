@@ -1,5 +1,5 @@
 import React from 'react';
-import Category from './Category.jsx';
+import Category from '../components/Category.jsx';
 
 var RecipesDisplay = React.createClass({
   render: function() {

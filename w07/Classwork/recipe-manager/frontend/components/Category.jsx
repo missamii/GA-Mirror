@@ -13,7 +13,7 @@ export default React.createClass({
     });
 
     return (
-      <div className="category" id={this.props.recipes[0].category}>
+      <div className="category" id={this.props.category}>
         <h2>{this.props.category}</h2>
         {recipes}
       </div>

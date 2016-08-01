@@ -1,5 +1,5 @@
 var React = require('react');
-import HeaderStyles from './stylesheets/Header.js';
+import HeaderStyles from '../stylesheets/Header.js';
 
 var Header = React.createClass({
   render: function() {
