@@ -50,11 +50,11 @@ Scope:
 function hello() {
   for (let i = 0; i < 'ethan'.length; i++) {
     const LIZA = 'liza';
-    console.log("inside the loop", LIZA); // this works
+    console.log(LIZA); // this works
   }
-  console.log("outside loop, inside fxn", LIZA); // this does not work
+  console.log(LIZA); // this does not work
 }
-console.log("outside fxn", LIZA); // this does not work
+console.log(LIZA); // this does not work
 
 ```
 
