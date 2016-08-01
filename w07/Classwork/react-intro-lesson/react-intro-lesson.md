@@ -9,7 +9,10 @@
 - What is a `React component`
 - What are the two main parts of a `React component`
 - What is the `virtual DOM`?
+
+
 ---
+
 
 # Part I • What is React?
 
@@ -70,7 +73,7 @@
 - Each of these possible DOM renderings are called `states`; the `state` of the DOM.
 - As you coded your vanilla JS, you had to keep track of what elements were doing what and when so that you could create the appropriate UI for the user at that time. This DOM that you're keeping track of in your head is the **virtual DOM**  
 - *Note:* You will also see it called the *shadow DOM*, but in React, it is called the **virtual DOM**.
-
+- *Also note:* When I talk about `state` here, I mean the state of the DOM in the broader web development scope. Read on to find out about `state` in React components, which refers to particular pieces of datum that represent the current `state` of the component.
 
 ### How does React use the virtual DOM?
 - Remember how I said React `components` are like tiny templates? Keep that in mind.
@@ -124,19 +127,43 @@ When **rendered**, it looks like this:
 - In React, each of your components have a state. Essentially, React knows when to re-render the scene because it is able to observe when this data changes.
 
 
-### Recap: React Components have two parts: `props` and `state`
-- If we think of `components` as JS objects, we can think of `props` as properties on those objects.
-- Child components keep track of their own `state`. They let their parent components know about it.
-- In React, **"properties flow down** and **states are maintained internally"**
+---
+
+
+### React components - `props` and `state`
+- Child components keep track of their own `state`. What do I mean by state? Pieces of data that represent the current state of the component.
+- In React, **properties flow down** and **states are maintained internally**
 - This means that
   - `props` are given to children by their parents.
   - But parents are blind to their children
   - `state` is maintained internally by each child; a child re-renders itself when state changes.
 
 
+### Imagining React components as simple JS objects
+- If we imagine `components` as JS objects, we can think of `props` and `state as two properties on those objects.
+- They automatically exist on components, and they start off as empty objects.
+- Also remember that every component must have a render fxn, which must return JSX.
+- Here is a visualization of a React component as a simple JS object:
+
+
+```js
+var AppComponent = {
+  props: {},
+  state: {},
+  render: function(){
+    return()
+  }
+}
+```
+
+
+---
+
+
 ### What is `this.props.children`?
-- `props` usually look like HTML attributes and are like properties on an object
+- When parents give children `props`, it usually looks like HTML attributes and are like properties on an object.
 - `this.props.children` is special; it refers to anything passed into the component as child elements
+
 
 ```js
 var Container = React.createClass({
