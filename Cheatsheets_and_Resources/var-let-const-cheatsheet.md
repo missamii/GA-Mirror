@@ -27,7 +27,7 @@ console.log(liza); // this does not work
 ```javascript
 
 function hello() {
-  for (var i = 0; i < 'ethan'.length; i++) {
+  for (let i = 0; i < 'ethan'.length; i++) {
     let liza = 'liza';
     console.log(liza); // this works
   } // end loop
@@ -48,20 +48,21 @@ console.log(liza); // this does not work
 Scope:
 ```javascript
 function hello() {
-  for (var i = 0; i < 'ethan'.length; i++) {
+  for (let i = 0; i < 'ethan'.length; i++) {
     const LIZA = 'liza';
+    console.log("inside the loop", LIZA); // this works
   }
-  console.log(LIZA); // this works
+  console.log("outside loop, inside fxn", LIZA); // this does not work
 }
-console.log(LIZA); // this does not work
+console.log("outside fxn", LIZA); // this does not work
 
 ```
 
 Mutability:
 ```javascript
-var liza = { name: 'liza', size: 'small' }
-
+const liza = { name: 'liza', size: 'small' }
 liza['name'] = 'liza ramo'; // this works
 
-liza = 'liza ramo'; // this does not  
+liza = 'liza ramo'; // this does not work
+
 ```
