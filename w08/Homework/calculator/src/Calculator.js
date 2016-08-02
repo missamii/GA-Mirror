@@ -112,15 +112,16 @@ class Calculator extends Component {
       <div className="Calculator">
         <input
           type="text"
+          id="input"
           value={currentValue} />
         <div className="row">
-          <button onClick={() => this.addDigit(7)}>7</button>
-          <button onClick={() => this.addDigit(8)}>8</button>
-          <button onClick={() => this.addDigit(9)}>9</button>
-          <button onClick={() => this.setAdd()}>+</button>
+          <button id="button" onClick={() => this.addDigit(7)}>7</button>
+          <button id="button" onClick={() => this.addDigit(8)}>8</button>
+          <button id="button" onClick={() => this.addDigit(9)}>9</button>
+          <button id="button" onClick={() => this.setAdd()}>+</button>
         </div>
         <div className="row">
-          <button onClick={() => this.addDigit(4)}>4</button>
+          <button id="button" onClick={() => this.addDigit(4)}>4</button>
           <button onClick={() => this.addDigit(5)}>5</button>
           <button onClick={() => this.addDigit(6)}>6</button>
           <button onClick={() => this.setSub()}>-</button>
