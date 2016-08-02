@@ -66,6 +66,14 @@ class Calculator extends Component {
     });
   }
 
+  //add decimal here.
+  setDec() {
+    this.setState({
+      lastButton: '.',
+      lastOperator: '.'
+    });
+  }
+
   calculate() {
     const {
       previousValue = 0,
@@ -136,6 +144,7 @@ class Calculator extends Component {
           <button id="button" onClick={() => this.addDigit(0)}>0</button>
           <button id="button" onClick={() => this.calculate()}>=</button>
           <button id="button">CLEAR</button>
+          // <button id="button" onClick={() => this.addDec()}>/</button>
           <button id="button" onClick={() => this.setDiv()}>/</button>
         </div>
 
