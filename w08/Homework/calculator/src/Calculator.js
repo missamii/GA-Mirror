@@ -122,20 +122,21 @@ class Calculator extends Component {
         </div>
         <div className="row">
           <button id="button" onClick={() => this.addDigit(4)}>4</button>
-          <button onClick={() => this.addDigit(5)}>5</button>
-          <button onClick={() => this.addDigit(6)}>6</button>
-          <button onClick={() => this.setSub()}>-</button>
+          <button id="button" onClick={() => this.addDigit(5)}>5</button>
+          <button id="button" onClick={() => this.addDigit(6)}>6</button>
+          <button id="button" onClick={() => this.setSub()}>-</button>
         </div>
         <div className="row">
-          <button onClick={() => this.addDigit(1)}>1</button>
-          <button onClick={() => this.addDigit(2)}>2</button>
-          <button onClick={() => this.addDigit(3)}>3</button>
-          <button onClick={() => this.setMulti()}>x</button>
+          <button id="button" onClick={() => this.addDigit(1)}>1</button>
+          <button id="button" onClick={() => this.addDigit(2)}>2</button>
+          <button id="button" onClick={() => this.addDigit(3)}>3</button>
+          <button id="button" onClick={() => this.setMulti()}>x</button>
         </div>
         <div className="row">
-          <button onClick={() => this.addDigit(0)}>0</button>
-          <button onClick={() => this.calculate()}>=</button>
-          <button onClick={() => this.setDiv()}>/</button>
+          <button id="button" onClick={() => this.addDigit(0)}>0</button>
+          <button id="button" onClick={() => this.calculate()}>=</button>
+          <button id="button">CLEAR</button>
+          <button id="button" onClick={() => this.setDiv()}>/</button>
         </div>
 
       </div>
