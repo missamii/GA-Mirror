@@ -30,6 +30,7 @@ class Calculator extends Component {
         // lastOperator: null,
         lastButton: digit,
         currentValue: parseFloat(`${currentValue}${digit}`) // calculatedValue + digit
+        // console.log(currentValue);
       });
     }
 
@@ -71,6 +72,7 @@ class Calculator extends Component {
       lastButton
     } = this.state;
     const performOperation = (a, b) => {
+      // console.log(performOperation);
       if (lastOperator === '+') {
         return a + b;
       } else if (lastOperator === '-') {
@@ -101,6 +103,7 @@ class Calculator extends Component {
       currentValue
     } = this.state;
 
+    // Tiffany remember this: I can do this!
     // DOM elements vs React components
     // DOM elements have attributes, while React components have props
     return (
@@ -134,7 +137,6 @@ class Calculator extends Component {
 
       </div>
     );
-    // <Button text="recall" clickHandler={this._showMemoryBank} />
   }
 }
 
