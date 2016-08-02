@@ -35,28 +35,28 @@ class Calculator extends Component {
 
   }
 
-  setOperatorAddition() {
+  setAdd() {
     this.setState({
       lastButton: '+',
       lastOperator: '+'
     });
   }
 
-  setOperatorSubtraction() {
+  setSub() {
     this.setState({
       lastButton: '-',
       lastOperator: '-'
     });
   }
 
-  setOperatorMultiplication() {
+  setMulti() {
     this.setState({
       lastButton: '*',
       lastOperator: '*'
     });
   }
 
-  setOperatorDivision() {
+  setDiv() {
     this.setState({
       lastButton: '/',
       lastOperator: '/'
@@ -112,24 +112,24 @@ class Calculator extends Component {
           <button onClick={() => this.addDigit(7)}>7</button>
           <button onClick={() => this.addDigit(8)}>8</button>
           <button onClick={() => this.addDigit(9)}>9</button>
-          <button onClick={() => this.setOperatorAddition()}>+</button>
+          <button onClick={() => this.setAdd()}>+</button>
         </div>
         <div className="row">
           <button onClick={() => this.addDigit(4)}>4</button>
           <button onClick={() => this.addDigit(5)}>5</button>
           <button onClick={() => this.addDigit(6)}>6</button>
-          <button onClick={() => this.setOperatorSubtraction()}>-</button>
+          <button onClick={() => this.setSub()}>-</button>
         </div>
         <div className="row">
           <button onClick={() => this.addDigit(1)}>1</button>
           <button onClick={() => this.addDigit(2)}>2</button>
           <button onClick={() => this.addDigit(3)}>3</button>
-          <button onClick={() => this.setOperatorMultiplication()}>x</button>
+          <button onClick={() => this.setMulti()}>x</button>
         </div>
         <div className="row">
           <button onClick={() => this.addDigit(0)}>0</button>
           <button onClick={() => this.calculate()}>=</button>
-          <button onClick={() => this.setOperatorDivision()}>/</button>
+          <button onClick={() => this.setDiv()}>/</button>
         </div>
 
       </div>
