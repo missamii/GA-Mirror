@@ -62,6 +62,6 @@ var newdiv = document.querySelector('#newdiv');
             html += response.attributionHTML;
           }
           document.querySelector('#newdiv').innerHTML = html;
-        })
-      })
-}
+        });
+      });
+};
