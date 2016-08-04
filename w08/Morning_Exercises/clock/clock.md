@@ -75,4 +75,5 @@ What are some others?
 * Also run `npm install -g jasmine` so that you have jasmine globally and can use it from the command line.
 * Open up 'clock.js' in your text editor; this is where you'll write your code. Also open up specs/clockSpec.js.
 * Before you write anything, try running `jasmine specs/clockSpec.js` from this directory in the command line and viewing the output.
-* We'll go over briefly how the Jasmine code works, then you're going to write code in `clock.js` to pass all the tests!
+* Happily we won't need to remember the whole command -- if you look at your "package.json" file you'll see that it contains a "test" script to run it for you! All you need to is run `npm test` from the command line and boom! your tests are run for you.
+* We'll go over briefly how the Jasmine code works, then you're going to write code in "clock.js" to pass all the tests!
