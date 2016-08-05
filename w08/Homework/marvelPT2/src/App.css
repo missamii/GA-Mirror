@@ -19,25 +19,7 @@ body {
   font-family: sans-serif;
   color: #D5CDCE;
 }
-#form {
-}
-#dropbox {
-  transition: all .2s;
-  box-shadow: inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
-  border: 0;
-
-}
-#searchbox {
-  height: 34px;
-  width: 40%;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  border-top: none;
-  border-bottom: 1px solid #666;
-  box-shadow: inset 0 5px 5px rgba(0,0,0,.39), 0 0px 1px #666, 0 1px 0 #666;
-  font-family: helvetica;
-}
-#searchbutton {
+#button {
   width: 30%;
   height: 30px;
   padding: 0;
@@ -83,9 +65,14 @@ p {
   font-size: 10pt;
   margin-top: .5em; color: #D5CDCE;
 }
-a:link {
+#link {
   background-color: #59031A;
+  color: #4F4F4F;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: helvetica;
+  text-decoration-line: overline;
 }
-ul.a {
-    list-style-type: none;
+ul {
+  list-style: none;
 }

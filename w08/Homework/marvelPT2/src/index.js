@@ -9,14 +9,12 @@ import './index.css';
 
 ReactDOM.render((
   <Router history={browserHistory}>
-    {/* all our routes go here */}
-    {/*we replaed <App /> with Route <Route /> */}
     <Route path="/" component={App}>
-    <Route path="/about" component={About} />
-    <Route path="/viewall" component={Viewall} >
+      <Route path="/about" component={About} />
+        <Route path="/viewall" component={Viewall} >
+        </Route>
     </Route>
-    </Route>
-    </Router> )
+  </Router> )
   ,
   document.getElementById('root')
 );

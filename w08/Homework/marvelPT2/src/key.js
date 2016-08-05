@@ -1,0 +1,1 @@
+MARVEL_PUBLIC_API_KEY = 'ccd00800ef07690edac2283cbf7b1cbe';

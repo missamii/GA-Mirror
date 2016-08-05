@@ -11,10 +11,11 @@ class App extends Component {
       <div id="box" className="App">
         <ul role="nav">
           <h1>Marvel React</h1>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/About.js">About</Link></li>
-          <li><Link to="/Viewall.js">View All</Link></li>
+          <li><Link id="link" to="/">Home</Link></li>
+          <li><Link id="link" to="/About">About</Link></li>
+          <li><Link id="link" to="/Viewall">View All</Link></li>
         </ul>
+        {this.props.children}
       </div>
     );
   }
