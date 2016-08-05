@@ -22,7 +22,20 @@ constructor(){
   render() {
     return(
       <div className="Viewall">
-        <button id="button" onClick={(event) => this.onClick(event)}>see all!</button>
+        <h2>View Marvel Characters</h2>
+        <b>Name:</b> Storm<br />
+        <b>Abilities:</b>	Weather manipulation, Flight, Ecological empathy
+        <b>Species:</b> Human Mutant<br />
+                  <br />
+        <b>Name:</b> Psylocke <br />
+        <b>Abilities:</b>	Expert martial artist, Telekinesis, Telepathy, Precognition, Ability to construct weapons made of psychic energy, usually in the form of a katana or knife.<br />
+        <b>Species:</b> Human Mutant <br />
+                  <br />
+        <b>Name:</b> Nightcrawler <br />
+        <b>Abilities:</b>		Superb fencer, Superhuman agility, dexterity, coordination, reflexes and balance. Enhanced flexibility, speed and night vision, Teleportation, Prehensile tail. Ability to stick to walls and blend into shadows<br />
+        <b>Species:</b> Human Mutant<br />
+
+        {/* <button id="button" onClick={(event) => this.onClick(event)}>see all!</button> */}
       </div>
     )
   }
