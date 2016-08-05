@@ -86,3 +86,6 @@ p {
 a:link {
   background-color: #59031A;
 }
+ul.a {
+    list-style-type: none;
+}
