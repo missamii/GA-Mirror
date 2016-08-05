@@ -10,6 +10,7 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var mongodb = require('mongodb');
 var app = express();
+const unicornsController = require('./controllers/UnicornsController.js');
 
 /* let's add the ability ajax to our server from anywhere! */
 app.use(cors());
@@ -25,39 +26,16 @@ var mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/unicorns_db
 
 /*** our backend routes ***/
 /* depending on the kind of request, fire the right callback */
+app.use('/unicorns', unicornsController);
 
 /* welcome page */
 app.get('/', function(request, response){
   response.json({"description":"uNiCoRnS API"});
 });
 
-/* get all */
-app.get('/unicorns', function(request, response){
-  MongoClient.connect(mongoUrl, function (err, db) {
-    var unicornsCollection = db.collection('unicorns');
-    if (err) {
-      console.log('Unable to connect to the mongoDB server. ERROR:', err);
-    } else {
-      /* Get all */
-      unicornsCollection.find().toArray(function (err, result) {
-        if (err) {
-          console.log("ERROR!", err);
-          response.json("error");
-        } else if (result.length) {
-          console.log('Found:', result);
-          response.json(result);
-        } else { //
-          console.log('No document(s) found with defined "find" criteria');
-          response.json("no unicorns found");
-        }
-        db.close(function() {
-          console.log( "database CLOSED");
-        });
-      }); // end find
 
-    } // end else
-  }); // end mongo connect
-}); // end get all
+  /* get all was here */
+
 
 /* add new */
 app.post('/unicorns/new', function(request, response){
@@ -93,33 +71,7 @@ app.post('/unicorns/new', function(request, response){
   }); // end mongo connect
 }); // end add new
 
-/* find */
-app.get('/unicorns/:name', function(request, response){
-  // response.json({"description":"find by name"});
-  // console.log("request.params: ", request.params);
-  MongoClient.connect(mongoUrl, function (err, db) {
-    var unicornsCollection = db.collection('unicorns');
-    if (err) {
-      console.log('Unable to connect to the mongoDB server. ERROR:', err);
-    } else {
-      // We are connected!
-      console.log('Finding by name... ');
-      /* Get */
-      unicornsCollection.find(request.params).toArray(function (err, result) {
-        if (err) {
-          console.log("ERROR!", err);
-          response.json("error");
-        } else if (result.length) {
-          console.log('Found:', result);
-          response.json(result);
-        } else { //
-          console.log('No document(s) found with defined "find" criteria');
-          response.json("no unicorns found");
-        }
-        db.close(function() {
-          console.log( "database CLOSED");
-        });
-      }); // end find
+//find was HERE
     } // end else
   }); // end mongo connect
 

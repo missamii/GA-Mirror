@@ -2,7 +2,7 @@ console.log('running tests!');
 
 const Jasmine = require('jasmine');
 const jasmine = new Jasmine();
-const clock = require('../clock.js');
+const clock = require('../myclock.js');
 
 jasmine.loadConfigFile('./spec/support/jasmine.json');
 
