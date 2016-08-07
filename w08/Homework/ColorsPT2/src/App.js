@@ -9,7 +9,7 @@ class App extends Component {
       results: []
     };
   }
-  /* the event for colors api */
+  /* the event button for colors api */
   getColors(event) {
     console.log(this);
     getColors()
@@ -23,18 +23,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div id="box" className="App">
         <div id="color-container">
           <h1>Colors YAY!</h1>
-              {
-                colors.map((img, i) => {
-                  return <img alt="" src={img} key={i}></img>
-
-                })
-              }
-         <br /> <br />
-        <button id="button" onClick={(event) => this.getColors(event)}>Get Colors!</button>
+         <br /> <br /><br /> <br />
+         <p>
+           Color display palette will go here
+         </p>
         </div>
+        <button id="button" onClick={(event) => this.getColors(event)}>Get Colors!</button>
       </div>
     );
   }
