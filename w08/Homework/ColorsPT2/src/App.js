@@ -26,9 +26,12 @@ class App extends Component {
       <div className="App">
         <div id="color-container">
           <h1>Colors YAY!</h1>
-          <ol>
-          {/* return colors here, will need to append the new ES6 way. */}
-          </ol>
+              {
+                colors.map((img, i) => {
+                  return <img alt="" src={img} key={i}></img>
+
+                })
+              }
          <br /> <br />
         <button id="button" onClick={(event) => this.getColors(event)}>Get Colors!</button>
         </div>
