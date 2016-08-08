@@ -1,5 +1,5 @@
 body {
-  background: #fff;
+  background: #888;
   background-image: url("birth_of_an_artist_wallpaper_by_yuuza-d5nnfa7.jpg");
 }
 #box {
@@ -8,11 +8,20 @@ body {
   opacity: 0.6;
 }
 #color-container {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /*justify-content: space-around;*/
   justify-content: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
+  /*max-width: 600px;*/
+  margin: 10px auto;
+  /*margin: 20px;*/
+}
+.color {
+  height: 50px;
+  width: 50px;
+  margin: 0 2.5%;
 }
 #button {
   background-color: #fce4ec;
@@ -26,6 +35,7 @@ body {
   display: inline-block;
 }
 h1 {
+  width: 100%;
   font-family: helvetica;
   font-size: 30pt;
   border-bottom: dotted;
