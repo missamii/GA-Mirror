@@ -5,7 +5,12 @@ body {
 #box {
   background-color: #3299CC;
   margin: 50px;
-  opacity: 0.6;
+  background-color: rgba(45, 116, 152, 0.5);
+  top: 20px;
+  left: 50px;
+  width: 590px;
+  height: 100%;
+  padding: 10px;
 }
 #color-container {
   display: flex;
@@ -35,8 +40,11 @@ body {
   display: inline-block;
 }
 h1 {
-  width: 100%;
-  font-family: helvetica;
-  font-size: 30pt;
-  border-bottom: dotted;
-}
+  text-align: center;
+  /*https://www.midwinter-dg.com/permalink-7-great-css-based-text-effects-using-the-text-shadow-property_2011-03-03.html*/
+  color: #fff;
+  border-bottom: dashed;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+  letter-spacing: 5px;
+  font: 55px 'MisoRegular';
+  }

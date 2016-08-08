@@ -54,7 +54,7 @@ class App extends Component {
 
     return (
       <div id="box" className="App">
-        <h1>Colors YAY!</h1>
+        <h1>Reactive Color APP!</h1>
         <div id="color-container">
           {colors.map((color, index) => (
             <div
@@ -65,12 +65,12 @@ class App extends Component {
               }} />
           ))}
         </div>
-        <button
+        <center><button
           id="button"
           disabled={isFetching}
           onClick={(event) => this.getColors(event)}>
           Get Colors!
-        </button>
+        </button></center>
       </div>
     );
   }
