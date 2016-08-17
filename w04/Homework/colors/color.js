@@ -15,24 +15,24 @@ var colorButton = document.getElementById('colorbutton').addEventListener('click
         var div = document.createElement("div");
         // create another element, create a text node to the element it will have the hex of decimal color
       var hexColor = document.createElement("div");
-        div.appendChild(hexColor)
-      var createTextNode = colorsArr[i]
+        div.appendChild(hexColor);
+      var createTextNode = colorsArr[i];
         div.appendChild(hexColor);
         div.classList.add('colors');
       var palette = document.createTextNode(colorsArr[i]);
-        hexColor.appendChild(palette)
+        hexColor.appendChild(palette);
         div.style.backgroundColor = '#' + colorsArr[i];
         colorContainer.appendChild(div);
         div.style.width = '60px';
         div.style.height = '60px';
-      var div = document.createElement("div");
+      // var div = document.createElement("div");
         div.style.width = '60px';
         div.style.height = '60px';
         div.classList.add('colors');
         colorContainer.appendChild(div);
         div.style.backgroundColor = '#' + colorsArr[i];
           }
-    })
+    });
 
     // I'm stuck on this part.
     // here i tried to change the function to be in association with whats going on in the rest of the code. I partially feel this might not be correct, but I wanted to at least make an attempt to complete my hw even if it's incorrect.
@@ -44,4 +44,4 @@ var colorButton = document.getElementById('colorbutton').addEventListener('click
         return (yiq >= 128) ? 'black' : 'white'; // if yiq > 128 return 'black'; otherwise return 'white'
 }
   });
-}
+};

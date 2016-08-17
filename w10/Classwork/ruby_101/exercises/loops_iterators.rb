@@ -13,8 +13,14 @@ num_hash = {
 }
 
 # - `each` over num_arr and puts each element
+eacharr = num_arr.each do |arr|
+  arr += 1
+end
 
 # - `each with index` over num_arr & puts each el & its index
+num_arr.each.with.index do |el, index|
+  puts "num_arr: #{el}"
+  puts "index #{index}"
 
 # - `map` over num_arr, adding 2 to each element
 

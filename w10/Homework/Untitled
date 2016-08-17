@@ -3,14 +3,20 @@ Ruby 101 Quiz! Review Liza's cheatsheets and/or the videos on Shorty's playlist 
 
 
 **QUESTIONS**
-1. What is the repl we use for executing Ruby code right from our command line?**ANSWER:** Pry
+1. What is the repl we use for executing Ruby code right from our command line?
 
-2. What are the Ruby commands to print things to the screen and get user input? **ANSWER:** `puts`
+**ANSWER:** Pry
+
+2. What are the Ruby commands to print things to the screen and get user input?
+
+**ANSWER:** `puts`
 
 3. How do we run a Ruby file from the command line?
+
 **ANSWER:** `load '/pathtofile/myrubyfile.rb'`
 
 4. Write a program that prints "Hello World" 20 times to the screen. (Re-watch the video if you're not sure how.)
+
 **ANSWER:** `puts "Hello Word" * 20`
 
 5. How do we create a variable in Ruby vs. in JavaScript?
@@ -26,23 +32,23 @@ It will return hello world ten times.
 **ANSWER:** Use `.class`
 
 8. What datatypes are the following things in Ruby? In JavaScript? (If the JS equivalent has a different name or term, what's that equivalent?)
-* "ethan" -- string
-* 5.6 -- float
-* 420 -- fixedNum
-* false -- boolean
-* true --  boolean
-* nil -- undifined
-* [7,8,9] -- array
-* { "teachers": ["syed", "liza"] } -- hash
-* :teachers -- symbol
+* "ethan" -- **string**
+* 5.6 -- **numbers**
+* 420 -- **numbers**
+* false -- **boolean**
+* true --  **boolean**
+* nil -- **undifined**
+* [7,8,9] -- **array**
+* { "teachers": ["syed", "liza"] } -- **hash**
+* :teachers -- **symbol**
 
 9. Given the following array, answer the questions below. If the answer would be *different* in JavaScript, what is it?
 ```ruby
-my_array = ["taco", "banana", ["pumpkin", "butter"]]```
-
-  * How do I access "taco"?  `my_array[0]`
-  * How do I access "pumpkin"?  `my_array[2] -  my_array[2][0]`
-  * What is the value of `my_array[6]? nil`
+my_array = ["taco", "banana", ["pumpkin", "butter"]]
+```
+  * How do I access "taco"? -- `my_array[0]`
+  * How do I access "pumpkin"? -- `my_array[2]`
+  * What is the value of `my_array[6]`? -- `nil`
 
 10. Given the following hash, answer the questions below.
 ```ruby
@@ -58,39 +64,32 @@ my_hash = {
 }
 ```
 
-  * How do I access the list of `teachers`? `[:teachers]`
-  * How is the answer to the prior question different than if `my_hash` were a JavaScript object like we're familiar with? `my_hash.teachers`
+  * How do I access the list of `teachers`?
+  * How is the answer to the prior question different than if `my_hash` were a JavaScript object like we're familiar with?
 
 11. JavaScript and Ruby both "assign by reference". What does this mean?
+
 ```ruby
 my_var = "hello dudes and dudettes"
 ```
-JS: `var color = blue` Ruby: `color = blue`
+JS: `var color = blue`
+
+Ruby: `color = blue`
+
 
 12. What is the value of `my_var[2]` in Ruby? In JS? What is the value of `my_var[-2]` in each language? What about `my_var[-77]`?
-**ANSWER:** `my_var[2]` is `and` `my_var[-2]` is `nil` `my_var[-77]` is `nil`
+
 13. `my_var[3] = "p"` What is the new value of `my_var`?
 
 14. `my_var[3] = "baba"` What is the new value of `my_var`? Can we run this command in JS? (Try it!)
-`"helbabao dudes and dudettes"`
 
 15. How do I get the length of `my_var`?
-`my_var.length`
 
 16. what is the value of `my_var[5, 9]` and `my_var[5..9]`?
-`' dudes an'` `'dude'`
 
 17. For arrays, what do `push`, `pop`, `shift`, and `unshift` do in Ruby and what do they return?
 
-push - pushes things to front of array
-pop - takes out last one from array
-shift - moves the first one from the front of the array
-unshift - adds something to the front of array
-
 18. What do `reverse`, `shuffle`, and `sample` do?
-reverses - reverses an array or string
-shuffle - puts array in random order
-sample - outputs a random value
 
 19. How do we "shovel" something onto an array or string?
 
@@ -144,7 +143,5 @@ end
 36. How do `while`, `unless`, and `loop do` work?
 
 37. Why does Shorty say Ruby programmers typically avoid `for` loops?
-
-because of cause of scope
 
 38. Write a method that puts all elements of an array to the console.
