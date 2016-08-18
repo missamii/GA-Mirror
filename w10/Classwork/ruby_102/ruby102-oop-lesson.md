@@ -621,3 +621,394 @@ juan = User.new("Juan", "Juanson")
 User.count
 => 1
 ```
+
+
+
+### Hijacking
+
+Let's have some fun for no reason at all.
+
+Below, I've hijacked the `.new` and, because this function automatically triggers the `initialize` method, that one too.
+
+```rb
+class User
+  attr_accessor :firstname, :lastname
+  @@all = 0
+
+  def initialize(firstname, lastname)
+    @firstname = firstname
+    @lastname = lastname
+    @@all += 0
+  end
+
+  def count
+    return @@all
+  end
+
+  def User.new
+    puts "I've hijacked the 'new' and 'initialize' methods!"
+  end
+
+end
+```
+
+Let's see it work:
+
+
+```rb
+juan = User.new("Juan", "Juanson")
+# "I've hijacked the 'new' and 'initialize' methods!"
+
+juan.firstname
+# => Error!
+```
+
+Uh oh... That's not good. The `.new` method is reserved. But because ruby is nice, it let's you do it anyway.
+
+
+---
+
+
+### Setting defaults for instances
+
+Ruby lets us define defaults for instances if no arguments are passed in at the time of creation.
+
+```ruby
+class Vehicle
+
+  def initialize(color = 'blue', fuel_level = 0, type = 'Volvo')
+    @type = type
+    @color = color
+    @fuel_level = fuel_level
+  end
+
+end
+```
+
+Let's try it out:
+
+```bash
+# Don't pass any args upon creation:
+bob = Vehicle.new()
+=> #<Vehicle:0x007faf02369828 @color="blue", @fuel_level=0, @type="Volvo">
+```
+
+
+### The options hash
+That's so neat! This works great.
+
+But what if we want to initialize a new vehicle with the color 'red' and the type 'bmw', but leave fuel_level as the default?
+
+Ruby is expecting the args in the order we passed them. That means when we initialize our new vehicle, if we do this, we will get unexpected results:
+
+```ruby
+my_car = Vehicle.new("red", "BMW")
+# => my_car @color = "red", fuel_level = "BMW", type = "Volvo"
+```
+
+Whoops, that's not what we wanted at all.
+
+Let's take a look at the options hash...
+
+Essentially what's happening below is IF the user passed a particular argument, set that arg as an instance method, otherwise use the default provided.
+
+If a particular arg was not passed, the value will automatically be `nil`, which is `false` in Ruby, so it would default to whatever's on the other side of the OR statement.
+
+
+```ruby
+class Vehicle
+  attr_accessor :type, :color, :fuel_level
+
+  def initialize( opts = {} )
+    @type = opts[:type] || 'Volvo'
+    @color = opts[:color] || 'blue'
+    @fuel_level = opts[:fuel_level] || 0
+    puts opts
+  end
+end
+```
+
+```ruby
+# opts is just an empty hash
+opts = { }
+
+# when we create a new instance, the hash will get filled.
+my_car = Vehicle.new("BMW")
+
+# now the opts hash looks like this:
+opts = { :type => "BMW" }
+
+# That means...
+opts[:type] # => "BMW", which is a truthy value
+
+# But...
+opts[:color] # => `nil`, which is falsey.
+```
+
+
+---
+
+
+## One or two last things before `inheritance`...
+
+### Private methods
+**What is it?** A method that an instance can't call directly.
+
+**Why?** Private methods offer some protection.
+
+In the below example, `bottle` can call the `verse` method, but not the `line_one` method. However, `verse` can call the `line_one` method.
+
+Interesting...
+
+```ruby
+class Bottles
+  def verse
+    line_one
+  end
+
+  private
+  def line_one
+    "99 bottles of beer on the wall"
+  end
+end
+
+
+---
+
+
+bottle_one = Bottle.new
+
+bottle_one.verse
+=> "99 bottles...."
+
+bottle_one.line_one
+=> error
+```
+
+
+---
+
+
+### Self
+
+`self` is a special variable that contains the current instance of an object. It's a lot like `this` in Javascript. It's how the object refers to *itself*.
+
+There are two uses that we'll look at: 1- for instance variables in the attr_ and 2- class methods.
+
+1- Why would you use `self` over an instance variable? You would do this if you needed to customize the method that attr_ provides for you.
+
+2- You would use `self.method_name` over `User.method_name` if you needed to change the name of the class later on, and some other reasons.
+
+Let's change the `@@all` variable into an array. We'll use it to store new user instances.
+
+```rb
+class User
+  attr_accessor :firstname, :lastname
+
+  @@all = []
+
+  def initialize(firstname, lastname)
+    @firstname = firstname
+    @lastname = lastname
+
+    # puts "Creating #{self.firstname}"
+    puts "Creating #{@firstname}"
+
+    @@all.push(self)
+  end
+
+  def show_firstname
+    # return @firstname
+    return self.firstname
+  end
+
+  # def User.show_all
+  def self.show_all
+    return @@all
+  end
+
+end
+```
+
+Let's see how it works:
+
+```rb
+juan = User.new("Juan", "Juanson")
+# => "Creating Juan"
+
+jorge = User.new("Jorge", "Jorgeson")
+# => "Creating Jorge"
+
+steve = User.new("Steve", "Steveson")
+# => "Creating Steve"
+
+User.show_all
+# =>
+[
+  #<User:0x007fa5dc23a7d8 @firstname="Juan", @lastname="Juanson">,
+  #<User:0x007fa5dc1aab60 @firstname="Jorge", @lastname="Jorgeson">,
+  #<User:0x007fa5dc0974d0 @firstname="Steve", @lastname="Steveson">
+]
+```
+
+
+
+---
+
+
+# Ruby Inheritance
+
+Just like we get traits from our parents, we can use a feature called inheritance to create multiple classes (children) that share, or **inherit** properties and methods from their parent.
+
+**Note:** class variables and inheritance: It's best practice to avoid class variables because some tricky things can happen when inheritance is brought into the mix. Instead, a common practice is to create a **helper class**, which performs the same functionality that a class variable would, but without the headaches introduced by inheritance. That is beyond the scope of this lesson, but it might be nice to know for future exploration.
+
+
+## Sub classes
+Let's say we have a class called `Being`. There are two types of beings: `Person` and `Animal`.
+
+`Being`
+- Have a name, a noise they can make, eyes and limbs
+- Tell you how many eyes they have.
+
+`Person`
+- Have a name, a noise they can make, eyes and limbs
+- Tell you how many eyes they have.
+- Can speak their name
+
+`Animal`
+- Have a name, a noise they can make, eyes and limbs
+- Tell you how many eyes they have.
+- Can make a noise appropriate for their animal type ("moo", "meow", "woof", etc.)
+
+We can think of `Person` and `Animal` as two `sub classes` of the class `Being`. See how the two sub classes share some traits of their parent class? Those traits are inherited.
+
+
+```ruby
+class Being
+  attr_accessor :name, :noise, :eyes, :limbs
+
+  def initialize ( name = nil, noise = nil, eyes = 2, limbs = 4 )
+    @name = name
+    @noise = noise
+    @eyes = eyes
+    @limbs = limbs
+  end
+
+  def how_many_eyes
+    puts "I have #{@eyes} eyes!"
+  end
+end
+
+class Person < Being
+  def speak_name
+    puts "Oh hey, my name's #{@name}!"
+  end
+end
+
+class Animal < Being
+  def make_noise
+    puts "I make this noise: #{@noise}!"
+  end
+end
+```
+
+Let's see it in action:
+```bash
+liza = Being.new("Liza")
+=> #<Being:0x007f81d30e3060 @eyes=2, @limbs=4, @name="Liza", @noise=nil>
+
+ethan = Person.new("Ethan")
+=> #<Person:0x007f81d205dd80 @eyes=2, @limbs=4, @name="Ethan", @noise=nil>
+
+syed = Animal.new("Syed", "moo")
+=> #<Animal:0x007f81d330e8d0 @eyes=2, @limbs=4, @name="Syed", @noise="moo">
+
+liza.how_many_eyes
+# => I have 2 eyes!
+
+ethan.how_many_eyes
+# => I have 2 eyes!
+
+syed.how_many_eyes
+# => I have 2 eyes!
+
+syed.make_noise
+# => I make this noise: moo!
+
+syed.speak_name
+# => NoMethodError!
+```
+
+We can see that Liza, Ethan and Syed have access to `how_many_eyes`. Ethan has access to a method `speak_name` that Syed does not. Conversely, Syed can access `make_noise`, but Ethan cannot. Liza cannot access any of these methods. Inheritance flows down, not up.
+
+
+---
+
+
+That's so neat, but it doesn't really make sense that the `Being` class contains the attr_ `noise` because that only pertains to an Animal instance.
+
+Let's fix that: I removed `@noise` from the Being class and put it in the Animal class.
+
+```ruby
+class Being
+  attr_accessor :name, :eyes, :limbs
+
+  def initialize ( name = nil, noise = nil, eyes = 2, limbs = 4 )
+    @name = name
+    @eyes = eyes
+    @limbs = limbs
+  end
+
+  def how_many_eyes
+    puts "I have #{@eyes} eyes!"
+  end
+
+end
+
+class Person < Being
+  def speak_name
+    puts "Oh hey, my name's #{@name}!"
+  end
+end
+
+class Animal < Being
+  attr_accessor :noise
+
+  def initialize(noise)
+    @noise = noise
+  end
+
+  def make_noise
+    puts "I make this noise: #{@noise}!"
+  end
+end
+```
+
+Now let's test it out:
+
+
+```bash
+syed = Animal.new("Syed", "moo")
+# => #<Animal:0x007f81d319e810 @noise="moo">
+
+syed.name
+=> nil
+```
+
+Uh oh. He doesn't have a name.
+
+What happened? The `initialize` method in the Animal class **overrode** the `initialize` class in the Being class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
