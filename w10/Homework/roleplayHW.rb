@@ -21,7 +21,7 @@ def self.count
    return @@count
  end
 
- def damage(hp) #another function
+ def damage_taken(hp) #another function
     @current_hp = @current_hp - hp
     if @current_hp <= 0
       self.die
