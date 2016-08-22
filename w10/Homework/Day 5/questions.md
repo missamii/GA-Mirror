@@ -2,7 +2,7 @@
 ---
 What are the SQL commands to:
 
-Find all Users => `SELECT * FROM Users`
+Find all Users => `SELECT * FROM users`
 
 Change a User's name to "Donald Drumpf" => ` UPDATE user SET name = 'Donald Drumpf' WHERE id = 4;`
 
