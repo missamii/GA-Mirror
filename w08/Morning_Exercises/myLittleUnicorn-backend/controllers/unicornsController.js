@@ -1,10 +1,14 @@
+
 const express = require('express');
 const router = express.Router();
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 const mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/unicorns_db';
-// ALL PATHS IN THIS FILE -- YOU SHOULD TAKE '/UNICORNS'
-// AS BEING UNDERSTOOD TO BE ALREADY THERE
+
+
+// ALL PATHS IN THIS FILE: YOU SHOULD TAKE '/UNICORNS' AS BEING UNDERSTOOD TO BE ALREADY THERE
+
+
 /* get all */
 router.get('/', (request, response) => {
   MongoClient.connect(mongoUrl, (err, db) => {
@@ -183,5 +187,9 @@ router.put('/:name', function(request, response) {
     } // end else
   }); // end mongo connect
 }); // end update
+
+
+
+
 
 module.exports = router;
