@@ -1,6 +1,7 @@
 class Being #the first class starts it all off!
   #a list of symbols
   attr_accessor :spieces, :gender, :level, :hp, :max_hp, :current_hp
+  #attr_accessor :gender, :spieces  #so things aren't change-able,
 
   @@count = 0
 
@@ -12,7 +13,7 @@ class Being #the first class starts it all off!
     @hp = opt[:hp] || 5
     @current_hp =  @hp * @level
     @max_hp = @current_hp
-    @@count += 1
+    @@count += 1 #if moved below, it will start with  a count of 0. (optional)
     @id = @@count
     puts opts
   end #end of the ruby function

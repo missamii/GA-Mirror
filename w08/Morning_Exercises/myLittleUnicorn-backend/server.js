@@ -22,7 +22,10 @@ app.use(cors());
 /* extended:true = put it in an obj */
 app.use(bodyParser.urlencoded({extended: true}));
 
-/*** our backend routes ***/
+
+/*** our backend routes: ***/
+
+
 /* depending on the kind of request, fire the right callback */
 app.use('/unicorns', unicornsController);
 
@@ -30,6 +33,7 @@ app.use('/unicorns', unicornsController);
 app.get('/', function(request, response){
   response.json({"description":"uNiCoRnS API"});
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -165,6 +169,10 @@ app.put('/unicorns/:name', function(request, response) {
 
 =======
 >>>>>>> 0f8cf03c1e00878ad9a02f504283c2e06ef46958
+=======
+
+
+>>>>>>> de54e8252a85c6e4c517b1729529228f1a2378b7
 /* tell our app where to listen */
 app.listen(PORT, function(){
   console.log('listen to events on "port" ', PORT);
