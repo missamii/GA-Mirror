@@ -1,6 +1,6 @@
 class BookController < ApplicationController
 
-  api_results = [
+  @@data = [
   {
     id: 1,
     title: "Harry Potter and the Sorcerer's Stone",
@@ -69,9 +69,44 @@ class BookController < ApplicationController
     ]
   }
 ]
-
+# I am really not sure I went about this correctly. :|
 def index
-  render json: @@data
+  render json: {"Books Controller": @@data}
 end
 
+def show
+  render json: {"Book controller": @@data[params[:id].to_i]}
+end
+
+def title
+   render json: {"Book controller": params[:title]}
+end
+
+def author
+   render json: {"Book controller": params[:author]}
+end
+
+def genre
+   render json: {"Book controller": params[:genre]}
+end
+
+def year
+   render json: {"Book controller": params[:year]}
+end
+
+def publisher
+   render json: {"Book controller": params[:publisher]}
+end
+
+def create
+   render json: {"Book Controller": params[:create]}
+ end
+
+ def destroy
+   render json: {"Book Controller": params[:destroy]}
+ end
+
+ def update
+   render json: {"Book Controller": params[:update]}
+ end
 end
