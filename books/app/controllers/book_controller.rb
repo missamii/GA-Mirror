@@ -71,7 +71,7 @@ class BookController < ApplicationController
 ]
 # I am really not sure I went about this correctly. :|
 def index
-  render json: {"Books Controller": @@data}
+  render json: {"Book Controller": @@data}
 end
 
 def show
@@ -109,4 +109,5 @@ def create
  def update
    render json: {"Book Controller": params[:update]}
  end
+
 end
