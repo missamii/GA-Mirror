@@ -1,6 +1,6 @@
 # TESTING SOME STACKS AND QUEUES
 
-For todays morning exercise, were going to practice how ruby handles classes. A few weeks ago we created Stack and Queue datatypes in JavaScript. Today, we are going to do the same thing, but in Ruby!
+Let's practice how ruby handles classes. A few weeks ago we created Stack and Queue datatypes in JavaScript. Today, we are going to do the same thing, but in Ruby!
 
 ## If you forgot:
 
@@ -44,4 +44,4 @@ rspec knows to look in a folder called spec in order to run all of the files ins
 
 My tests are expecting there to be two files inside of this folder: stack.rb and queue.rb. So work in those.
 
-**HINT:** Start by creating a Queue class and a Stack class in each respective file. Then run `rspec` it should indicate which tests were passed and failed. You'll need "storage" -- what type of variable should it be? Etc. Make a change, run `rspec` see what happened and repeat.
+**HINT:** Start by creating a Queue class and a Stack class in each respective file. Then run `rspec`; it should indicate which tests were passed and failed. You'll need "storage" -- what type of variable should it be? Etc. Make a change, run `rspec` see what happened, and repeat.
