@@ -1,6 +1,6 @@
 require_relative '../lib/monkey'
 
-# this part just tells RSpec and people what class this test is for
+# this part just tells RSpec what class this test is for
 describe Monkey do
 
   # each `it` tests a specific functionality of our Monkey objects
@@ -59,7 +59,7 @@ describe Monkey do
     robin.eat("ice")
     robin.eat("ovaltine")
     robin.eat("udon")
-  
+
     robin.eat("pudding")
     robin.eat("chocolate")
 
