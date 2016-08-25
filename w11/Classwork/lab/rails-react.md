@@ -33,6 +33,7 @@ here's the accompanying github:
 https://github.com/learncodeacademy/react-js-tutorials/tree/master/5-redux-react
 
 ***one caveat***
+
 in the video the instructor mentions decorators. we can't use them, so here's
 an example with out decorators that uses a function to map state to props.
 
