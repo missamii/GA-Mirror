@@ -42,13 +42,27 @@ def create
    render json: books
 end
 
- def destroy
-   render json: {"Book Controller": params[:destroy]}
- end
+def destroy
+   data.each do |i|
+      if i[:id] == params[:id]
+        data.delete(i)
+      end
+    end
+    render json: data
+end
 
- def update
-   render json: {"Book Controller": params[:update]}
- end
+def update
+  data.each do |u|
+    if u[:id] == params[id].to_i
+      u[:title] = params[:title]
+      u[:author] = params[:author]
+      u[:year] = params[:year]
+      u[:publisher] = params[:publisher]
+      u[:genres] = params[:genre]
+    end
+    render json: u
+  end
+end
 private
 def data
   [
@@ -120,5 +134,5 @@ def data
     ]
   }
 ]
-  end
+end
 end
