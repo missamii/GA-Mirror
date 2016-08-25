@@ -1,6 +1,57 @@
 class BookController < ApplicationController
 
-  @@data = [
+def index
+  render json: data
+end
+
+def show
+  render json: data.select{|b| b[:id] == params[:id].to_i}.first
+end
+
+def title
+   render json: data.select{|b| b[:title] == params[:title]}.first
+end
+
+def author
+   render json: data.select{|b| b[:author] == params[:author]}.first
+end
+
+def genre
+   render json: data.select{|b| b[:genres].include?(params[:genre])}
+end
+
+def year
+   render json: data.select{|b| b[:year] == params[:year].to_i}
+end
+
+def publisher
+   render json: data.select{|b| b[:publisher] == params[:publisher]}
+end
+
+def create
+  books = data
+  new_book = {
+    id: books.size+1,
+    title: params[:title],
+    author: params[:author],
+    year: params[:year].to_i,
+    genres: params[:genres],
+    publisher: params[:publisher]
+  }
+  books << new_book
+   render json: books
+end
+
+ def destroy
+   render json: {"Book Controller": params[:destroy]}
+ end
+
+ def update
+   render json: {"Book Controller": params[:update]}
+ end
+private
+def data
+  [
   {
     id: 1,
     title: "Harry Potter and the Sorcerer's Stone",
@@ -20,7 +71,7 @@ class BookController < ApplicationController
     genres: [
       "biography",
       "politics"
-    ]
+    ],
     publisher: "Harper & Brothers"
   },
   {
@@ -49,7 +100,7 @@ class BookController < ApplicationController
     title: "Liza's pretty good book",
     author: "Liza Ramo",
     year: 1965,
-    publisher: "HarperPenguinRandomHouse"
+    publisher: "HarperPenguinRandomHouse",
     genres: [
       "biography",
       "childrens"
@@ -60,7 +111,7 @@ class BookController < ApplicationController
     title: "Syed's also pretty okay book",
     author: "Syed Salahuddin",
     year: 1997,
-    publisher: "Super Syed-an Books"
+    publisher: "Super Syed-an Books",
     genres: [
       "fantasy",
       "biography",
@@ -69,45 +120,5 @@ class BookController < ApplicationController
     ]
   }
 ]
-# I am really not sure I went about this correctly. :|
-def index
-  render json: {"Book Controller": @@data}
-end
-
-def show
-  render json: {"Book controller": @@data[params[:id].to_i]}
-end
-
-def title
-   render json: {"Book controller": params[:title]}
-end
-
-def author
-   render json: {"Book controller": params[:author]}
-end
-
-def genre
-   render json: {"Book controller": params[:genre]}
-end
-
-def year
-   render json: {"Book controller": params[:year]}
-end
-
-def publisher
-   render json: {"Book controller": params[:publisher]}
-end
-
-def create
-   render json: {"Book Controller": params[:create]}
- end
-
- def destroy
-   render json: {"Book Controller": params[:destroy]}
- end
-
- def update
-   render json: {"Book Controller": params[:update]}
- end
-
+  end
 end
