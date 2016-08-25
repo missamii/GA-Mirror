@@ -38,3 +38,11 @@ in the video the instructor mentions decorators. we can't use them, so here's
 an example with out decorators that uses a function to map state to props.
 
 https://gist.github.com/sssyed/ad7f54842f19ee0e24b402e22a62171e
+
+
+# done?!
+
+if you started with unicorns do the library app. 
+
+still done? then deploy :) https://blog.heroku.com/container_ready_rails_5
+
