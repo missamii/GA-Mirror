@@ -84,27 +84,27 @@ passing in the initial scene and choices (which were initially set up above for 
   //your code here
 
 
+
 // the renderStory function will display the story in the view
 // it needs to (1) empty out the .display and .choices divs in the DOM
 // (2) fill the .display div with what's passed in as 'text', and
 // (3) iterate over the storyChoices that were passed in and for each one
 // create a new <p> with class "game-options" and add them all to the .choices div
-  function renderStory(text, storyChoices) {
-    storyDisplay.innerHTML = "";
-    storyDisplay.innerHTML = text;
-
-    gameOptions.innerHTML = "";
-    storyChoices.forEach(function(choice) {
-      var p = document.createElement('p');
-      p.className = "game-options";
-      p.innerHTML = choice;
-      gameOptions.appendChild(p);
-    });
-  }
-
-}
+function renderStory(text, storyChoices) {
+console.log("rendering the next scene in the story");
   //your code here
-
+  var display = document.querySelector('#display');
+  var choices = document.querySelector('#choices');
+  display.innerHTML = '';
+  choices.innerHTML = '';
+  display.innerHTML = text;
+  for (var i = 0; i < storyChoices.length; i++) {
+    var p = document.createElement('p');
+    p.classList.add("game-options");
+    choices.appendChild(p);
+    var newText = document.createTextNode(storyChoices[i]);
+    p.appendChild(newText);
+  }
 }
 
 // this function should iterate over the story object (HINT: check out 'for ... in' loops!) and for each
@@ -115,15 +115,17 @@ passing in the initial scene and choices (which were initially set up above for 
 // A second HINT: make sure you use `hasOwnProperty` when you use a for ... in loop on an object
 function makeShortChoices() {
   console.log("generating the one-word short choices arrays in the story object");
-    for (var scene in story) {
-      if (story.hasOwnProperty(scene)) {
-        story[scene].shortChoices = [];
-        for (var i = 0; i < story[scene].fullChoices.length; i++) {
-          story[scene].shortChoices.push(story[scene].fullChoices[i].toLowerCase().split(" ")[0]);
-        }
-      }
-    }
   //your code here
+  for (var scene in story) {
+    if (story.hasOwnProperty(scene)) {
+      story[scene].shortChoices = [];
+      for(var i = 0; i < story[scene].fullChoices.length; i++) {
+        var firstWord = story[scene].fullChoices[i].split(" ")[0].toLowerCase();
+        story[scene].shortChoices.push(firstWord);
+    }
+  }
+}
+  commands = story.opening.shortChoices;
 }
 
 // sets up parameters for the speech recognition and starts it listening
@@ -153,6 +155,11 @@ function initializeRecognition() {
 function playGame() {
   console.log("let's play now!");
   //your code here
+  if(inProgress) {
+    speechResult();
+  } else {
+    endGame();
+  }
 
 }
 
@@ -175,10 +182,25 @@ function speechResult() {
   console.log('running speechResult()');
   recognition.onresult = function(event) {
    console.log("recognition result event!");
-   var transcript = event.results[event.resultIndex][0].transcript;
-   //your code here
+     var transcript = event.results[event.resultIndex][0].transcript;
+     //your code here
+     var transcriptSplit = transcript.split(" ");
+     var lastWord = transcriptSplit[transcriptSplit.length - 1];
+     var match = checkForMatch(lastWord);
 
-  };
+       if(development) {
+         var speech = document.querySelector('#speech');
+         speech.innerHTML = "";
+         speech.innerHTML = "Last speech result was: " + lastWord;
+        }
+       if(match === "gameover") {
+         recognition.stop();
+         inProgress = false;
+         endGame();
+       } else if (match) {
+         moveStory(match);
+       }
+     };
 }
 
 // checkForMatch should take in a parameter and compare it with the one-word commands listed in the
@@ -191,18 +213,19 @@ function speechResult() {
 // "open" it will return story.opening.results[0] (because "open" is the first item in the commands array)
 // if it detects "walk" it will return "story.opening.results[1]" because "walk" is the second item in the
 // commands array and so on.
-  function checkForMatch(text) {
-    console.log("checking for match");
-    var result = false;
-    for (var i = 0; i < commands.length; i++) {
-      if (commands[i] == text) {
-        console.log("Match found with command: ", commands[i]);
-        result = scene.results[i];
-      }
-    }
-    return result;
-  }
+function checkForMatch(text) {
+  console.log("checking for match");
   //your code here
+  var result = false;
+  for(var i = 0; i < commands.length; i++) {
+    if(text == commands[i].toLowerCase()) {
+      result = scene.results[i];
+    }
+  }
+  return result;
+}
+
+
 
 
 // needs to set the narrative and choices and commands objects appropriately
