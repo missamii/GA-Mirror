@@ -1,6 +1,5 @@
 body {
-  background-color: #96CDCD;
-  background-image: url(storm-horsemen_of_apocalypse-wallpaper.jpg);
+  background-image: url("storm-horsemen_of_apocalypse-wallpaper.jpg");
   /*bg from http://forgehd.com/*/
   background-repeat: no-repeat;
   background-position: top;
@@ -62,6 +61,9 @@ body {
 }
 #newdiv img {
   width: 100px;
+}
+#delete-button {
+  color: red;
 }
 h1 {
   font-family: times, Times New Roman, times-roman, georgia, serif;
