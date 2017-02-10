@@ -3,6 +3,8 @@
 
 ##About Calculator
 This is a General Assembly Homework. Tuesday night we where gave a task to create a Calculator. I planned out on my own how I'd go about doing this. I looked for the needed help and resources for getting this project done. Credits are below.
+
+
 ![alt text](https://github.com/missamii/wdi-nyc-robots/blob/master/w08/Homework/calculator/cal.png "Logo Title Text 1")
 
 
