@@ -144,7 +144,6 @@ class Calculator extends Component {
           <button id="button" onClick={() => this.addDigit(0)}>0</button>
           <button id="button" onClick={() => this.calculate()}>=</button>
           <button id="button">CLEAR</button>
-          // <button id="button" onClick={() => this.addDec()}>/</button>
           <button id="button" onClick={() => this.setDiv()}>/</button>
         </div>
 
